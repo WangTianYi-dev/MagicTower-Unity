@@ -1,0 +1,634 @@
+﻿[
+  {
+    "id": 0,
+    "events": "-1"
+  },
+  {
+    "id": 1,
+    "events": "0,0,1|1"
+  },
+  {
+    "id": 2,
+    "events": "0,1,1|1"
+  },
+  {
+    "id": 3,
+    "events": "0,2,1|1"
+  },
+  {
+    "id": 4,
+    "events": "6,true#这把黄钥匙，似乎能打开中间的门|0,0,1|1|7|4"
+  },
+  {
+    "id": 11,
+    "events": "2,0,1|1"
+  },
+  {
+    "id": 12,
+    "events": "2,1,1|1"
+  },
+  {
+    "id": 13,
+    "events": "2,2,1|1"
+  },
+  {
+    "id": 22,
+    "events": "9,1|1"
+  },
+  {
+    "id": 23,
+    "events": "9,2|1"
+  },
+  {
+    "id": 24,
+    "events": "17,Heroine,true#看样子，这章鱼是之前也是农民工。$false#这镐可以用来拆墙，但质量看起来不怎么样。$true#估计是一次性的。$false#不过你之前为什么要说“也”？$true#别问我，我早就失忆了。|9,8|4|7|1"
+  },
+  {
+    "id": 25,
+    "events": "17,Heroine,true#十字架入手|9,11|4|7|1"
+  },
+  {
+    "id": 26,
+    "events": "9,6|1"
+  },
+  {
+    "id": 27,
+    "events": "9,7|1"
+  },
+  {
+    "id": 28,
+    "events": "9,3|1"
+  },
+  {
+    "id": 29,
+    "events": "9,4|1"
+  },
+  {
+    "id": 30,
+    "events": "9,5|1"
+  },
+  {
+    "id": 31,
+    "events": "9,12|1"
+  },
+  {
+    "id": 32,
+    "events": "9,13|1"
+  },
+  {
+    "id": 33,
+    "events": "9,10|1"
+  },
+  {
+    "id": 51,
+    "events": "8,0,50|1"
+  },
+  {
+    "id": 52,
+    "events": "8,0,200|1"
+  },
+  {
+    "id": 53,
+    "events": "8,0,100|1"
+  },
+  {
+    "id": 54,
+    "events": "8,0,400|1"
+  },
+  {
+    "id": 55,
+    "events": "8,0,800|1"
+  },
+  {
+    "id": 56,
+    "events": "8,0,250|1"
+  },
+  {
+    "id": 57,
+    "events": "8,0,1000|1"
+  },
+  {
+    "id": 61,
+    "events": "8,1,1|1"
+  },
+  {
+    "id": 62,
+    "events": "8,2,1|1"
+  },
+  {
+    "id": 63,
+    "events": "6,true#我的剑，终于回来了|8,1,10|7|4|1"
+  },
+  {
+    "id": 64,
+    "events": "6,true#找到盾了|8,2,10|7|4|1"
+  },
+  {
+    "id": 65,
+    "events": "6,true#银盾入手|8,2,20|7|4|1"
+  },
+  {
+    "id": 66,
+    "events": "8,1,2|1"
+  },
+  {
+    "id": 67,
+    "events": "8,2,2|1"
+  },
+  {
+    "id": 68,
+    "events": "17,Heroine,true#银剑入手。$false#这剑名字和你挺配的。$true#啥？|8,1,20|7|4|1"
+  },
+  {
+    "id": 69,
+    "events": "8,1,4|1"
+  },
+  {
+    "id": 70,
+    "events": "8,2,4|1"
+  },
+  {
+    "id": 71,
+    "events": "6,true#骑士剑入手。|8,1,40|7|4|1"
+  },
+  {
+    "id": 72,
+    "events": "6,true#骑士盾入手。|8,2,40|7|4|1|10035|13,38,2:7,DoorGreen,0,true,false|6,true#怎么会有门？|7|4"
+  },
+  {
+    "id": 73,
+    "events": "6,true#圣盾入手。|8,2,50|7|4|1"
+  },
+  {
+    "id": 74,
+    "events": "8,1,5|1"
+  },
+  {
+    "id": 75,
+    "events": "8,2,5|1"
+  },
+  {
+    "id": 76,
+    "events": "6,true#久违了，神圣盾入手|7|8,2,100|10044|4|1"
+  },
+  {
+    "id": 77,
+    "events": "6,true#圣剑入手|8,1,50|7|4|1"
+  },
+  {
+    "id": 78,
+    "events": "6,true#久违了，神圣剑入手|8,1,100|10053|7|4|1"
+  },
+  {
+    "id": 100,
+    "events": "3|4|1"
+  },
+  {
+    "id": 101,
+    "events": "6,false#你是干什么的？|7|3|1|6,true#不知为什么，总感觉来过这个地方|7|4"
+  },
+  {
+    "id": 102,
+    "events": "3|1|17,Heroine,true#没有武器，打起来真费劲$false#你原来是带着武器来的吗？$true#是的，刚醒来时手里有剑和盾$true#但之后中了埋伏，可能是被魔王抢走了|7|4"
+  },
+  {
+    "id": 103,
+    "events": "3|4|1|21,10:7"
+  },
+  {
+    "id": 104,
+    "events": "3|1|10010|6,true#这点手段，还不足为惧。|7|4"
+  },
+  {
+    "id": 105,
+    "events": "6,false#有两下子。$true#直接出招吧。|7|3|6,false#不，这是不可能的，你怎会打败我！$true#你也不过如此$false#你别太得意，我后面还有许多兄弟，肯定干掉你。|10011|13,10,1:9,GemRed,61,true,false|13,10,2:9,GemRed,61,true,false|13,10,3:9,GemRed,61,true,false|13,10,1:8,Bottle1,51,true,false|13,10,2:8,Bottle1,51,true,false|13,10,3:8,Bottle1,51,true,false|13,10,9:9,GemBlue,62,true,false|13,10,10:9,GemBlue,62,true,false|13,10,11:9,GemBlue,62,true,false|13,10,9:8,KeyYellow,1,true,false|13,10,10:8,KeyYellow,1,true,false|13,10,11:8,KeyYellow,1,true,false|7|4|1"
+  },
+  {
+    "id": 106,
+    "events": "3|4|1|21,2:7"
+  },
+  {
+    "id": 107,
+    "events": "3|4|1|10015|13,14,1:9,KeyRed,3,true,false"
+  },
+  {
+    "id": 108,
+    "events": "6,false#你瞅啥？$true#瞅你咋地。|7|3|4|1|13,15,6:6,Pickaxe,24,true,false|14,15,5:6,Way|14,15,7:6,Way|10017"
+  },
+  {
+    "id": 109,
+    "events": "3|4|1|21,2:4"
+  },
+  {
+    "id": 110,
+    "events": "3|4|1|21,2:7"
+  },
+  {
+    "id": 111,
+    "events": "3|4|1|21,10:7"
+  },
+  {
+    "id": 112,
+    "events": "3|4|1|21,10:4"
+  },
+  {
+    "id": 113,
+    "events": "3|4|6,false#上帝啊！我做梦也没想到我会被人打败。毫无疑问你是比我强。$false#但以你现在的状态对于大法师来说又太弱了。$false#你仅仅取得了一个暂时的胜利。$true#闭嘴吧。反派总死于话多。$false#。。。|13,20,4:5,GemRed,66,true,false|13,20,4:6,GemRed,66,true,false|13,20,4:7,GemRed,66,true,false|13,20,8:7,GemBlue,67,true,false|13,20,8:6,GemBlue,67,true,false|13,20,8:5,GemBlue,67,true,false|13,20,7:8,KeyYellow,67,true,false|13,20,5:8,KeyYellow,67,true,false|13,20,6:8,KeyYellow,67,true,false|13,20,5:4,Bottle2,54,true,false|13,20,6:4,Bottle2,54,true,false|13,20,7:4,Bottle2,54,true,false|13,20,6:2,EPAfterM,10031,true,false|4|7|25,6:3|1"
+  },
+  {
+    "id": 114,
+    "events": "6,false#杀-死-入-侵-者$true#这是机器人？|7|3|10021|6,true#呼，总算解决了。|7|13,25,4:4,KeyRed,3,true,false|13,25,5:4,KeyRed,3,true,false|13,25,7:4,KeyRed,3,true,false|13,25,8:4,KeyRed,3,true,false|4|1"
+  },
+  {
+    "id": 115,
+    "events": "3|4|1|10026|6,true#这一层的BOSS战是不是太水了一点。|25,6:8|7|4"
+  },
+  {
+    "id": 116,
+    "events": "3|4|1|21,2:2"
+  },
+  {
+    "id": 117,
+    "events": "3|4|1|10029"
+  },
+  {
+    "id": 118,
+    "events": "3|4|1|10030|13,34,2:6,KeyRed,3,true,false|13,34,1:5,KeyYellow,1,true,false|13,34,1:7,KeyYellow,1,true,false|13,34,3:5,KeyYellow,1,true,false|13,34,3:7,KeyYellow,1,true,false"
+  },
+  {
+    "id": 119,
+    "events": "3|4|1|21,2:2"
+  },
+  {
+    "id": 120,
+    "events": "10039|6,false#你必须打败我的手下，才有资格和我单挑。|7|4|24,0|6,false#居然能击败我所有的手下|6,false#但我也不会认输，受死吧。|7|3|6,true#就这两下？$false#我还没出全力，这次先饶了你，别让我再看到你。$true#你吹牛的样子，好像CXK。$false#见你太霉。|7|25,6:4|10040|13,40,2:10,KeyYellow,1,true,false|13,40,3:10,KeyYellow,1,true,false|13,40,4:10,KeyYellow,1,true,false|13,40,8:10,GemRed,69,true,false|13,40,9:10,GemRed,69,true,false|13,40,10:10,GemRed,69,true,false|13,40,3:8,Bottle2,55,true,false|13,40,4:8,Bottle2,55,true,false|13,40,5:8,Bottle2,55,true,false|13,40,7:8,GemBlue,70,true,false|13,40,8:8,GemBlue,70,true,false|13,40,9:8,GemBlue,70,true,false|27,7:2,6:8|17,Heroine,false#公主是为了解决魔塔问题而来的。|26,,0|17,Heroine,false#但是却一直没有消息，所以我前来寻找。$true#所以之前看到的公主是假的？$false#应该是。$false#看样子，她也是进来了。$false#妖精打扮也正好骗过了魔王的耳目。|23,7:2|4|7|1"
+  },
+  {
+    "id": 121,
+    "events": "3|4|1|14,41,5:5,Way|14,41,7:5,Way|14,41,5:6,Wall|14,41,7:6,Wall|14,41,6:6,Wall|13,41,6:7,Down,28,true,false"
+  },
+  {
+    "id": 122,
+    "events": "3|4|1|28,8:2"
+  },
+  {
+    "id": 123,
+    "events": "3|4|1|28,5:2"
+  },
+  {
+    "id": 124,
+    "events": "3|4|1|21,6:3"
+  },
+  {
+    "id": 125,
+    "events": "3|4|1|25,8:4"
+  },
+  {
+    "id": 126,
+    "events": "3|4|1|21,6:2"
+  },
+  {
+    "id": 127,
+    "events": "3|4|1|21,6:4"
+  },
+  {
+    "id": 128,
+    "events": "3|4|10046|17,Boss_Final,false#嗯？这是。。封印？|4|7|1"
+  },
+  {
+    "id": 129,
+    "events": "3|10047|23,5:10|23,6:10|23,7:10|23,5:9|23,7:9|23,5:8|23,6:8|23,7:8|6,false#哈哈，毫无疑问你是一个合格的战士。$false#但我是假的，真魔王会在50层等你。$true#奉陪。|7|4|1|13,49,2:8,GemRed,74,true,false|13,49,3:8,GemRed,74,true,false|13,49,4:8,GemRed,74,true,false|13,49,8:8,GemBlue,75,true,false|13,49,9:8,GemBlue,75,true,false|13,49,10:8,GemBlue,75,true,false|13,49,6:7,Bottle2,57,true,false|13,49,7:7,Bottle2,57,true,false|13,49,5:7,Bottle2,57,true,false|13,49,5:10,KeyRed,3,true,false|13,49,7:10,Dagger,31,true,false"
+  },
+  {
+    "id": 130,
+    "events": "3|6,true#你输了。$false#哦？是吗？|7|22,1|6,true#怎么？身体动不了。|7|14,50,5:10,Way|15,5:10,false|15,5:7,false|15,6:7,false|6,false#曾经在这里，我让你毁掉<color=red>神圣剑</color>，但你却拒绝。$true#（曾经？完全记不起来。）$false#但这次我想通了，世上能有资格使用这剑的人，也只有你了。$false#直接让你带着神圣剑，和这魔塔一起毁掉，不就好了。$true#所以这就是让我拿剑来50层的理由？|7|15,6:5,true|13,50,6:6,DoorFe,0,true,false|6,false#你说对了。但也该是我们说再见的时候了。|7|10049|22,1.5|6,false#和这塔一起玩完吧。|7|15,6:3,true|14,50,6:0,Fire|14,50,6:1,Fire|12,Fire,6:1|12,Fire,6:0|15,6:2,true|11|6,false#什么？谁在哪？|7|13,50,6:7,Elf,10075,true,true"
+  },
+  {
+    "id": 131,
+    "events": "6,false#你瞅啥？$true#你和章鱼哥都是东北来的吗？|7|3|4|1|13,35,6:6,Snowflake,33,true,false|14,35,5:6,Way|14,35,7:6,Way|10017"
+  },
+  {
+    "id": 200,
+    "events": "5"
+  },
+  {
+    "id": 300,
+    "events": "6,true#这面墙，似乎可以破坏|7|4|18|1"
+  },
+  {
+    "id": 301,
+    "events": "4|18|1"
+  },
+  {
+    "id": 400,
+    "events": "19"
+  },
+  {
+    "id": 1001,
+    "events": "6,false#你醒了。$true#这是哪？$false#这里是魔塔，你需要去50层打败魔王。$false#我只能帮你到这。$true#等等！|7|1|6,true#发生了什么？\n为什么我什么都想不起来|7|4"
+  },
+  {
+    "id": 10001,
+    "events": "3|4|1|10001"
+  },
+  {
+    "id": 10002,
+    "events": "3|4|1|10002"
+  },
+  {
+    "id": 10003,
+    "events": "6,true#情况有些不对……|7|1|10003,false#欢迎来到魔塔，我会在50层等你$true#我为什么会在这？$false#你暂时不用知道|12,Lighting,5:3|6,true#！|10,2,3:4|7|4|10004|11"
+  },
+  {
+    "id": 10004,
+    "events": "6,false#你醒了$true#看起来是的$false#你很走运，我刚好在挖一条地道，马上就要挖通了$true#。。|14,2,2:5,Way|7|15,1:3,false|6,false#你也快逃吧|7|15,1:1,false|1|13,2,2:5,EPAfterM,10005,true,false|4"
+  },
+  {
+    "id": 10005,
+    "events": "6,true#这个人，总感觉以前见过。|1|7|13,2,1:11,Heroine,10006,false,true"
+  },
+  {
+    "id": 10006,
+    "events": "-1|15,1:5,false|16,1:0|6,false#你好，请问你知道这是哪吗？$true#为什么突然问我？我也不知道$true#不知到为什么，什么也想不起来$false#我也是，只记得之前，好像看到过魔王$false#然后不知道为什么就到这了。$true#之前也有一个奇怪的人告诉我，去50层打败魔王。$false#既然这样，那暂时一起行动吧。$false#总之能出去再说。$true#好吧。$false#我叫艾玲。$true#我失忆了，记不起任何事。包括名字。|7|15,2:5,false|1|4"
+  },
+  {
+    "id": 10007,
+    "events": "6,false#少年，看你骨骼精奇，必是百年一遇的练武奇才$true#我看你像搞传销的$false#别这么说嘛$false#我这有本怪物手册，看与你有缘，就送给你了$false#它可以显示当前怪物的属性，你一定会用的上的|9,0|6,true#居然有这好事?$false#我先去领盒饭了|1|6,true#?|7|4"
+  },
+  {
+    "id": 10008,
+    "events": "6,false#有些门不能用钥匙打开，当你完成一定条件后，它会自动打开$true#然后呢？$false#什么然后？$true#你就不该给点什么？$false#策划不让给$true#好吧。。|29,2|1|7|4"
+  },
+  {
+    "id": 10009,
+    "events": "6,false#谢谢你救了我。$true#所以随便给个千把块感谢费就行了，不用太多啦。$false#这是<color=green>1000金币</color>，请收下$true#真这么大方？|8,3,1000|1|7|4"
+  },
+  {
+    "id": 10010,
+    "events": "6,false#谢谢你救了我。$false#我可以提升你3%的攻击力和防御力。$true#是不是少了点？$false#你行你自己弄。$true#别，我干。|7|20,是否现在提升3%的攻防？|10005|6,false#那我就先走一步了|7|1|4"
+  },
+  {
+    "id": 10011,
+    "events": "6,false#当你购买NPC的物品后，他们就会提供一些信息。$true#似乎挺势利。$false#爱买不买。$true#。。。|29,1|7|1|4"
+  },
+  {
+    "id": 10012,
+    "events": "6,false#大清仓，大处理！$false#一把<color=blue>蓝钥匙</color>只卖<color=red>50</color>元了！$false#走过路过不要错过！$true#大叔，你都被抓了还想着卖东西呢=_=|7|20,是否花费<color=red>50</color>金币买一把<color=blue>蓝钥匙</color>？|10006|6,false#魔塔一共<color=red>50</color>层，每<color=red>10</color>层一个区域。$false#必须打败每个区域的头目，才能到达更高的地方|29,3|7|4|1"
+  },
+  {
+    "id": 10013,
+    "events": "6,false#从前一个商人卖钥匙。$false#5把<color=yellow>黄钥匙</color>卖<color=red>50</color>元，每把进价9元，请问他赚了多少元？$true#49元。$false#你不懂数学。$true#但我懂奸商。|7|20,是否花费<color=red>50</color>金币买5把<color=yellow>黄钥匙</color>？|10007|6,false#在商店里，你最好提升防御。等砍不动怪时再提升攻击$true#为什么？$false#我的台词是这么写的。|29,4|7|4|1"
+  },
+  {
+    "id": 10014,
+    "events": "17,Heroine,true#你就留在这吧，我一个人进去。$false#小心些。$true#好的。|7|1|13,10,6:4,Heroine,10015,false,true"
+  },
+  {
+    "id": 10015,
+    "events": "-1|15,7:2,true|16,-1:0|4|24,5|10008|6,true#你在此地不要走动，我去打几个骷髅。$false#我还得依靠你啊，别挂了就好。$true#。。。|7|4|24,5"
+  },
+  {
+    "id": 10016,
+    "events": "17,SkullRed,false#哈哈，你果然会来。$false#兄弟们，上！$true#有埋伏？|7|14,10,5:6,Way|14,10,7:6,Way|10009|22,1.5|13,10,4:8,DoorGreen,0,true,false|13,10,8:8,DoorGreen,0,true,false|13,10,6:9,DoorGreen,0,true,false|13,10,6:5,DoorGreen,0,true,false|13,10,6:3,EPAfterM,10017,true,false|4|1"
+  },
+  {
+    "id": 10017,
+    "events": "1|26,7:2,1|6,true#看起来是解决了。|17,Heroine,false#嗯，刚才看见那么多骷髅，都以为你要挂了呢。$true#你就不能盼我点好么。。|7|13,10,1:1,Warrior,10018,false,true"
+  },
+  {
+    "id": 10018,
+    "events": "-1|15,5:2,false|6,false#嗨，勇士，好久不见了$true#是你啊，上次都没感谢你呢。$false#小事啦，我还得谢谢你打开了上楼的路啦。$false#作为一个神偷，我也该更上一层楼了。|7|15,6:1,false|1|17,Heroine,false#他是谁？$true#一个小偷。上次我被魔王埋伏，就是他挖地道，我们才出来的。$false#隐约觉得他不是好人呢。$true#是你多虑了。$true#人家总不可能是魔王变的吧。$false#我看没准。$true#好了，我们也该上楼了。$true#总之先能逃出去再说。$false#嗯。|7|27,7:2,6:3|22,0.5|23,7:2|4"
+  },
+  {
+    "id": 10019,
+    "events": "10012|13,12,11:11,MerchantRed,10020,true,false"
+  },
+  {
+    "id": 10020,
+    "events": "6,false#我有许多黄钥匙，<color=red>1000</color>金币一把，你要吗？$true#1000金币。。你抢钱啊?$false#没办法，我也是为了防止玩家把钥匙用光，通不了关才设计的嘛。|7|20,是否花费<color=red>1000</color>金币买一把黄钥匙？|10013|24,2"
+  },
+  {
+    "id": 10021,
+    "events": "6,false#我这有红钥匙，<color=red>800</color>金币一把。$true#啥？这玩意这么值钱么？|7|20,是否花费<color=red>800</color>金币买一把<color=red>红钥匙</color>？|10014|6,false#你是否注意到5，9，14，16，18的某几块墙壁与众不同？|29,5|7|4|1"
+  },
+  {
+    "id": 10022,
+    "events": "6,false#我这有蓝钥匙，你出<color=red>200</color>金币就卖给你。|7|20,是否花费<color=red>200</color>金币买一把<color=blue>蓝钥匙</color>？|10016|6,false#十字架会对<color=red>兽人</color>和<color=red>吸血鬼</color>的伤害加倍$false#它隐藏于高于15层的墙内|29,6|7|4|1"
+  },
+  {
+    "id": 10023,
+    "events": "6,false#你好啊，这条大章鱼挡住了去路，幸好我会挖地道。$false#你现在最好也躲开它。|7|14,15,8:11,Way|22,0.5|6,false#先走一步|7|15,6:11,false|4|1"
+  },
+  {
+    "id": 10024,
+    "events": "6,false#塔里有两把<color=red>隐藏的红钥匙</color>。$true#它们在哪？$false#我也不知道。$true#塔里还有一辆隐藏的兰博基尼。$false#车在哪？$true#我也不知道。$false#滚。|29,7|7|4|1"
+  },
+  {
+    "id": 10025,
+    "events": "6,true#这里似乎有暗道|7|4|1|14,16,10:1,Way|14,16,11:1,Way|13,16,11:1,OldManBlue,10026,true,false"
+  },
+  {
+    "id": 10026,
+    "events": "6,false#我这有瓶无根水，能<color=red>回血</color>，点数是 你的<color=red>攻击</color>+你的<color=red>防御</color>，你要吗？$true#无根？听起来有点怪怪的。|7|9,14|4|1"
+  },
+  {
+    "id": 10027,
+    "events": "6,false#不提升攻击力，会很难打败石头人。|29,8|7|4|1"
+  },
+  {
+    "id": 10028,
+    "events": "6,true#这里似乎有暗道|18|14,19,6:9,Way|13,19,6:9,Cross,25,true,false|7|4|1"
+  },
+  {
+    "id": 10029,
+    "events": "6,true#这里只有蝙蝠，BOSS呢？|7|10018|22,0.8|13,20,6:6,BatVampire,113,true,false|17,BatVampire,false#在找我吗？$true#是的。$false#很好，你打败了骷髅族$false#但别想像藐视骷髅人一样藐视我。$false#我对于你就像是神一样，是不可战胜的。$false#呵呵，来吧。$true#我要让你知道。$true#什么叫反派死于话多。|17,Heroine,true#艾玲，你先退下，我和这家伙单挑。|1|7|13,20,6:4,Heroine,10030,false,true"
+  },
+  {
+    "id": 10030,
+    "events": "-1|15,7:2,true|16,-1:0|13,20,6:3,DoorGreen,0,true,false|4"
+  },
+  {
+    "id": 10031,
+    "events": "26,,2|26,7:2,1|17,Heroine,true#我们走吧。$false#有点奇怪。$true#怎么了？$false#总感觉这里的一切，都是设计好的。$false#魔王说会在50层等你。$false#小偷每次都能准确给你提供到路。$false#然后是各种BOSS。$false#明明可以直接干掉我们，却等着你去搜集装备，等你变强后再让你干掉。$true#这么一说，好像确实是。$true#但我们现在似乎别无选择，只能向上。$false#嗯。|7|25,6:9|27,7:2,6:2|23,7:2|4|1"
+  },
+  {
+    "id": 10032,
+    "events": "6,false#大法师住在25楼。$true#住在这种地方真的舒服么？$false#他是魔塔的主人。$true#那魔王是啥？$false#以你现在的状态去攻击他简直就是自杀。$true#不去不就行了。$false#应当取更高级的道具。$true#那……$false#你再打岔我和你急！$false#想去50层就干掉他，一点都不懂尊重老人。$true#。。。|29,9|7|4|1"
+  },
+  {
+    "id": 10033,
+    "events": "17,Heroine,false#这一层啥都没有哎。$true#就是。$true#策划真够懒的，为了凑够50层也不用这样啊。|7|4|1"
+  },
+  {
+    "id": 10034,
+    "events": "10019"
+  },
+  {
+    "id": 10035,
+    "events": "6,false#我没什么话可说，这一层被复刻这游戏的程序猿改了。|29,10|1|7|4"
+  },
+  {
+    "id": 10037,
+    "events": "10020"
+  },
+  {
+    "id": 10038,
+    "events": "26,,3|17,Princess,true#How are you？$false#I am fine，thanks!And you？$true#既然没事，那我走了。|26,,1|17,Princess,false#回来！$false#你看老娘像没事的样子吗？|7|26,,3|17,Princess,false#会说中文拽什么英文，害的老娘以为你是外国的。$true#。。$false#我可是公主，快救我出去。$true#为什么？$false#没我你上不去50层。$true#早这么说，我不就明白了嘛！|29,11|7|4|1"
+  },
+  {
+    "id": 10039,
+    "events": "6,false#如果你到27楼的状态是：$false#生命1500，攻击80，防御98，$false#拥有1蓝钥匙，5黄钥匙，$false#那么祝贺你，你前期是比较成功的。|29,12|7|4|1"
+  },
+  {
+    "id": 10040,
+    "events": "6,false#我回收黄钥匙，100金币一把。|7|20,是否以<color=green>100</color>金币卖一把<color=yellow>黄钥匙</color>？|10022|4|24,2"
+  },
+  {
+    "id": 10041,
+    "events": "6,false#我回收蓝钥匙，300金币一把。|7|20,是否以<color=green>300</color>金币卖一把<color=blue>蓝钥匙</color>？|10023|4|24,2"
+  },
+  {
+    "id": 10042,
+    "events": "6,false#我回收红钥匙，800金币一把。|7|20,是否以<color=green>800</color>金币卖一把<color=red>红钥匙</color>？|10024|4|24,2"
+  },
+  {
+    "id": 10043,
+    "events": "6,false#我听说塔里有<color=red>增加金币</color>的宝物，暗层<color=red>在地下</color>，需要打开机关才能进入。$false#如果你能帮我把23层的机关打开，我就帮你打通下一层的道路。|7|4|10025|6,false#已经打开了吗？$false#感谢，那我就先走一步了。|14,29,6:9,Way|7|15,1:1,false|17,Heroine,false#你觉得他多大可能会成功？$true#不好说。$true#希望别在<color=red>2层的监狱</color>再见到他吧|7|4|1"
+  },
+  {
+    "id": 10044,
+    "events": "6,false#你们好啊，又见面了。$true#看样子挺狼狈啊。|17,Heroine,false#小偷先生果然是被抓了。|6,false#别提了，我在1层并没有发现宝物的入口，估计是找不到了。$false#现在只能向上走了。$false#不过我也打听到35层有龙。我来打洞，我们一起绕过它。|7|4|1|10032"
+  },
+  {
+    "id": 10045,
+    "events": "6,false#我有4把黄钥匙和1把蓝钥匙，你出1000金币就卖给你。|7|20,是否花费<color=red>1000</color>金币买4把<color=yellow>黄钥匙</color>和一把<color=blue>蓝钥匙</color>？|10027|6,false#从游戏名可知，魔塔有50层高。$false#但是，你不能从49层直接上50层。$false#你最好留意<color=red>之前的楼层漏掉的东西</color>。|29,14|7|4|1"
+  },
+  {
+    "id": 10046,
+    "events": "6,false#<color=red>双手剑士</color>的攻击很高，对付他最好是<color=red>一击必杀</color>，|6,false#而且要特别注意<color=red>对方先手攻击时</color>的特殊情况。|29,15|7|4|1"
+  },
+  {
+    "id": 10047,
+    "events": "17,Heroine,false#下面的剑，怎么看都像是有陷阱的样子。|7|26,,0|22,1|17,Heroine,true#这么一说，还真像。$false#还是注意一下吧。|7|4|1"
+  },
+  {
+    "id": 10048,
+    "events": "10028|1"
+  },
+  {
+    "id": 10049,
+    "events": "10031|6,true#某人是不是该到了？|7|13,35,6:1,Warrior,10050,false,true"
+  },
+  {
+    "id": 10050,
+    "events": "-1|6,false#来了！|7|26,,1|15,5:2,false|22,0.5|14,35,4:2,Way|6,false#这样就行了。|7|15,6:1,false|4|1"
+  },
+  {
+    "id": 10051,
+    "events": "6,false#别匆忙，这一区域<color=red>陷阱很多</color>。|29,16|7|4|1"
+  },
+  {
+    "id": 10052,
+    "events": "6,false#在这一层有<color=red>四条密道</color>，你最好能利用好它们。|29,17|7|4|1"
+  },
+  {
+    "id": 10053,
+    "events": "10033|17,Heroine,false#这一层有好多宝物。$true#可惜小偷不在，不然这点东西都不够咱分的。$false#叫他干啥，都说过了他不像好人。$false#要是有能<color=red>一次性凿掉所有墙壁</color>宝物就好了。|7|4|1"
+  },
+  {
+    "id": 10054,
+    "events": "10034|17,Heroine,false#又是这套路。$true#了解。|7|4|1"
+  },
+  {
+    "id": 10055,
+    "events": "6,false#我有3把黄钥匙，你出200金币就卖给你。$true#4楼那位50金就5把。你这不是坑人吗？|7|20,是否花费<color=red>200</color>金币买3把<color=yellow>黄钥匙</color>？|10036|6,false#放圣剑房间的门坏了，但你可以用镐进入。|6,false#或者可能还有其他方法，你可以尝试。|29,18|7|4|1"
+  },
+  {
+    "id": 10056,
+    "events": "6,false#听好，这是上面门的线索。|6,false#你需要猜出3个数字。|6,false#9扇门从左至右，从上到下依次对应数字1-9。|6,false#以下是数字的线索：|6,false#1.你最早看到魔王的层数。|6,false#2.你在39层（本层）前打败过的首领个数。|6,false#3.圆周率的小数点后第5位|6,false#我说完了。|7|4|1"
+  },
+  {
+    "id": 10057,
+    "events": "2,0,1|1|22,0.6|10037"
+  },
+  {
+    "id": 10058,
+    "events": "6,false#我有3把蓝钥匙，你出2000金币就卖给你。|7|20,是否花费<color=red>2000</color>金币买3把<color=blue>蓝钥匙</color>？|10038|6,false#塔里有<color=red>幸运金币</color>，能让你击杀敌人后<color=red>获得的金币翻倍</color>。$true#之前小偷说的会不会是这个？|29,19|7|4|1"
+  },
+  {
+    "id": 10059,
+    "events": "14,40,5:3,Way|14,40,7:3,Way|6,false#你来了。$true#你是一开始的……|7|13,40,6:2,Heroine,10060,false,true"
+  },
+  {
+    "id": 10060,
+    "events": "-1|15,7:2,true|16,0:1|6,false#公主？你怎么会在这？|17,Elf,true#（公主？那之前看到的是……）$false#现在还不是时候。$false#这一层首领区域的怪物都是<color=red>先手攻击</color>，要小心。|7|4|13,40,6:3,GemBlue,70,true,false|30|10008|6,false#公主为什么会妖精打扮呢？$true#等我先解决这一层再说。$false#嗯。|7|4|24,9"
+  },
+  {
+    "id": 10061,
+    "events": "17,General,false#我还在担心你不能来了。$false#我确信这次我一定能杀了你。$true#上一个被我弄死的人也是这么说的。|13,40,6:4,DoorGreen,-1,true,false|7|4|1"
+  },
+  {
+    "id": 10062,
+    "events": "10041|6,true#这墙似乎有机关，但墙体似乎暂时无法破坏。|7|4|24,0|14,41,10:10,Way|13,41,10:10,SorcererRed,121,true,false|1"
+  },
+  {
+    "id": 10063,
+    "events": "6,false#怎么又是你这个瘟神。$true#你不是要决斗吗？$false#是啊，你明天再来，这个点都该睡觉了。（溜先）|7|15,6:4,true|17,Boss_Final,false#敢临阵脱逃？|6,false#啊，老板，我错了。|17,Boss_Final,false#叫我董事长！|12,Lighting,6:4|6,false#我一定会回来的！|7|4|17,Heroine,true#这。是魔王的声音吗？$false#（奇怪，这声音怎么这么熟悉？）|11|4|7|1"
+  },
+  {
+    "id": 10064,
+    "events": "6,false#以下是魔法攻击的情报：$false#从巫师身边经过，会<color=red>受到巫师的魔法攻击</color>。$false#<color=red>红巫师</color>攻击力为<color=red>200</color>，<color=yellow>黄巫师</color>为<color=red>100</color>$false#从两个魔法警卫中间经过，<color=red>HP会减半</color>。$true#一路上中招不少了。$false#但是记住，魔法攻击<color=red>不会致死</color>。|29,20|7|4|1"
+  },
+  {
+    "id": 10065,
+    "events": "6,false#44层被藏在异空间里，你必须<color=red>使用秘宝</color>才能到达|29,21|7|4|1"
+  },
+  {
+    "id": 10066,
+    "events": "6,false#41楼实际上是<color=red>左右对称</color>的。$false#如果它不对称，那一定是你的打开方式有问题。|29,22|7|4|1"
+  },
+  {
+    "id": 10067,
+    "events": "6,false#给我1000金币，我就给你加2000点生命值。$true#我是车么？还带加油的。|7|20,是否花费<color=red>1000</color>金币提升<color=green>2000点生命</color>？|10042|6,false#神圣盾能<color=red>免疫魔法攻击</color>，但它被藏在异空间里。|29,23|7|4|1"
+  },
+  {
+    "id": 10068,
+    "events": "6,false#给我4000金币，我就给地震卷轴。$true#什么玩意这么值钱？$false#它能<color=red>震碎一层楼所有的墙</color>。$false#但最外面的围墙就别想了。出去了会出BUG的。|7|20,是否花费<color=red>4000</color>购买<color=green>地震卷轴</color>？|10043|6,false#你是否看见过一条魔龙呢？$false#打败它你需要<color=red>圣剑</color>，<color=red>圣盾</color>，<color=red>屠龙匕</color>等更高级装备。|29,24|7|4|1"
+  },
+  {
+    "id": 10069,
+    "events": "6,true#这块地板有些不对。|18|13,48,1:10,Guard,125,true,false|7|4|1"
+  },
+  {
+    "id": 10070,
+    "events": "6,false#骰子上的5代表一种封印魔法，你最好记住它，在与假魔王战斗时有用。$true#骰子？5？假魔王？难道魔王还有假？|29,25|7|4|1"
+  },
+  {
+    "id": 10071,
+    "events": "17,Boss_Final,false#又见面了。$false#我很想和你单挑，但我的部下不让。|17,Heroine,true#艾玲，这里太危险，你先下楼等我。$false#好，你也小心。$false#有一件事我不是特别肯定。$false#刚刚金骑士被电的时候，说话的人很像小偷。$true#！|7|13,49,2:1,Heroine,10073,false,true"
+  },
+  {
+    "id": 10072,
+    "events": "6,true#假货，去死吧！$false#你是在找那个女孩吗？$true#！$true#她在哪？$false#嘻~|7|10048|22,0.5|6,true#可恶。|7|4|1"
+  },
+  {
+    "id": 10073,
+    "events": "-1|15,1:1,false|23,2:1|4|1"
+  },
+  {
+    "id": 10074,
+    "events": "17,Warrior,false#你来了。$true#居然真的是你。$false#这次倒是不笨嘛，上一次你还很惊讶呢。$true#（上一次？难道我真来过这？）$true#艾玲在哪？$false#抱歉，这我还真不知道。$false#但我知道你今天会死在这。|4|7|1|13,50,6:10,Boss_True,130,true,false"
+  },
+  {
+    "id": 10075,
+    "events": "-1|6,false#终于等到这一刻了。$false#这次可是你亲手毁掉了魔塔。|17,Boss_Final,false#什么？你是不是以为这样我就没办法了。|7|27,6:2,6:5|23,6:6|6,false#一层的出口已经打开，带着神圣剑快走！|7|12,Portal,6:9|22,0.5|1|10050|4|10,49,6:11"
+  },
+  {
+    "id": 10076,
+    "events": "6,false#你终于...$true#走！|10051|4|7|1"
+  },
+  {
+    "id": 10077,
+    "events": "10052"
+  }
+]

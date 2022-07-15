@@ -1,0 +1,20 @@
+{
+  "floorAndPos": "1,6:1",
+  "keys": "0,0,0",
+  "hp": 1000,
+  "atk": 100,
+  "def": 100,
+  "coin": 0,
+  "items": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+  "maxFloor": 1,
+  "task1": false,
+  "task2": [
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "isImmune": false,
+  "info": ""
+}

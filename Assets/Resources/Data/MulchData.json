@@ -1,0 +1,512 @@
+[
+  {
+    "floor": 0,
+    "enemyData": "",
+    "doorData": "",
+    "itemData": "6:6,Coin,32",
+    "stairsData": "1:11,StairsNext,200,1,6:1",
+    "npcData": "",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 1,
+    "enemyData": "9:1,BallGreen,100|11:1,BallGreen,100|10:2,BatSmall,100|2:5,SkullSword,100|2:8,SkullNormal,100|7:6,BatSmall,100|9:6,BatSmall,100|8:6,Wizard,100|3:11,BallGreen,100|5:11,BallGreen,100|4:11,BallRed,101",
+    "doorData": "2:4,DoorYellow,11|2:7,DoorYellow,11|4:9,DoorYellow,11|6:3,DoorYellow,11|6:6,DoorYellow,11|9:7,DoorYellow,11|10:3,DoorYellow,11",
+    "itemData": "1:1,Bottle1,51|1:2,Bottle1,51|1:9,Bottle1,51|8:8,Bottle1,51|10:1,Bottle2,52|1:6,KeyYellow,1|3:1,KeyYellow,1|3:2,KeyYellow,1|5:2,KeyYellow,4|8:9,KeyYellow,1|7:8,GemBlue,62|7:9,GemRed,61|2:1,FlyStaff,22",
+    "stairsData": "1:11,StairsNext,200,2,1:11",
+    "npcData": "6:2,Elf,1001",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 2,
+    "enemyData": "6:10,StoneManBlue,10001|8:10,StoneManBlue,10002",
+    "doorData": "5:1,DoorFe,0|5:4,DoorFe,0|5:7,DoorFe,0|9:1,DoorFe,0|9:4,DoorFe,0|9:7,DoorFe,0|3:11,DoorBlue,12",
+    "itemData": "3:7,KeyYellow,1|3:8,KeyYellow,1|4:8,KeyYellow,1|3:1,Bottle2,52|3:2,Bottle2,52|4:2,Bottle2,52",
+    "stairsData": "1:11,StairsLast,200,1,1:11|1:1,StairsNext,200,3,1:1",
+    "npcData": "11:5,MerchantRed,10010|3:5,Warrior,10004|11:8,OldManBlue,10009",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 3,
+    "enemyData": "1:9,Wizard,100|7:7,BallGreen,102|10:4,Wizard,100|1:5,SkullNormal,100|8:2,BallRed,100|10:10,BatSmall,100|3:7,BatSmall,100",
+    "doorData": "1:6,DoorYellow,11|1:8,DoorYellow,11|9:1,DoorYellow,11|9:10,DoorYellow,11|9:4,DoorYellow,11",
+    "itemData": "2:11,GemBlue,62|2:10,Bottle1,51|11:5,Bottle1,51|11:11,Bottle1,51|1:3,Bottle1,51|2:3,GemRed,61|1:11,KeyYellow,1|5:10,KeyYellow,1|2:4,KeyYellow,1|11:4,KeyYellow,1|6:9,KeyYellow,1|6:11,KeyYellow,1|4:9,KeyYellow,1|4:11,KeyYellow,1|5:11,Bottle2,52|6:10,Bottle2,52|4:10,Bottle2,52|5:9,KeyBlue,2",
+    "stairsData": "1:1,StairsLast,200,2,1:1|11:1,StairsNext,200,4,11:1",
+    "npcData": "11:8,OldManBlue,10007",
+    "evtPointData": "5:3,EPAfterM,10003",
+    "shopData": ""
+  },
+  {
+    "floor": 4,
+    "enemyData": "8:1,BallGreen,100|3:2,BallGreen,100|3:5,BallGreen,100|4:1,BallGreen,100|1:5,BallRed,100|6:7,BallRed,100|9:7,SkullNormal,100|10:9,SkullSword,100|8:3,Wizard,100|2:7,Wizard,100|4:3,BatSmall,100",
+    "doorData": "1:4,DoorYellow,11|8:4,DoorYellow,11|4:4,DoorYellow,11|4:7,DoorYellow,11|2:8,DoorYellow,11|10:8,DoorYellow,11|11:4,DoorYellow,11|6:8,DoorBlue,12",
+    "itemData": "1:10,Bottle1,51|9:2,Bottle1,51|5:1,KeyYellow,1|5:2,KeyYellow,1|3:1,KeyYellow,1|3:10,KeyYellow,1|9:10,KeyYellow,1|2:11,KeyBlue,2|7:2,GemRed,61|11:10,Bottle2,52",
+    "stairsData": "1:1,StairsNext,200,5,1:1|11:1,StairsLast,200,3,11:1",
+    "npcData": "10:11,OldManBlue,10008",
+    "evtPointData": "",
+    "shopData": "6:11,shop,0,0"
+  },
+  {
+    "floor": 5,
+    "enemyData": "2:5,SkullSword,100|7:6,BallGreen,100|8:10,BallGreen,100|9:10,BallGreen,100|11:5,BallRed,100|11:10,BallRed,100|4:11,BallRed,100|4:6,BatSmall,100|6:8,BatSmall,100|3:9,BatSmall,100|3:7,Wizard,100|6:5,BallGreen,100",
+    "doorData": "4:8,DoorYellow,11|2:9,DoorYellow,11|5:11,DoorYellow,11|8:3,DoorYellow,11|10:11,DoorYellow,11",
+    "itemData": "1:3,GemBlue,62|6:10,KeyYellow,1|2:3,KeyYellow,1|8:8,KeyYellow,1|8:9,KeyYellow,1|9:8,KeyYellow,1|9:9,KeyYellow,1|1:6,KeyYellow,1|1:7,KeyYellow,1|3:3,Bottle1,51|11:1,Sword0,63|4:3,NoteBook,23",
+    "stairsData": "1:1,StairsLast,200,4,1:1|1:11,StairsNext,200,6,1:11",
+    "npcData": "",
+    "evtPointData": "9:1,EPBeforeM,300",
+    "shopData": ""
+  },
+  {
+    "floor": 6,
+    "enemyData": "10:11,BallGreen,100|2:1,BallGreen,100|9:3,BallRed,100|11:3,BallRed,100|4:9,BallRed,100|3:6,BallRed,100|8:6,SkullNormal,100|9:6,SkullSword,100|11:8,BatSmall,100|2:3,BatSmall,100|5:1,SkullNormal,100|1:4,Wizard,100|4:6,Wizard,100|7:11,Wizard,100|10:9,SkullNormal,100",
+    "doorData": "7:4,DoorYellow,11|1:2,DoorYellow,11|8:4,DoorYellow,11|11:10,DoorYellow,11|3:8,DoorYellow,11|10:4,DoorYellow,11|2:8,DoorYellow,11|5:8,DoorYellow,11",
+    "itemData": "8:9,Bottle1,51|9:1,Bottle1,51|8:1,Bottle1,51|4:3,GemBlue,62|9:11,KeyYellow,1|4:10,KeyYellow,1|3:11,KeyYellow,1|4:11,KeyYellow,1|3:10,KeyYellow,1|6:6,KeyYellow,1",
+    "stairsData": "1:11,StairsLast,200,5,1:11|11:1,StairsNext,200,7,11:1",
+    "npcData": "4:4,OldManBlue,10011|8:8,MerchantRed,10012",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 7,
+    "enemyData": "1:2,BallGreen,100|11:9,BallGreen,100|11:11,BallGreen,100|3:2,BallGreen,100|11:10,BallRed,100|2:1,BallRed,100|5:9,BallRed,100|7:3,BallRed,100|9:7,SkullNormal,100|9:5,SkullSword,100|2:6,SkullSword,100|5:3,BatSmall,100|3:9,BatSmall,100|7:9,SkullSword,100|7:2,Wizard,100|4:6,Wizard,100",
+    "doorData": "1:7,DoorYellow,11|3:5,DoorYellow,11|7:5,DoorYellow,11|7:7,DoorYellow,11|11:5,DoorYellow,11|11:7,DoorYellow,11|3:7,DoorYellow,11|1:5,DoorYellow,11|5:5,DoorYellow,11|5:7,DoorYellow,11",
+    "itemData": "5:1,KeyYellow,1|5:2,KeyYellow,1|9:1,KeyYellow,1|9:2,KeyYellow,1|9:10,KeyYellow,1|9:11,KeyYellow,1|9:9,Bottle1,51|9:3,Bottle2,52|7:1,Bottle2,52|3:11,GemRed,61",
+    "stairsData": "11:1,StairsLast,200,6,11:1|1:11,StairsNext,200,8,1:11",
+    "npcData": "6:11,MerchantRed,10013",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 8,
+    "enemyData": "1:2,BallGreen,100|3:6,BallGreen,100|7:10,BallGreen,100|2:6,BallRed,100|4:6,BallRed,100|2:1,BatSmall,100|4:4,BatSmall,100|7:5,BatSmall,100|7:7,Wizard,100|8:4,Wizard,100|11:2,SkullNormal,100|10:1,SkullSword,100|9:7,StoneManYellow,103|11:7,StoneManYellow,103|6:4,SkullNormal,100",
+    "doorData": "1:3,DoorYellow,11|1:9,DoorYellow,11|3:11,DoorYellow,11|4:11,DoorYellow,11|5:5,DoorYellow,11|6:9,DoorYellow,11|9:1,DoorYellow,11|10:5,DoorYellow,11|11:3,DoorYellow,11|10:8,DoorGreen,0|3:1,DoorBlue,12",
+    "itemData": "3:8,KeyYellow,1|4:8,KeyYellow,1|5:8,KeyYellow,1|9:11,KeyYellow,1|11:11,KeyYellow,1|4:1,KeyYellow,1|5:2,KeyYellow,1|7:1,KeyYellow,1|11:9,Bottle1,51|1:7,Bottle1,51|8:2,Bottle1,51|7:2,KeyBlue,2|4:2,GemRed,61|5:1,GemBlue,62|10:10,KeyRed,3|9:9,Bottle2,52",
+    "stairsData": "1:11,StairsLast,200,7,1:11|6:11,StairsNext,200,9,6:11",
+    "npcData": "",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 9,
+    "enemyData": "10:10,BallGreen,100|9:11,BallGreen,100|7:6,BallRed,100|5:2,SkullNormal,100|10:2,SkullNormal,100|3:11,SkullNormal,100|1:9,SkullSword,100|4:5,SkullSword,100|1:4,SkullSword,100|11:6,SkullSword,100|9:1,Wizard,100|11:3,Wizard,100|7:2,BatSmall,100|3:7,BatSmall,100",
+    "doorData": "5:3,DoorYellow,11|8:1,DoorYellow,11|4:11,DoorYellow,11|3:5,DoorYellow,11|4:7,DoorYellow,11|9:8,DoorYellow,11|8:8,DoorYellow,11|8:11,DoorYellow,11|1:3,DoorYellow,11|6:1,DoorYellow,11|11:4,DoorYellow,11|3:1,DoorBlue,12|6:9,DoorBlue,12",
+    "itemData": "11:11,Bottle1,51|11:1,Bottle1,51|2:2,Bottle1,51|5:8,KeyYellow,1|2:10,KeyYellow,1|1:5,KeyYellow,1|7:8,KeyYellow,1|5:5,KeyYellow,1|9:3,KeyYellow,1|2:8,KeyYellow,1|6:7,GemRed,61|1:7,GemBlue,62|9:5,Shield,64",
+    "stairsData": "1:1,StairsNext,200,10,1:1|6:11,StairsLast,200,8,6:11",
+    "npcData": "",
+    "evtPointData": "10:7,EPBeforeM,301",
+    "shopData": ""
+  },
+  {
+    "floor": 10,
+    "enemyData": "4:1,Wizard,100|8:1,Wizard,100|1:9,SkullNormal,104|2:9,SkullNormal,104|3:9,SkullNormal,104|9:9,SkullNormal,104|10:9,SkullNormal,104|11:9,SkullNormal,104|1:6,SkullNormal,100|3:6,SkullNormal,100|9:6,SkullNormal,100|11:6,SkullNormal,100|2:5,SkullSword,100|2:8,SkullSword,104|10:5,SkullSword,104|10:8,SkullSword,104|6:8,SkullRed,105",
+    "doorData": "1:3,DoorYellow,11|3:3,DoorYellow,11|9:3,DoorYellow,11|11:3,DoorYellow,11|6:3,DoorRed,13|4:8,DoorGreen,0|8:8,DoorGreen,0",
+    "itemData": "10:6,GemRed,61|2:6,GemBlue,62|11:1,Bottle2,52",
+    "stairsData": "1:1,StairsLast,200,9,1:1",
+    "npcData": "",
+    "evtPointData": "6:4,EPAfterM,10014|6:7,EPAfterM,10016",
+    "shopData": ""
+  },
+  {
+    "floor": 11,
+    "enemyData": "6:10,BatSmall,100|10:3,BatSmall,100|11:4,BatBig,100|6:8,BatBig,100|4:5,BatBig,100|2:3,BatBig,100|9:1,BatBig,100|8:5,BallBlack,100|4:3,BallBlack,100|11:9,BallBlack,100|5:7,Orca,100|8:10,Orca,100|1:7,WizardRed,106|3:7,WizardRed,106|8:7,WizardRed,100",
+    "doorData": "5:3,DoorYellow,11|9:2,DoorYellow,11|9:9,DoorYellow,11|7:5,DoorYellow,11|7:7,DoorYellow,11|7:11,DoorYellow,11|5:9,DoorYellow,11|2:4,DoorBlue,12|2:8,DoorGreen,0",
+    "itemData": "9:6,Bottle1,53|10:11,Bottle1,53|11:11,KeyYellow,1|3:1,KeyYellow,1|1:2,KeyYellow,1|1:1,KeyYellow,1|4:1,KeyYellow,1|2:1,KeyYellow,1|5:11,GemRed,61|1:5,Bottle2,54|8:1,Bottle2,54|2:10,Shield2,65",
+    "stairsData": "6:1,StairsLast,200,10,6:1|11:1,StairsNext,200,12,11:1",
+    "npcData": "",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 12,
+    "enemyData": "2:7,WizardRed,100|5:9,WizardRed,100|7:6,WizardRed,100|7:9,WizardRed,100|4:1,BatSmall,100|8:1,BatSmall,100|3:10,BatBig,100|11:7,BatBig,100|11:5,BallBlack,100|3:3,Orca,100|6:7,Orca,100|10:9,Orca,100|11:3,Orca,100",
+    "doorData": "1:8,DoorYellow,11|4:7,DoorYellow,11|3:2,DoorYellow,11|6:8,DoorYellow,11|8:6,DoorYellow,11|11:4,DoorYellow,11|9:4,DoorBlue,12",
+    "itemData": "5:2,Bottle1,53|7:2,Bottle1,53|9:7,Bottle1,53|6:5,Bottle2,54|6:11,GemRed,66|5:11,KeyYellow,1|7:11,KeyYellow,1|9:5,KeyYellow,1|1:5,KeyYellow,1|2:5,KeyYellow,1|1:4,KeyYellow,1|2:4,KeyBlue,2|10:6,GemBlue,67",
+    "stairsData": "11:1,StairsLast,200,11,11:1|1:1,StairsNext,200,13,1:1",
+    "npcData": "1:11,MerchantRed,10021",
+    "evtPointData": "10:11,EPBeforeM,10019|2:11,EPBeforeM,301",
+    "shopData": "6:3,shop,0,0"
+  },
+  {
+    "floor": 13,
+    "enemyData": "",
+    "doorData": "6:2,DoorYellow,11",
+    "itemData": "6:7,SwordN,78",
+    "stairsData": "1:1,StairsLast,200,12,1:1|11:1,StairsNext,200,14,11:1",
+    "npcData": "",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 14,
+    "enemyData": "2:10,OrcaSword,107|3:11,OrcaSword,107|1:11,OrcaSword,107|7:10,OrcaSword,100|5:10,BallBlack,100|4:4,Orca,100|11:6,Orca,100|10:8,OrcaSword,100|6:7,Head,100|4:7,BatBig,100|8:7,BatBig,100|2:6,BallBlack,100|10:4,BallBlack,100|8:4,BallBlack,100|3:3,WizardRed,100|1:3,WizardRed,100",
+    "doorData": "1:5,DoorYellow,11|3:5,DoorYellow,11|4:1,DoorYellow,11|10:9,DoorYellow,11|9:3,DoorYellow,11|7:8,DoorYellow,11|6:6,DoorYellow,11|6:4,DoorYellow,11|2:8,DoorBlue,12|5:8,DoorBlue,12|11:5,DoorYellow,11",
+    "itemData": "11:10,KeyYellow,1|11:11,KeyYellow,1|10:11,KeyYellow,1|9:11,KeyYellow,1|6:11,KeyYellow,1|5:2,Bottle1,53|9:6,Bottle1,53|7:11,Bottle1,53|1:1,KeyBlue,2|1:7,Bottle1,53|5:11,GemBlue,67",
+    "stairsData": "11:1,StairsLast,200,13,11:1|6:1,StairsNext,200,15,6:1",
+    "npcData": "",
+    "evtPointData": "6:3,EPBeforeM,301",
+    "shopData": ""
+  },
+  {
+    "floor": 15,
+    "enemyData": "6:6,WuZei,108|9:1,BatSmall,100|10:2,BatSmall,100|9:8,BatBig,100|10:7,BatBig,100|1:2,BatBig,100|3:2,BatBig,100|2:1,WizardRed,100|11:6,WizardRed,100|1:5,BallBlack,100|3:9,BallBlack,100|11:10,BallBlack,100|2:11,OrcaSword,100|1:10,Orca,100",
+    "doorData": "1:8,DoorYellow,11|2:3,DoorYellow,11|4:11,DoorYellow,11|9:3,DoorYellow,11|9:6,DoorYellow,11|8:1,DoorYellow,11|11:9,DoorYellow,11|6:9,DoorGreen,0",
+    "itemData": "3:6,KeyBlue,2|3:5,KeyYellow,1|3:7,KeyYellow,1|11:4,Bottle2,54|1:11,GemBlue,67",
+    "stairsData": "6:11,StairsNext,200,16,6:11|6:1,StairsLast,200,14,6:1",
+    "npcData": "11:1,MerchantRed,10022|9:11,Warrior,10023",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 16,
+    "enemyData": "2:9,BatBig,100|2:11,BatBig,100|9:5,BatBig,100|11:11,BatBig,100|2:10,WizardRed,100|10:3,WizardRed,100|6:6,OrcaSword,100|5:9,Orca,100|10:7,Orca,100|2:3,BallBlack,100|9:10,BallBlack,100|3:6,Head,100|9:1,Ghost,100",
+    "doorData": "4:2,DoorYellow,11|4:6,DoorYellow,11|4:10,DoorYellow,11|6:4,DoorYellow,11|8:2,DoorYellow,11|8:10,DoorYellow,11|10:4,DoorYellow,11|10:8,DoorYellow,11|6:8,DoorBlue,12",
+    "itemData": "1:5,GemBlue,67|2:5,KeyYellow,1|2:7,KeyYellow,1|5:7,KeyYellow,1|7:5,KeyYellow,1|7:9,KeyYellow,1|1:9,KeyYellow,1|1:10,KeyYellow,1|1:11,KeyYellow,1|11:5,KeyBlue,2|11:9,Bottle1,53|1:7,GemRed,66",
+    "stairsData": "6:11,StairsLast,200,15,6:11|6:1,StairsNext,200,17,6:1",
+    "npcData": "1:1,OldManBlue,10024",
+    "evtPointData": "10:1,EPBeforeM,10025|2:4,EPBeforeM,301",
+    "shopData": ""
+  },
+  {
+    "floor": 17,
+    "enemyData": "3:4,StoneManYellow,109|3:7,StoneManYellow,110|1:4,StoneManYellow,109|1:7,StoneManYellow,110|9:7,OrcaSword,111|11:7,OrcaSword,111|9:4,Orca,112|11:4,Orca,112|5:5,Orca,100|5:9,Orca,100|7:9,BatBig,100|7:5,BallBlack,100|4:1,BatBig,100|8:1,BatBig,100|6:3,WizardRed,100",
+    "doorData": "2:8,DoorGreen,0|10:5,DoorGreen,0|10:8,DoorGreen,0|2:5,DoorGreen,0|10:2,DoorYellow,11|2:2,DoorYellow,11|5:7,DoorYellow,11|7:7,DoorBlue,12",
+    "itemData": "11:1,Bottle1,53|1:1,Bottle1,53|11:11,GemBlue,67|10:10,Bottle2,54|9:9,KeyYellow,1|11:9,KeyYellow,1|9:11,GemRed,66|2:10,Sword1,68",
+    "stairsData": "6:1,StairsLast,200,16,6:1|6:11,StairsNext,200,18,6:11",
+    "npcData": "",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 18,
+    "enemyData": "9:11,WizardRed,100|11:3,WizardRed,100|1:3,WizardRed,100|5:3,BatBig,100|4:3,BatBig,100|4:2,BatBig,100|5:2,BatBig,100|7:2,BallBlack,100|8:2,BallBlack,100|8:3,BallBlack,100|7:3,BallBlack,100|3:7,Head,100|1:7,Head,100|10:5,Head,100|2:5,Orca,100|10:7,BatBig,100|9:8,Orca,100|5:8,OrcaSword,100|7:8,OrcaSword,100",
+    "doorData": "4:4,DoorYellow,11|8:8,DoorYellow,11|8:4,DoorYellow,11|8:11,DoorYellow,11|11:4,DoorYellow,11|4:8,DoorYellow,11|1:4,DoorYellow,11|6:6,DoorBlue,12|4:11,DoorBlue,12|1:9,DoorYellow,11",
+    "itemData": "11:7,KeyYellow,1|11:11,KeyYellow,1|11:10,KeyYellow,1|11:8,KeyYellow,1|11:9,KeyBlue,2|7:1,KeyYellow,1|5:1,KeyYellow,1|10:2,KeyYellow,1|2:2,KeyYellow,1|11:1,Bottle1,53|1:1,Bottle1,53|2:8,Bottle1,53|2:1,GemRed,66|10:1,GemBlue,67",
+    "stairsData": "6:11,StairsLast,200,17,6:11|1:11,StairsNext,200,19,1:11",
+    "npcData": "3:10,OldManBlue,10027",
+    "evtPointData": "6:9,EPBeforeM,301",
+    "shopData": ""
+  },
+  {
+    "floor": 19,
+    "enemyData": "1:5,BatBig,100|3:1,BatBig,100|10:10,BatBig,100|11:2,BatBig,100|10:1,BatSmall,100|1:8,BatSmall,100|1:1,BallBlack,100|3:4,BallBlack,100|10:7,BallBlack,100|11:7,BallBlack,100|6:3,OrcaSword,100|8:4,OrcaSword,100|11:4,Orca,100|5:6,Head,100|7:6,Head,100|6:11,WizardRed,100|4:9,OrcaSword,100|8:9,OrcaSword,100",
+    "doorData": "1:3,DoorYellow,11|1:6,DoorYellow,11|1:9,DoorYellow,11|4:2,DoorYellow,11|8:1,DoorYellow,11|10:9,DoorYellow,11|11:5,DoorYellow,11|6:5,DoorBlue,12",
+    "itemData": "4:7,KeyYellow,1|5:2,KeyYellow,1|7:2,KeyYellow,1|8:7,KeyYellow,1|10:3,KeyYellow,1|9:3,Bottle1,53|10:11,KeyYellow,1|11:11,GemRed,66|4:11,Bottle1,53|8:11,KeyBlue,2",
+    "stairsData": "1:11,StairsLast,200,18,1:11|6:1,StairsNext,200,20,6:1",
+    "npcData": "",
+    "evtPointData": "6:8,EPBeforeM,10028",
+    "shopData": ""
+  },
+  {
+    "floor": 20,
+    "enemyData": "1:5,BatSmall,100|2:4,BatSmall,100|10:4,BatSmall,100|11:5,BatSmall,100|2:2,Head,100|10:2,Head,100|4:1,WizardRed,100|8:1,WizardRed,100|5:5,BatBig,100|5:6,BatBig,100|5:7,BatBig,100|6:5,BatBig,100|6:7,BatBig,100|7:5,BatBig,100|7:6,BatBig,100|7:7,BatBig,100",
+    "doorData": "1:3,DoorYellow,11|11:3,DoorYellow,11|2:6,DoorBlue,12|10:6,DoorBlue,12|6:3,DoorRed,13|6:9,DoorGreen,0",
+    "itemData": "1:8,GemRed,66|2:8,GemBlue,67|1:7,KeyYellow,1|11:7,KeyYellow,1|1:1,Bottle1,53|10:8,Bottle1,53|11:1,Bottle1,53|11:8,Bottle2,54",
+    "stairsData": "6:1,StairsLast,200,19,6:1|6:11,StairsNext,200,21,6:11",
+    "npcData": "",
+    "evtPointData": "6:4,EPAfterM,10029",
+    "shopData": ""
+  },
+  {
+    "floor": 21,
+    "enemyData": "",
+    "doorData": "",
+    "itemData": "",
+    "stairsData": "6:11,StairsLast,200,20,6:11|6:1,StairsNext,200,22,6:1",
+    "npcData": "6:6,OldManBlue,10032",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 22,
+    "enemyData": "",
+    "doorData": "",
+    "itemData": "",
+    "stairsData": "6:6,StairsNext,200,23,1:11|6:1,StairsLast,200,21,6:1",
+    "npcData": "",
+    "evtPointData": "6:4,EPAfterM,10033",
+    "shopData": ""
+  },
+  {
+    "floor": 23,
+    "enemyData": "",
+    "doorData": "",
+    "itemData": "",
+    "stairsData": "1:11,StairsLast,200,22,6:6|11:11,StairsNext,200,24,1:1",
+    "npcData": "6:6,OldManBlue,10035",
+    "evtPointData": "3:9,EPBeforeM,10034|5:1,EPBeforeM,10034|4:7,EPBeforeM,10034|3:10,EPBeforeM,10034|4:5,EPBeforeM,10034|3:7,EPBeforeM,10034|3:8,EPBeforeM,10034|4:2,EPBeforeM,10034|3:4,EPBeforeM,10034|4:10,EPBeforeM,10034|5:7,EPBeforeM,10034|5:4,EPBeforeM,10034|6:1,EPBeforeM,10034|5:9,EPBeforeM,10034|5:8,EPBeforeM,10034|5:10,EPBeforeM,10034|7:10,EPBeforeM,10034|7:1,EPBeforeM,10034|7:4,EPBeforeM,10034|7:7,EPBeforeM,10034|7:9,EPBeforeM,10034|7:8,EPBeforeM,10034|8:5,EPBeforeM,10034|8:2,EPBeforeM,10034|8:8,EPBeforeM,10034|8:10,EPBeforeM,10034|9:4,EPBeforeM,10034|9:10,EPBeforeM,10034",
+    "shopData": ""
+  },
+  {
+    "floor": 24,
+    "enemyData": "",
+    "doorData": "6:5,DoorGreen,10037|6:7,DoorRed,13",
+    "itemData": "",
+    "stairsData": "6:11,StairsNext,200,50,6:1|2:2,StairsNext,200,25,2:2|1:1,StairsLast,200,23,11:11",
+    "npcData": "",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 25,
+    "enemyData": "6:6,Archmage,114",
+    "doorData": "6:2,DoorRed,13",
+    "itemData": "",
+    "stairsData": "1:1,StairsNext,200,26,1:1|2:2,StairsLast,200,24,2:2",
+    "npcData": "",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 26,
+    "enemyData": "",
+    "doorData": "6:2,DoorRed,13|6:3,DoorRed,13|6:4,DoorRed,13",
+    "itemData": "",
+    "stairsData": "2:2,StairsNext,200,27,2:2|1:1,StairsLast,200,25,1:1",
+    "npcData": "6:6,Princess,10072",
+    "evtPointData": "6:1,EPAfterM,10038",
+    "shopData": ""
+  },
+  {
+    "floor": 27,
+    "enemyData": "",
+    "doorData": "",
+    "itemData": "",
+    "stairsData": "2:2,StairsLast,200,26,2:2|11:1,StairsNext,200,28,11:1",
+    "npcData": "6:11,OldManBlue,10039",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 28,
+    "enemyData": "",
+    "doorData": "",
+    "itemData": "",
+    "stairsData": "11:1,StairsLast,200,27,11:1|1:1,StairsNext,200,29,1:1",
+    "npcData": "3:3,MerchantRed,10040|6:3,MerchantRed,10041|9:3,MerchantRed,10042",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 29,
+    "enemyData": "",
+    "doorData": "",
+    "itemData": "",
+    "stairsData": "6:1,StairsNext,200,30,6:1|1:1,StairsLast,200,28,1:1",
+    "npcData": "6:10,Warrior,10043",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 30,
+    "enemyData": "3:7,BallBlack,115|9:7,BallBlack,115|4:7,BallRed,115|8:7,BallRed,115|7:7,BallGreen,115|5:7,BallGreen,115",
+    "doorData": "6:8,DoorGreen,0",
+    "itemData": "",
+    "stairsData": "6:11,StairsNext,200,31,6:11|6:1,StairsLast,200,29,6:1",
+    "npcData": "",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 31,
+    "enemyData": "1:10,DoubleSword,100|6:3,OrcaSword,100|6:4,OrcaSword,100|2:6,SkullBlue,100|10:6,SkullBlue,100|10:9,SkullBlue,100|11:9,SkullBlue,100|8:10,FeMan,100|2:9,FeMan,100|2:3,SkullBlue,100|1:3,SkullBlue,100|10:3,Ghost,100|11:2,Ghost,100|4:2,KnightRed,100",
+    "doorData": "3:8,DoorYellow,11|4:3,DoorYellow,11|1:5,DoorYellow,11|9:4,DoorYellow,11|11:5,DoorYellow,11|11:7,DoorYellow,11|1:7,DoorYellow,11|8:9,DoorYellow,11",
+    "itemData": "4:10,KeyYellow,1|4:11,KeyYellow,1|3:10,KeyYellow,1|3:11,KeyYellow,1|9:2,KeyYellow,1|8:1,KeyYellow,1|8:2,KeyYellow,1|9:1,KeyYellow,1|4:8,KeyBlue,2|8:8,GemRed,69|4:4,GemBlue,70|10:11,Bottle1,52|2:1,Bottle1,52|8:4,Bottle2,55",
+    "stairsData": "6:11,StairsLast,200,30,6:11|6:1,StairsNext,200,32,6:1",
+    "npcData": "1:1,MerchantRed,10045|11:11,OldManBlue,10046",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 32,
+    "enemyData": "1:2,StoneManBlue,116|3:2,StoneManBlue,116|1:8,FeMan,100|8:1,SkullBlue,100|8:8,SkullBlue,100|3:8,Ghost,100|4:7,Ghost,100|8:5,KnightRed,100",
+    "doorData": "1:9,DoorYellow,11|5:9,DoorYellow,11|7:9,DoorYellow,11|9:4,DoorYellow,11|9:7,DoorYellow,11|2:3,DoorGreen,0|3:11,DoorBlue,12",
+    "itemData": "1:5,KeyYellow,1|2:5,KeyYellow,1|2:7,KeyYellow,1|3:5,KeyYellow,1|4:5,KeyYellow,1|10:5,KeyYellow,1|10:8,KeyYellow,1|11:4,KeyYellow,1|11:7,KeyYellow,1|4:4,KeyBlue,2|11:5,KeyBlue,2|11:8,Bottle2,55|1:11,GemBlue,70|2:10,GemRed,69",
+    "stairsData": "6:1,StairsLast,200,31,6:1|11:11,StairsNext,200,33,11:11",
+    "npcData": "",
+    "evtPointData": "",
+    "shopData": "10:2,shop,0,0"
+  },
+  {
+    "floor": 33,
+    "enemyData": "9:5,FeMan,117|11:5,FeMan,117|9:7,SkullBlue,117|11:7,SkullBlue,117|6:5,SkullBlue,100|2:1,FeMan,100|6:3,FeMan,100|7:2,Ghost,100|6:11,Ghost,100|1:2,DoubleSword,100|4:6,DoubleSword,100|3:3,OrcaSword,100|4:11,OrcaSword,100|6:7,OrcaSword,100|1:7,Ghost,100|2:5,Ghost,100",
+    "doorData": "1:4,DoorYellow,11|3:5,DoorYellow,11|3:11,DoorYellow,11|5:8,DoorYellow,11|6:1,DoorYellow,11|7:6,DoorYellow,11|7:11,DoorYellow,11|8:10,DoorYellow,11|4:1,DoorBlue,12|1:9,DoorBlue,12",
+    "itemData": "1:1,KeyYellow,1|5:2,KeyYellow,1|6:9,KeyYellow,1|2:8,Bottle1,52|11:9,Bottle2,55|5:10,Bottle1,52|10:2,Sword2,71",
+    "stairsData": "1:11,StairsNext,200,34,1:11|11:11,StairsLast,200,32,11:11",
+    "npcData": "4:9,OldManBlue,10051",
+    "evtPointData": "10:7,EPAfterM,10048|10:11,EPAfterM,10047",
+    "shopData": ""
+  },
+  {
+    "floor": 34,
+    "enemyData": "2:1,FeMan,100|11:8,FeMan,118|3:3,SkullBlue,100|5:4,SkullBlue,118|9:2,FeMan,100|5:8,BallGreen,118|7:4,BallRed,118|9:4,KnightRed,118|11:4,BatSmall,118|7:8,DoubleSword,118|9:8,BallBlack,118|2:9,Ghost,100|5:10,Ghost,100|7:10,KnightRed,100|1:2,DoubleSword,100",
+    "doorData": "2:4,DoorYellow,11|2:8,DoorYellow,11|4:2,DoorYellow,11|4:10,DoorYellow,11|5:5,DoorYellow,11|5:7,DoorYellow,11|7:5,DoorYellow,11|7:7,DoorYellow,11|8:2,DoorYellow,11|8:10,DoorYellow,11|9:5,DoorYellow,11|9:7,DoorYellow,11|11:5,DoorYellow,11|11:7,DoorYellow,11",
+    "itemData": "1:1,Bottle2,55|3:11,Bottle1,52|11:2,Bottle1,52|11:1,GemRed,69|11:11,GemBlue,70|11:10,Bottle1,52|6:11,KeyYellow,1|9:11,KeyYellow,1|10:1,KeyYellow,1|10:10,KeyYellow,1|10:11,KeyYellow,1",
+    "stairsData": "1:11,StairsLast,200,33,1:11|6:1,StairsNext,200,35,6:1",
+    "npcData": "",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 35,
+    "enemyData": "6:6,Dragon,131",
+    "doorData": "6:9,DoorGreen,0",
+    "itemData": "",
+    "stairsData": "6:1,StairsLast,200,34,6:1|11:11,StairsNext,200,36,11:11",
+    "npcData": "",
+    "evtPointData": "3:3,EPBeforeM,301|2:10,EPBeforeM,301|1:7,EPBeforeM,301|3:4,EPBeforeM,301|3:6,EPBeforeM,301|3:8,EPBeforeM,301|3:1,EPBeforeM,301|1:3,EPBeforeM,301|3:5,EPBeforeM,301|3:10,EPBeforeM,301|2:1,EPBeforeM,301|1:4,EPBeforeM,301|3:2,EPBeforeM,301|1:1,EPBeforeM,301|1:10,EPBeforeM,301|1:8,EPBeforeM,301|1:5,EPBeforeM,301|3:7,EPBeforeM,301|1:2,EPBeforeM,301|1:6,EPBeforeM,301|1:9,EPBeforeM,301|4:10,EPBeforeM,301|7:1,EPAfterM,10049|6:2,EPAfterM,10049|5:1,EPAfterM,10049",
+    "shopData": ""
+  },
+  {
+    "floor": 36,
+    "enemyData": "3:1,FeMan,100|3:11,FeMan,100|1:3,DoubleSword,100|9:1,DoubleSword,100|11:7,DoubleSword,100|1:7,KnightRed,100|11:5,KnightRed,100|6:5,KnightRed,100|9:11,KnightRed,100|5:6,Ghost,100|7:6,Ghost,100|6:7,SkullBlue,100|1:9,Ghost,100|7:11,OrcaSword,100|11:9,Ghost,100|7:1,OrcaSword,100",
+    "doorData": "2:6,DoorYellow,11|6:2,DoorYellow,11|6:10,DoorYellow,11|10:6,DoorYellow,11",
+    "itemData": "5:1,KeyYellow,1|1:1,Bottle2,55",
+    "stairsData": "11:11,StairsLast,200,35,11:11|11:1,StairsNext,200,37,11:1",
+    "npcData": "1:11,OldManBlue,10052",
+    "evtPointData": "3:4,EPBeforeM,301|3:8,EPBeforeM,301|4:2,EPBeforeM,301|4:3,EPBeforeM,301|4:4,EPBeforeM,301|4:8,EPBeforeM,301|4:9,EPBeforeM,301|4:10,EPBeforeM,301|8:2,EPBeforeM,301|8:3,EPBeforeM,301|8:4,EPBeforeM,301|8:8,EPBeforeM,301|8:9,EPBeforeM,301|8:10,EPBeforeM,301|9:4,EPBeforeM,301|10:4,EPBeforeM,301|10:8,EPBeforeM,301|2:4,EPBeforeM,301|9:8,EPBeforeM,301|2:8,EPBeforeM,301",
+    "shopData": ""
+  },
+  {
+    "floor": 37,
+    "enemyData": "11:9,KnightRed,100|1:3,FeMan,100|9:11,FeMan,100|11:6,DoubleSword,100|9:1,SkullBlue,100|11:3,KnightRed,100|3:1,Ghost,100",
+    "doorData": "3:11,DoorYellow,11|1:9,DoorBlue,12",
+    "itemData": "7:5,GemRed,69|8:5,GemRed,69|9:5,GemRed,69|4:5,GemRed,69|3:5,GemBlue,70|7:4,GemBlue,70|8:4,GemBlue,70|9:4,GemBlue,70|5:4,KeyYellow,1|3:4,KeyYellow,1|4:4,KeyYellow,1|8:3,KeyYellow,1|8:7,KeyYellow,1|9:7,KeyYellow,1|7:7,KeyRed,3|5:9,Bottle1,52|3:8,Bottle1,52|7:8,Bottle1,52|7:9,Bottle1,52|8:8,Bottle1,52|8:9,Bottle1,52|9:8,Bottle1,52|4:8,Bottle1,52|4:9,Bottle1,52|5:8,KeyYellow,1|3:7,KeyYellow,1|4:7,KeyYellow,1|5:5,Bottle2,55|5:3,KeyBlue,2|4:3,KeyBlue,2|7:3,Bottle2,55|11:11,Bottle2,55|1:7,Bottle1,52|5:7,Bomb,26",
+    "stairsData": "1:11,StairsNext,200,38,1:11|11:1,StairsLast,200,36,11:1",
+    "npcData": "",
+    "evtPointData": "10:1,EPAfterM,10053|11:2,EPAfterM,10053",
+    "shopData": ""
+  },
+  {
+    "floor": 38,
+    "enemyData": "3:8,FeMan,100|4:8,FeMan,100|1:9,SkullBlue,100|1:2,StoneManBlue,119|3:2,StoneManBlue,119|7:5,DoubleSword,100|5:1,DoubleSword,100|7:6,SkullBlue,100|11:3,SkullBlue,100|11:6,SkullBlue,100|9:1,FeMan,100|10:2,KnightRed,100|10:5,KnightRed,100|7:1,Orca,100|8:11,Ghost,100|4:11,Ghost,100",
+    "doorData": "7:9,DoorYellow,11|8:1,DoorYellow,11|9:11,DoorYellow,11|11:4,DoorYellow,11|11:9,DoorYellow,11|4:1,DoorYellow,11|2:3,DoorGreen,0|4:6,DoorBlue,12|5:6,DoorBlue,12|5:7,DoorBlue,12|3:11,DoorRed,13",
+    "itemData": "9:6,KeyYellow,1|9:7,KeyYellow,1|9:8,KeyYellow,1|9:3,KeyYellow,1|5:4,GemBlue,70|6:10,KeyYellow,1|6:4,Bottle1,52|11:1,Bottle2,55|2:5,Shield3,72",
+    "stairsData": "1:11,StairsLast,200,37,1:11|11:11,StairsNext,200,39,11:11",
+    "npcData": "5:10,MerchantRed,10055",
+    "evtPointData": "1:10,EPAfterM,10054|2:11,EPAfterM,10054",
+    "shopData": ""
+  },
+  {
+    "floor": 39,
+    "enemyData": "11:7,FeMan,100|7:3,KnightRed,100|10:3,KnightRed,100|2:2,SkullBlue,100|11:5,SkullBlue,100|3:3,SkullBlue,100|6:1,Ghost,100|9:6,Ghost,100|5:3,DoubleSword,100",
+    "doorData": "2:6,DoorYellow,11|2:8,DoorYellow,11|2:10,DoorYellow,11|4:6,DoorYellow,11|4:8,DoorYellow,11|4:10,DoorYellow,10057|6:6,DoorYellow,10057|6:8,DoorYellow,11|6:10,DoorYellow,10057|10:4,DoorYellow,11|10:8,DoorYellow,11|4:2,DoorYellow,11|8:2,DoorYellow,11|2:4,DoorBlue,12",
+    "itemData": "3:1,KeyYellow,1|6:3,GemBlue,70|11:6,GemRed,69|9:1,Bottle1,52|11:9,KeyYellow,1",
+    "stairsData": "11:11,StairsLast,200,38,11:11|11:1,StairsNext,200,40,11:1",
+    "npcData": "1:1,OldManBlue,10056|9:10,MerchantRed,10058",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 40,
+    "enemyData": "10:3,DoubleSword,100|9:2,FeMan,100|7:8,FeManFir,100|8:8,FeManFir,100|9:8,FeManFir,100|5:8,SkullBlueFir,100|3:8,SkullBlueFir,100|4:8,SkullBlueFir,100|8:10,KnightRedFir,100|9:10,KnightRedFir,100|10:10,KnightRedFir,100|3:10,DoubleSwordFir,100|4:10,DoubleSwordFir,100|2:10,DoubleSwordFir,100|6:11,General,120",
+    "doorData": "8:1,DoorYellow,11|4:1,DoorBlue,12|6:4,DoorRed,13",
+    "itemData": "1:3,GemBlue,70|1:2,Bottle2,55|1:1,GemRed,69|2:3,KeyYellow,1|9:3,Bottle1,52",
+    "stairsData": "11:1,StairsLast,200,39,11:1",
+    "npcData": "6:3,Elf,10059",
+    "evtPointData": "6:5,EPAfterM,10061",
+    "shopData": ""
+  },
+  {
+    "floor": 41,
+    "enemyData": "2:5,BatRed,100|1:6,BatRed,100|10:5,BatRed,100|11:6,BatRed,100|3:7,SorcererYellow,100|9:7,SorcererYellow,100|4:5,BallBig,100|8:5,BallBig,100|2:10,SorcererRed,100|5:8,Guard,100|7:8,Guard,100",
+    "doorData": "1:10,DoorYellow,11|1:9,DoorYellow,11|1:8,DoorYellow,11|6:3,DoorYellow,11|6:4,DoorYellow,11|6:5,DoorYellow,11|1:2,DoorYellow,11|1:3,DoorYellow,11|1:4,DoorYellow,11|3:8,DoorYellow,11|4:4,DoorYellow,11|8:4,DoorYellow,11|9:8,DoorYellow,11|11:2,DoorYellow,11|11:3,DoorYellow,11|11:4,DoorYellow,11|11:8,DoorYellow,11|11:9,DoorYellow,11|11:10,DoorYellow,11|5:6,DoorBlue,12|7:6,DoorBlue,12",
+    "itemData": "4:11,KeyBlue,2|8:11,KeyBlue,2|3:1,KeyYellow,1|3:2,KeyYellow,1|4:2,KeyYellow,1|8:2,KeyYellow,1|9:1,KeyYellow,1|9:2,KeyYellow,1|4:1,GemRed,74|8:1,GemBlue,75|3:3,Bottle1,56|9:3,Bottle1,56|1:1,Bottle2,57|11:1,Bottle2,57|1:11,Bottle1,56|11:11,Bottle1,56",
+    "stairsData": "6:11,StairsLast,200,40,6:11|6:1,StairsNext,200,42,6:1",
+    "npcData": "",
+    "evtPointData": "10:10,EPBeforeM,10062",
+    "shopData": ""
+  },
+  {
+    "floor": 42,
+    "enemyData": "9:8,SorcererYellow,100|11:6,SorcererYellow,100|11:8,SorcererRed,100|9:4,Guard,100|11:4,Guard,100|1:2,BatRed,100|3:7,BallBig,100|3:10,BallBig,100|3:4,BatRed,100|6:8,KnightBlack,100|6:2,General,10063",
+    "doorData": "1:6,DoorYellow,11|8:7,DoorYellow,11|3:9,DoorYellow,11|4:7,DoorYellow,11",
+    "itemData": "2:1,KeyYellow,1|2:3,KeyYellow,1|1:1,KeyYellow,1|3:3,KeyYellow,1|9:1,KeyYellow,1|9:2,KeyYellow,1|9:10,KeyYellow,1|9:11,KeyYellow,1|10:2,KeyYellow,1|10:10,KeyYellow,1|11:1,KeyYellow,1|11:2,KeyYellow,1|11:10,KeyYellow,1|11:11,KeyYellow,1|10:1,KeyBlue,2|10:11,KeyBlue,2|1:3,Bottle2,57|3:1,GemBlue,75|6:11,KeyRed,3",
+    "stairsData": "6:1,StairsLast,200,41,6:1|1:11,StairsNext,200,43,1:11",
+    "npcData": "1:8,OldManBlue,10064",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 43,
+    "enemyData": "2:7,BallBig,100|5:5,BallBig,100|5:11,BallBig,100|6:9,KnightBlack,100|7:8,KnightBlack,100|9:11,Guard,100|4:8,SorcererRed,100|6:3,KnightBlack,100|10:2,BatRed,100|9:5,SorcererYellow,100|2:3,BatRed,100",
+    "doorData": "1:8,DoorYellow,11|1:6,DoorBlue,12|11:3,DoorYellow,11|11:7,DoorYellow,11|7:11,DoorYellow,11|8:2,DoorYellow,11|8:6,DoorYellow,11|8:11,DoorYellow,11|3:6,DoorYellow,11|3:9,DoorYellow,11|3:11,DoorYellow,11|6:1,DoorBlue,12",
+    "itemData": "11:5,Bottle1,56|4:1,Bottle2,57|4:2,Bottle2,57|4:3,Bottle2,57|10:4,KeyYellow,1|6:6,Bottle2,57|11:1,KeyBlue,2|9:8,Shield4,73",
+    "stairsData": "1:1,StairsNext,200,45,1:11|1:11,StairsLast,200,42,1:11",
+    "npcData": "",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 45,
+    "enemyData": "5:1,KnightBlack,123|5:3,KnightBlack,123|3:6,KnightBlack,100|3:8,KnightBlack,100|8:1,Guard,122|8:3,Guard,122|5:7,SorcererRed,100|7:9,SorcererRed,100|10:4,SorcererRed,100|5:9,SorcererYellow,100|7:7,SorcererYellow,100|7:5,BatRed,100|11:8,BallBig,100",
+    "doorData": "6:6,DoorYellow,11|6:10,DoorYellow,11|9:2,DoorYellow,11|11:3,DoorYellow,11|11:7,DoorYellow,11|4:5,DoorYellow,11|1:6,DoorBlue,12|1:8,DoorBlue,12|2:4,DoorRed,13|7:2,DoorGreen,0|4:2,DoorGreen,0",
+    "itemData": "11:5,KeyYellow,1|2:9,GemRed,74|1:9,GemRed,74|2:7,GemBlue,75|1:7,GemBlue,75|11:1,Bottle2,57|2:2,Up,29",
+    "stairsData": "11:11,StairsNext,200,46,11:11|1:11,StairsLast,200,43,1:1",
+    "npcData": "9:9,MerchantRed,10067|9:6,OldManBlue,10065",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 46,
+    "enemyData": "2:11,SorcererRed,100|2:8,SorcererYellow,100|9:8,BatRed,100|10:6,BallBig,100|10:3,SorcererYellow,100|8:5,SorcererRed,100|4:1,BallRed,100|2:1,SkullNormal,100|1:2,BatBig,100|1:4,Orca,100|1:6,FeMan,100|3:6,DoubleSword,100|5:6,KnightRed,100|5:4,BallBig,100|4:3,SorcererYellow,100",
+    "doorData": "3:8,DoorYellow,11|3:11,DoorYellow,11|7:4,DoorYellow,11|9:1,DoorYellow,11|9:6,DoorYellow,11|11:4,DoorYellow,11|11:7,DoorYellow,11|11:9,DoorYellow,11|6:1,DoorBlue,12|9:11,DoorBlue,12",
+    "itemData": "1:10,GemRed,74|1:9,Bottle1,56|7:6,Bottle1,56|3:4,GoldKey,30",
+    "stairsData": "11:11,StairsLast,200,45,11:11|11:1,StairsNext,200,47,11:1",
+    "npcData": "8:3,OldManBlue,10066",
+    "evtPointData": "",
+    "shopData": "6:11,shop,0,0"
+  },
+  {
+    "floor": 47,
+    "enemyData": "8:10,SorcererRed,100|1:3,SorcererRed,100|5:8,SorcererRed,100|6:7,SorcererYellow,100|9:7,SorcererYellow,100|11:6,BatRed,100|9:9,BallBig,100|8:3,BallBig,100|5:1,SorcererYellow,100|3:7,BatRed,100",
+    "doorData": "3:1,DoorYellow,11|11:5,DoorYellow,11|2:6,DoorYellow,11|7:1,DoorYellow,11|7:11,DoorYellow,11|8:8,DoorYellow,11|4:8,DoorYellow,11|4:4,DoorBlue,12|3:11,DoorBlue,12",
+    "itemData": "11:9,KeyYellow,1|11:11,KeyYellow,1|6:5,KeyYellow,1|8:6,KeyYellow,1|5:5,KeyBlue,2|11:10,GemBlue,75|6:4,GemBlue,75|5:4,GemRed,74|6:2,GemRed,74|4:2,Bottle1,56",
+    "stairsData": "11:1,StairsLast,200,46,11:1|1:11,StairsNext,200,48,11:1",
+    "npcData": "5:10,MerchantRed,10068",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 44,
+    "enemyData": "7:3,StoneManRed,124|5:3,StoneManRed,124",
+    "doorData": "6:4,DoorGreen,0",
+    "itemData": "6:5,Bottle1,56|6:7,Bottle1,56|7:6,Bottle1,56|5:6,Bottle1,56|6:6,Shield5,76",
+    "stairsData": "1:11,StairsNext,200,45,1:11",
+    "npcData": "",
+    "evtPointData": "",
+    "shopData": ""
+  },
+  {
+    "floor": 48,
+    "enemyData": "4:5,SorcererYellow,100|1:3,SorcererYellow,100|10:5,SorcererYellow,100|7:7,Guard,100|7:9,Guard,100|9:7,Guard,100|9:9,Guard,100|2:9,SorcererRed,100|3:7,BallBig,100|1:5,BatRed,100|4:2,KnightBlack,100",
+    "doorData": "4:3,DoorYellow,11|4:6,DoorYellow,11|5:10,DoorBlue,12|11:10,DoorBlue,12|2:8,DoorBlue,12|8:4,DoorGreen,0",
+    "itemData": "3:4,GemRed,74|3:1,GemBlue,75|5:4,Bottle1,56|5:1,Bottle2,57|7:11,Bottle1,56|8:11,Bottle1,56|9:11,Bottle1,56|2:11,Bottle2,57|8:2,Sword3,77",
+    "stairsData": "11:1,StairsLast,200,47,1:11|1:1,StairsNext,200,49,1:1",
+    "npcData": "3:10,OldManBlue,10070",
+    "evtPointData": "1:10,EPBeforeM,10069",
+    "shopData": ""
+  },
+  {
+    "floor": 49,
+    "enemyData": "7:10,Guard,128|6:8,Guard,128|7:9,Guard,128|5:10,Guard,128|7:8,Guard,128|6:10,Guard,128|5:9,Guard,128|5:8,Guard,128|6:9,Boss_Final,129|5:4,KnightBlack,127|7:4,KnightBlack,127|5:2,SorcererRed,126|7:2,SorcererRed,126",
+    "doorData": "6:5,DoorGreen,0|6:3,DoorGreen,0|3:1,DoorRed,13",
+    "itemData": "",
+    "stairsData": "1:1,StairsLast,200,48,1:1",
+    "npcData": "",
+    "evtPointData": "2:1,EPAfterM,10071",
+    "shopData": ""
+  },
+  {
+    "floor": 50,
+    "enemyData": "",
+    "doorData": "",
+    "itemData": "",
+    "stairsData": "",
+    "npcData": "6:10,Warrior,0",
+    "evtPointData": "6:7,EPAfterM,10074",
+    "shopData": ""
+  }
+]
