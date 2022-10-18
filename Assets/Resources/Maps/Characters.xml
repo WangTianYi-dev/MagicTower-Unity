@@ -1,0 +1,2188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tileset version="1.9" tiledversion="1.9.1" name="Characters" tilewidth="64" tileheight="64" tilecount="728" columns="0">
+ <grid orientation="orthogonal" width="1" height="1"/>
+ <tile id="1160" class="CrazyOldMan">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-06_2_1.png"/>
+ </tile>
+ <tile id="455">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver02_1_1.png"/>
+ </tile>
+ <tile id="456">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver03_1_1.png"/>
+ </tile>
+ <tile id="457">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver04_1_1.png"/>
+ </tile>
+ <tile id="458">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver05_1_1.png"/>
+ </tile>
+ <tile id="459">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver06_1_1.png"/>
+ </tile>
+ <tile id="460">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver07_1_1.png"/>
+ </tile>
+ <tile id="461">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver08_1_1.png"/>
+ </tile>
+ <tile id="462">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver09_1_1.png"/>
+ </tile>
+ <tile id="463">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver10_1_1.png"/>
+ </tile>
+ <tile id="464">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver11_1_1.png"/>
+ </tile>
+ <tile id="465">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver12_1_1.png"/>
+ </tile>
+ <tile id="466">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver13_1_1.png"/>
+ </tile>
+ <tile id="467">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver14_1_1.png"/>
+ </tile>
+ <tile id="468">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver15_1_1.png"/>
+ </tile>
+ <tile id="469">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver16_1_1.png"/>
+ </tile>
+ <tile id="470">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver17_1_1.png"/>
+ </tile>
+ <tile id="471">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver18_1_1.png"/>
+ </tile>
+ <tile id="472">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor02-Monster01_1_1.png"/>
+ </tile>
+ <tile id="473">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor02-Monster02_1_1.png"/>
+ </tile>
+ <tile id="474">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor02-Monster03_1_1.png"/>
+ </tile>
+ <tile id="475">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor02-Monster04_1_1.png"/>
+ </tile>
+ <tile id="476">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor02-Monster05_1_1.png"/>
+ </tile>
+ <tile id="477">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor02-Monster06_1_1.png"/>
+ </tile>
+ <tile id="478">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor02-Monster08_1_1.png"/>
+ </tile>
+ <tile id="479">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor02-Monster10_1_1.png"/>
+ </tile>
+ <tile id="480">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor02-Monster11_1_1.png"/>
+ </tile>
+ <tile id="481">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor02-Monster12_1_1.png"/>
+ </tile>
+ <tile id="482">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor02-Monster13_1_1.png"/>
+ </tile>
+ <tile id="483">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor02-Monster14_1_1.png"/>
+ </tile>
+ <tile id="484">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor02-Monster23_1_1.png"/>
+ </tile>
+ <tile id="485">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor02-Monster24_1_1.png"/>
+ </tile>
+ <tile id="486">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor02-Monster25_1_1.png"/>
+ </tile>
+ <tile id="487">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor03-Eagle01_1_1.png"/>
+ </tile>
+ <tile id="488">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor03-Eagle02_1_1.png"/>
+ </tile>
+ <tile id="489">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor03-Eagle03_1_1.png"/>
+ </tile>
+ <tile id="490">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor04-Another01_1_1.png"/>
+ </tile>
+ <tile id="491">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor04-Another02_1_1.png"/>
+ </tile>
+ <tile id="492">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-01_1_1.png"/>
+ </tile>
+ <tile id="493">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-01_2_1.png"/>
+ </tile>
+ <tile id="494">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-01_3_1.png"/>
+ </tile>
+ <tile id="495">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-01_4_1.png"/>
+ </tile>
+ <tile id="496">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-02_1_1.png"/>
+ </tile>
+ <tile id="497">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-02_2_1.png"/>
+ </tile>
+ <tile id="498">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-02_3_1.png"/>
+ </tile>
+ <tile id="499">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-02_4_1.png"/>
+ </tile>
+ <tile id="500">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-03_1_1.png"/>
+ </tile>
+ <tile id="501">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-03_2_1.png"/>
+ </tile>
+ <tile id="502">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-03_3_1.png"/>
+ </tile>
+ <tile id="503">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-03_4_1.png"/>
+ </tile>
+ <tile id="504">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-04_1_1.png"/>
+ </tile>
+ <tile id="505">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-04_2_1.png"/>
+ </tile>
+ <tile id="506">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-04_3_1.png"/>
+ </tile>
+ <tile id="507">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-04_4_1.png"/>
+ </tile>
+ <tile id="508">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-05_1_1.png"/>
+ </tile>
+ <tile id="509">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-05_2_1.png"/>
+ </tile>
+ <tile id="510">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-05_3_1.png"/>
+ </tile>
+ <tile id="511">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-05_4_1.png"/>
+ </tile>
+ <tile id="512">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-06_1_1.png"/>
+ </tile>
+ <tile id="513">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-06_2_1.png"/>
+ </tile>
+ <tile id="514">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-06_3_1.png"/>
+ </tile>
+ <tile id="515">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-06_4_1.png"/>
+ </tile>
+ <tile id="516">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-07_1_1.png"/>
+ </tile>
+ <tile id="517">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-07_2_1.png"/>
+ </tile>
+ <tile id="518">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-07_3_1.png"/>
+ </tile>
+ <tile id="519">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-07_4_1.png"/>
+ </tile>
+ <tile id="520">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-08_1_1.png"/>
+ </tile>
+ <tile id="521">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-08_2_1.png"/>
+ </tile>
+ <tile id="522">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-08_3_1.png"/>
+ </tile>
+ <tile id="523">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-08_4_1.png"/>
+ </tile>
+ <tile id="524">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-09_1_1.png"/>
+ </tile>
+ <tile id="525">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-09_2_1.png"/>
+ </tile>
+ <tile id="526">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-09_3_1.png"/>
+ </tile>
+ <tile id="527">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-09_4_1.png"/>
+ </tile>
+ <tile id="528">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-10_1_1.png"/>
+ </tile>
+ <tile id="529">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-10_2_1.png"/>
+ </tile>
+ <tile id="530">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-10_3_1.png"/>
+ </tile>
+ <tile id="531">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-10_4_1.png"/>
+ </tile>
+ <tile id="532">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-11_1_1.png"/>
+ </tile>
+ <tile id="533">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-11_2_1.png"/>
+ </tile>
+ <tile id="534">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-11_3_1.png"/>
+ </tile>
+ <tile id="535">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-12_1_1.png"/>
+ </tile>
+ <tile id="536">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-12_2_1.png"/>
+ </tile>
+ <tile id="537">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-12_3_1.png"/>
+ </tile>
+ <tile id="538">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-12_4_1.png"/>
+ </tile>
+ <tile id="539">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-13_1_1.png"/>
+ </tile>
+ <tile id="540">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-13_2_1.png"/>
+ </tile>
+ <tile id="541">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-13_3_1.png"/>
+ </tile>
+ <tile id="542">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-13_4_1.png"/>
+ </tile>
+ <tile id="543">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-14_1_1.png"/>
+ </tile>
+ <tile id="544">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-14_2_1.png"/>
+ </tile>
+ <tile id="545">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-14_3_1.png"/>
+ </tile>
+ <tile id="546">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-14_4_1.png"/>
+ </tile>
+ <tile id="547">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-15_1_1.png"/>
+ </tile>
+ <tile id="548">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-15_2_1.png"/>
+ </tile>
+ <tile id="549">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-15_3_1.png"/>
+ </tile>
+ <tile id="550">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-16_1_1.png"/>
+ </tile>
+ <tile id="551">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-16_2_1.png"/>
+ </tile>
+ <tile id="552">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-16_3_1.png"/>
+ </tile>
+ <tile id="553">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-16_4_1.png"/>
+ </tile>
+ <tile id="554">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-17_1_1.png"/>
+ </tile>
+ <tile id="555">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-17_2_1.png"/>
+ </tile>
+ <tile id="556">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-17_3_1.png"/>
+ </tile>
+ <tile id="557">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-17_4_1.png"/>
+ </tile>
+ <tile id="558">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-18_1_1.png"/>
+ </tile>
+ <tile id="559">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-18_2_1.png"/>
+ </tile>
+ <tile id="560">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-18_3_1.png"/>
+ </tile>
+ <tile id="561">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-18_4_1.png"/>
+ </tile>
+ <tile id="562">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-19_1_1.png"/>
+ </tile>
+ <tile id="563">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-19_2_1.png"/>
+ </tile>
+ <tile id="564">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-19_3_1.png"/>
+ </tile>
+ <tile id="565">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-19_4_1.png"/>
+ </tile>
+ <tile id="566">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-20_1_1.png"/>
+ </tile>
+ <tile id="567">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-20_2_1.png"/>
+ </tile>
+ <tile id="568">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-20_3_1.png"/>
+ </tile>
+ <tile id="569">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-20_4_1.png"/>
+ </tile>
+ <tile id="570">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-21_1_1.png"/>
+ </tile>
+ <tile id="571">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-21_2_1.png"/>
+ </tile>
+ <tile id="572">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-21_3_1.png"/>
+ </tile>
+ <tile id="573">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-21_4_1.png"/>
+ </tile>
+ <tile id="574">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-22_1_1.png"/>
+ </tile>
+ <tile id="575">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-22_2_1.png"/>
+ </tile>
+ <tile id="576">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-22_3_1.png"/>
+ </tile>
+ <tile id="577">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster01-22_4_1.png"/>
+ </tile>
+ <tile id="578">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-01_1_1.png"/>
+ </tile>
+ <tile id="579">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-01_2_1.png"/>
+ </tile>
+ <tile id="580">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-01_3_1.png"/>
+ </tile>
+ <tile id="581">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-01_4_1.png"/>
+ </tile>
+ <tile id="582">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-02_1_1.png"/>
+ </tile>
+ <tile id="583">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-02_2_1.png"/>
+ </tile>
+ <tile id="584">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-02_3_1.png"/>
+ </tile>
+ <tile id="585">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-02_4_1.png"/>
+ </tile>
+ <tile id="586">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-03_1_1.png"/>
+ </tile>
+ <tile id="587">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-03_2_1.png"/>
+ </tile>
+ <tile id="588">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-03_3_1.png"/>
+ </tile>
+ <tile id="589">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-03_4_1.png"/>
+ </tile>
+ <tile id="590">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-04_1_1.png"/>
+ </tile>
+ <tile id="591">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-04_2_1.png"/>
+ </tile>
+ <tile id="592">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-04_3_1.png"/>
+ </tile>
+ <tile id="593">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-04_4_1.png"/>
+ </tile>
+ <tile id="594">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-05_1_1.png"/>
+ </tile>
+ <tile id="595">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-05_2_1.png"/>
+ </tile>
+ <tile id="596">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-05_3_1.png"/>
+ </tile>
+ <tile id="597">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-06_1_1.png"/>
+ </tile>
+ <tile id="598">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-06_2_1.png"/>
+ </tile>
+ <tile id="599">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-06_3_1.png"/>
+ </tile>
+ <tile id="600">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-06_4_1.png"/>
+ </tile>
+ <tile id="601">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-07_1_1.png"/>
+ </tile>
+ <tile id="602">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-07_2_1.png"/>
+ </tile>
+ <tile id="603">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-07_3_1.png"/>
+ </tile>
+ <tile id="604">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-07_4_1.png"/>
+ </tile>
+ <tile id="605">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-08_1_1.png"/>
+ </tile>
+ <tile id="606">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-08_2_1.png"/>
+ </tile>
+ <tile id="607">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-08_3_1.png"/>
+ </tile>
+ <tile id="608">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster02-08_4_1.png"/>
+ </tile>
+ <tile id="609">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-01_1_1.png"/>
+ </tile>
+ <tile id="610">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-01_2_1.png"/>
+ </tile>
+ <tile id="611">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-01_3_1.png"/>
+ </tile>
+ <tile id="612">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-01_4_1.png"/>
+ </tile>
+ <tile id="613">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-02_1_1.png"/>
+ </tile>
+ <tile id="614">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-02_2_1.png"/>
+ </tile>
+ <tile id="615">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-02_3_1.png"/>
+ </tile>
+ <tile id="616">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-02_4_1.png"/>
+ </tile>
+ <tile id="617">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-03_1_1.png"/>
+ </tile>
+ <tile id="618">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-03_2_1.png"/>
+ </tile>
+ <tile id="619">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-03_3_1.png"/>
+ </tile>
+ <tile id="620">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-03_4_1.png"/>
+ </tile>
+ <tile id="621">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-04_1_1.png"/>
+ </tile>
+ <tile id="622">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-04_2_1.png"/>
+ </tile>
+ <tile id="623">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-04_3_1.png"/>
+ </tile>
+ <tile id="624">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-04_4_1.png"/>
+ </tile>
+ <tile id="625">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-05_1_1.png"/>
+ </tile>
+ <tile id="626">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-05_2_1.png"/>
+ </tile>
+ <tile id="627">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-05_3_1.png"/>
+ </tile>
+ <tile id="628">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-05_4_1.png"/>
+ </tile>
+ <tile id="629">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-06_1_1.png"/>
+ </tile>
+ <tile id="630">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-06_2_1.png"/>
+ </tile>
+ <tile id="631">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-06_3_1.png"/>
+ </tile>
+ <tile id="632">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-06_4_1.png"/>
+ </tile>
+ <tile id="633">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster04-01_1_1.png"/>
+ </tile>
+ <tile id="634">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster04-01_2_1.png"/>
+ </tile>
+ <tile id="635">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster04-01_3_1.png"/>
+ </tile>
+ <tile id="636">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster04-01_4_1.png"/>
+ </tile>
+ <tile id="637">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster04-02_1_1.png"/>
+ </tile>
+ <tile id="638">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster04-02_2_1.png"/>
+ </tile>
+ <tile id="639">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster04-02_3_1.png"/>
+ </tile>
+ <tile id="640">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster04-02_4_1.png"/>
+ </tile>
+ <tile id="641">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster04-03_1_1.png"/>
+ </tile>
+ <tile id="642">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster04-03_2_1.png"/>
+ </tile>
+ <tile id="643">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster04-03_3_1.png"/>
+ </tile>
+ <tile id="644">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster04-03_4_1.png"/>
+ </tile>
+ <tile id="645">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster04-04_1_1.png"/>
+ </tile>
+ <tile id="646">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster04-04_2_1.png"/>
+ </tile>
+ <tile id="647">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster05-01_1_1.png"/>
+ </tile>
+ <tile id="648">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster05-01_2_1.png"/>
+ </tile>
+ <tile id="649">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster05-01_3_1.png"/>
+ </tile>
+ <tile id="650">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster05-02_1_1.png"/>
+ </tile>
+ <tile id="651">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster05-02_2_1.png"/>
+ </tile>
+ <tile id="652">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster05-02_3_1.png"/>
+ </tile>
+ <tile id="653">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster05-03_1_1.png"/>
+ </tile>
+ <tile id="654">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster05-03_2_1.png"/>
+ </tile>
+ <tile id="655">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster05-03_3_1.png"/>
+ </tile>
+ <tile id="656">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster05-04_1_1.png"/>
+ </tile>
+ <tile id="657">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster05-04_2_1.png"/>
+ </tile>
+ <tile id="658">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster05-04_3_1.png"/>
+ </tile>
+ <tile id="659">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster05-04_4_1.png"/>
+ </tile>
+ <tile id="660">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster05-05_1_1.png"/>
+ </tile>
+ <tile id="661">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster05-05_2_1.png"/>
+ </tile>
+ <tile id="662">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster05-05_3_1.png"/>
+ </tile>
+ <tile id="663">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster05-05_4_1.png"/>
+ </tile>
+ <tile id="664">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster05-06_1_1.png"/>
+ </tile>
+ <tile id="665">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-01_1_1.png"/>
+ </tile>
+ <tile id="666">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-01_2_1.png"/>
+ </tile>
+ <tile id="667">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-01_3_1.png"/>
+ </tile>
+ <tile id="668">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-01_4_1.png"/>
+ </tile>
+ <tile id="669">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-02_1_1.png"/>
+ </tile>
+ <tile id="670">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-02_2_1.png"/>
+ </tile>
+ <tile id="671">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-02_3_1.png"/>
+ </tile>
+ <tile id="672">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-02_4_1.png"/>
+ </tile>
+ <tile id="673">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-03_1_1.png"/>
+ </tile>
+ <tile id="674">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-03_2_1.png"/>
+ </tile>
+ <tile id="675">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-03_3_1.png"/>
+ </tile>
+ <tile id="676">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-03_4_1.png"/>
+ </tile>
+ <tile id="677">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-04_1_1.png"/>
+ </tile>
+ <tile id="678">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-04_2_1.png"/>
+ </tile>
+ <tile id="679">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-04_3_1.png"/>
+ </tile>
+ <tile id="680">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-04_4_1.png"/>
+ </tile>
+ <tile id="681">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-05_1_1.png"/>
+ </tile>
+ <tile id="682">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-05_2_1.png"/>
+ </tile>
+ <tile id="683">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-05_3_1.png"/>
+ </tile>
+ <tile id="684">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-06_1_1.png"/>
+ </tile>
+ <tile id="685">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-06_2_1.png"/>
+ </tile>
+ <tile id="686">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-07_1_1.png"/>
+ </tile>
+ <tile id="687">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-07_2_1.png"/>
+ </tile>
+ <tile id="688">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-07_3_1.png"/>
+ </tile>
+ <tile id="689">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster06-07_4_1.png"/>
+ </tile>
+ <tile id="690">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-01_1_1.png"/>
+ </tile>
+ <tile id="691">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-01_2_1.png"/>
+ </tile>
+ <tile id="692">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-01_3_1.png"/>
+ </tile>
+ <tile id="693">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-01_4_1.png"/>
+ </tile>
+ <tile id="694">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-02_1_1.png"/>
+ </tile>
+ <tile id="695">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-02_2_1.png"/>
+ </tile>
+ <tile id="696">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-02_3_1.png"/>
+ </tile>
+ <tile id="697">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-02_4_1.png"/>
+ </tile>
+ <tile id="698">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-03_1_1.png"/>
+ </tile>
+ <tile id="699">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-03_2_1.png"/>
+ </tile>
+ <tile id="700">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-03_3_1.png"/>
+ </tile>
+ <tile id="701">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-03_4_1.png"/>
+ </tile>
+ <tile id="702">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-04_1_1.png"/>
+ </tile>
+ <tile id="703">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-04_2_1.png"/>
+ </tile>
+ <tile id="704">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-04_3_1.png"/>
+ </tile>
+ <tile id="705">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-04_4_1.png"/>
+ </tile>
+ <tile id="706">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-05_1_1.png"/>
+ </tile>
+ <tile id="707">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-05_2_1.png"/>
+ </tile>
+ <tile id="708">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-05_3_1.png"/>
+ </tile>
+ <tile id="709">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-05_4_1.png"/>
+ </tile>
+ <tile id="710">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-06_1_1.png"/>
+ </tile>
+ <tile id="711">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-06_2_1.png"/>
+ </tile>
+ <tile id="712">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-06_3_1.png"/>
+ </tile>
+ <tile id="713">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-07_1_1.png"/>
+ </tile>
+ <tile id="714">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-07_2_1.png"/>
+ </tile>
+ <tile id="715">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-07_3_1.png"/>
+ </tile>
+ <tile id="716">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-07_4_1.png"/>
+ </tile>
+ <tile id="717">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-08_1_1.png"/>
+ </tile>
+ <tile id="718">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-08_2_1.png"/>
+ </tile>
+ <tile id="719">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-08_3_1.png"/>
+ </tile>
+ <tile id="720">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-08_4_1.png"/>
+ </tile>
+ <tile id="721">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-09_1_1.png"/>
+ </tile>
+ <tile id="722">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-09_2_1.png"/>
+ </tile>
+ <tile id="723">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-09_3_1.png"/>
+ </tile>
+ <tile id="724">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-09_4_1.png"/>
+ </tile>
+ <tile id="725">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-10_1_1.png"/>
+ </tile>
+ <tile id="726">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-10_2_1.png"/>
+ </tile>
+ <tile id="727">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-10_3_1.png"/>
+ </tile>
+ <tile id="728">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-10_4_1.png"/>
+ </tile>
+ <tile id="729">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-11_1_1.png"/>
+ </tile>
+ <tile id="730">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-11_2_1.png"/>
+ </tile>
+ <tile id="731">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-11_3_1.png"/>
+ </tile>
+ <tile id="732">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-11_4_1.png"/>
+ </tile>
+ <tile id="733">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-12_1_1.png"/>
+ </tile>
+ <tile id="734">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-12_2_1.png"/>
+ </tile>
+ <tile id="735">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-12_3_1.png"/>
+ </tile>
+ <tile id="736">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-12_4_1.png"/>
+ </tile>
+ <tile id="737">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-01_1_1.png"/>
+ </tile>
+ <tile id="738">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-01_2_1.png"/>
+ </tile>
+ <tile id="739">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-01_3_1.png"/>
+ </tile>
+ <tile id="740">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-01_4_1.png"/>
+ </tile>
+ <tile id="741">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-02_1_1.png"/>
+ </tile>
+ <tile id="742">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-02_2_1.png"/>
+ </tile>
+ <tile id="743">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-02_3_1.png"/>
+ </tile>
+ <tile id="744">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-02_4_1.png"/>
+ </tile>
+ <tile id="745">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-03_1_1.png"/>
+ </tile>
+ <tile id="746">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-03_2_1.png"/>
+ </tile>
+ <tile id="747">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-03_3_1.png"/>
+ </tile>
+ <tile id="748">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-03_4_1.png"/>
+ </tile>
+ <tile id="749">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-04_1_1.png"/>
+ </tile>
+ <tile id="750">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-04_2_1.png"/>
+ </tile>
+ <tile id="751">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-04_3_1.png"/>
+ </tile>
+ <tile id="752">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-04_4_1.png"/>
+ </tile>
+ <tile id="753">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-05_1_1.png"/>
+ </tile>
+ <tile id="754">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-05_2_1.png"/>
+ </tile>
+ <tile id="755">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-05_3_1.png"/>
+ </tile>
+ <tile id="756">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-05_4_1.png"/>
+ </tile>
+ <tile id="757">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-06_1_1.png"/>
+ </tile>
+ <tile id="758">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-06_2_1.png"/>
+ </tile>
+ <tile id="759">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-06_3_1.png"/>
+ </tile>
+ <tile id="760">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-06_4_1.png"/>
+ </tile>
+ <tile id="761">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster09-01_1_1.png"/>
+ </tile>
+ <tile id="762">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster09-01_2_1.png"/>
+ </tile>
+ <tile id="763">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster09-01_3_1.png"/>
+ </tile>
+ <tile id="764">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster09-01_4_1.png"/>
+ </tile>
+ <tile id="765">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster09-02_1_1.png"/>
+ </tile>
+ <tile id="766">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster09-02_2_1.png"/>
+ </tile>
+ <tile id="767">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster09-02_3_1.png"/>
+ </tile>
+ <tile id="768">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster09-02_4_1.png"/>
+ </tile>
+ <tile id="769">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster09-03_1_1.png"/>
+ </tile>
+ <tile id="770">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster09-03_2_1.png"/>
+ </tile>
+ <tile id="771">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster09-03_3_1.png"/>
+ </tile>
+ <tile id="772">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster09-03_4_1.png"/>
+ </tile>
+ <tile id="773">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster09-04_1_1.png"/>
+ </tile>
+ <tile id="774">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster09-04_2_1.png"/>
+ </tile>
+ <tile id="775">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster09-04_3_1.png"/>
+ </tile>
+ <tile id="776">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster10-01_1_1.png"/>
+ </tile>
+ <tile id="777">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster10-01_2_1.png"/>
+ </tile>
+ <tile id="778">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster10-01_3_1.png"/>
+ </tile>
+ <tile id="779">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster10-01_4_1.png"/>
+ </tile>
+ <tile id="780">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster10-02_1_1.png"/>
+ </tile>
+ <tile id="781">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster10-02_2_1.png"/>
+ </tile>
+ <tile id="782">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster10-02_3_1.png"/>
+ </tile>
+ <tile id="783">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster10-02_4_1.png"/>
+ </tile>
+ <tile id="784">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster11-01_1_1.png"/>
+ </tile>
+ <tile id="785">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster11-01_2_1.png"/>
+ </tile>
+ <tile id="786">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster11-01_3_1.png"/>
+ </tile>
+ <tile id="787">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster11-01_4_1.png"/>
+ </tile>
+ <tile id="788">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster11-02_1_1.png"/>
+ </tile>
+ <tile id="789">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster11-02_2_1.png"/>
+ </tile>
+ <tile id="790">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster11-02_3_1.png"/>
+ </tile>
+ <tile id="791">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster11-02_4_1.png"/>
+ </tile>
+ <tile id="792">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster11-03_1_1.png"/>
+ </tile>
+ <tile id="793">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster11-03_2_1.png"/>
+ </tile>
+ <tile id="794">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster12-03_1_1.png"/>
+ </tile>
+ <tile id="795">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster12-03_2_1.png"/>
+ </tile>
+ <tile id="796">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster12-03_3_1.png"/>
+ </tile>
+ <tile id="797">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster12-03_4_1.png"/>
+ </tile>
+ <tile id="798">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster12-04_1_1.png"/>
+ </tile>
+ <tile id="799">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster12-04_2_1.png"/>
+ </tile>
+ <tile id="800">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-01_1_1.png"/>
+ </tile>
+ <tile id="801">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-01_2_1.png"/>
+ </tile>
+ <tile id="802">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-01_3_1.png"/>
+ </tile>
+ <tile id="803">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-01_4_1.png"/>
+ </tile>
+ <tile id="804">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-02_1_1.png"/>
+ </tile>
+ <tile id="805">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-02_2_1.png"/>
+ </tile>
+ <tile id="806">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-02_3_1.png"/>
+ </tile>
+ <tile id="807">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-02_4_1.png"/>
+ </tile>
+ <tile id="808">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-03_1_1.png"/>
+ </tile>
+ <tile id="809">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-03_2_1.png"/>
+ </tile>
+ <tile id="810">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-03_3_1.png"/>
+ </tile>
+ <tile id="811">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-03_4_1.png"/>
+ </tile>
+ <tile id="812">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-04_1_1.png"/>
+ </tile>
+ <tile id="813">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-04_2_1.png"/>
+ </tile>
+ <tile id="814">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-04_3_1.png"/>
+ </tile>
+ <tile id="815">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-04_4_1.png"/>
+ </tile>
+ <tile id="816">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-05_1_1.png"/>
+ </tile>
+ <tile id="817">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-05_2_1.png"/>
+ </tile>
+ <tile id="818">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-05_3_1.png"/>
+ </tile>
+ <tile id="819">
+  <image width="40" height="40" source="../../魔塔吧素材库/Battlers/Monster13-06_1_1.png"/>
+ </tile>
+ <tile id="820">
+  <image width="40" height="40" source="../../魔塔吧素材库/Battlers/Monster13-06_2_1.png"/>
+ </tile>
+ <tile id="821">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-07_1_1.png"/>
+ </tile>
+ <tile id="822">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-07_2_1.png"/>
+ </tile>
+ <tile id="823">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-07_3_1.png"/>
+ </tile>
+ <tile id="824">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-07_4_1.png"/>
+ </tile>
+ <tile id="825">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-08_1_1.png"/>
+ </tile>
+ <tile id="826">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-08_2_1.png"/>
+ </tile>
+ <tile id="827">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-08_3_1.png"/>
+ </tile>
+ <tile id="828">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-08_4_1.png"/>
+ </tile>
+ <tile id="829">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-09_1_1.png"/>
+ </tile>
+ <tile id="830">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-09_2_1.png"/>
+ </tile>
+ <tile id="831">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-09_3_1.png"/>
+ </tile>
+ <tile id="832">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-09_4_1.png"/>
+ </tile>
+ <tile id="833">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-10_1_1.png"/>
+ </tile>
+ <tile id="834">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-10_2_1.png"/>
+ </tile>
+ <tile id="835">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-10_3_1.png"/>
+ </tile>
+ <tile id="836">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-10_4_1.png"/>
+ </tile>
+ <tile id="837">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-11_1_1.png"/>
+ </tile>
+ <tile id="838">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-11_2_1.png"/>
+ </tile>
+ <tile id="839">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-01_1_1.png"/>
+ </tile>
+ <tile id="840">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-01_2_1.png"/>
+ </tile>
+ <tile id="841">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-01_3_1.png"/>
+ </tile>
+ <tile id="842">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-01_4_1.png"/>
+ </tile>
+ <tile id="843">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-02_1_1.png"/>
+ </tile>
+ <tile id="844">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-02_2_1.png"/>
+ </tile>
+ <tile id="845">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-02_3_1.png"/>
+ </tile>
+ <tile id="846">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-02_4_1.png"/>
+ </tile>
+ <tile id="847">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-03_1_1.png"/>
+ </tile>
+ <tile id="848">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-03_2_1.png"/>
+ </tile>
+ <tile id="849">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-03_3_1.png"/>
+ </tile>
+ <tile id="850">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-03_4_1.png"/>
+ </tile>
+ <tile id="851">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-04_1_1.png"/>
+ </tile>
+ <tile id="852">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-04_2_1.png"/>
+ </tile>
+ <tile id="853">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-04_3_1.png"/>
+ </tile>
+ <tile id="854">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-04_4_1.png"/>
+ </tile>
+ <tile id="855">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-05_1_1.png"/>
+ </tile>
+ <tile id="856">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-05_2_1.png"/>
+ </tile>
+ <tile id="857">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-05_3_1.png"/>
+ </tile>
+ <tile id="858">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-05_4_1.png"/>
+ </tile>
+ <tile id="859">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-06_1_1.png"/>
+ </tile>
+ <tile id="860">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-06_2_1.png"/>
+ </tile>
+ <tile id="861">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-06_3_1.png"/>
+ </tile>
+ <tile id="862">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-06_4_1.png"/>
+ </tile>
+ <tile id="863">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-07_1_1.png"/>
+ </tile>
+ <tile id="864">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-07_2_1.png"/>
+ </tile>
+ <tile id="865">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-07_3_1.png"/>
+ </tile>
+ <tile id="866">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-07_4_1.png"/>
+ </tile>
+ <tile id="867">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-08_1_1.png"/>
+ </tile>
+ <tile id="868">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-08_2_1.png"/>
+ </tile>
+ <tile id="869">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-08_3_1.png"/>
+ </tile>
+ <tile id="870">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-08_4_1.png"/>
+ </tile>
+ <tile id="871">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-09_1_1.png"/>
+ </tile>
+ <tile id="872">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-09_2_1.png"/>
+ </tile>
+ <tile id="873">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-09_3_1.png"/>
+ </tile>
+ <tile id="874">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-09_4_1.png"/>
+ </tile>
+ <tile id="875">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-10_1_1.png"/>
+ </tile>
+ <tile id="876">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-10_2_1.png"/>
+ </tile>
+ <tile id="877">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-10_3_1.png"/>
+ </tile>
+ <tile id="878">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-10_4_1.png"/>
+ </tile>
+ <tile id="879">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-12_1_1.png"/>
+ </tile>
+ <tile id="880">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-12_2_1.png"/>
+ </tile>
+ <tile id="881">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-12_3_1.png"/>
+ </tile>
+ <tile id="882">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-12_4_1.png"/>
+ </tile>
+ <tile id="883">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-13_1_1.png"/>
+ </tile>
+ <tile id="884">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-13_2_1.png"/>
+ </tile>
+ <tile id="885">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-13_3_1.png"/>
+ </tile>
+ <tile id="886">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-13_4_1.png"/>
+ </tile>
+ <tile id="887">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-14_1_1.png"/>
+ </tile>
+ <tile id="888">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-14_2_1.png"/>
+ </tile>
+ <tile id="889">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-14_3_1.png"/>
+ </tile>
+ <tile id="890">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-14_4_1.png"/>
+ </tile>
+ <tile id="891">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-15_1_1.png"/>
+ </tile>
+ <tile id="892">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-15_2_1.png"/>
+ </tile>
+ <tile id="893">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-15_3_1.png"/>
+ </tile>
+ <tile id="894">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-16_1_1.png"/>
+ </tile>
+ <tile id="895">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-16_2_1.png"/>
+ </tile>
+ <tile id="896">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-16_3_1.png"/>
+ </tile>
+ <tile id="897">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-17_1_1.png"/>
+ </tile>
+ <tile id="898">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-17_2_1.png"/>
+ </tile>
+ <tile id="899">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-17_3_1.png"/>
+ </tile>
+ <tile id="900">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-17_4_1.png"/>
+ </tile>
+ <tile id="901">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-18_1_1.png"/>
+ </tile>
+ <tile id="902">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-18_2_1.png"/>
+ </tile>
+ <tile id="903">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-18_3_1.png"/>
+ </tile>
+ <tile id="904">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-18_4_1.png"/>
+ </tile>
+ <tile id="905">
+  <image width="64" height="64" source="../../魔塔吧素材库/Battlers/Monster14-21_1_1.png"/>
+ </tile>
+ <tile id="906">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-22_1_1.png"/>
+ </tile>
+ <tile id="907">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-22_2_1.png"/>
+ </tile>
+ <tile id="908">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-22_3_1.png"/>
+ </tile>
+ <tile id="909">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-22_4_1.png"/>
+ </tile>
+ <tile id="910">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-23_1_1.png"/>
+ </tile>
+ <tile id="911">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-23_2_1.png"/>
+ </tile>
+ <tile id="912">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-23_3_1.png"/>
+ </tile>
+ <tile id="913">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-23_4_1.png"/>
+ </tile>
+ <tile id="914">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-24_1_1.png"/>
+ </tile>
+ <tile id="915">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-24_2_1.png"/>
+ </tile>
+ <tile id="916">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-24_3_1.png"/>
+ </tile>
+ <tile id="917">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-30_1_1.png"/>
+ </tile>
+ <tile id="918">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-30_2_1.png"/>
+ </tile>
+ <tile id="919">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-30_3_1.png"/>
+ </tile>
+ <tile id="920">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-30_4_1.png"/>
+ </tile>
+ <tile id="921">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-31_1_1.png"/>
+ </tile>
+ <tile id="922">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-31_2_1.png"/>
+ </tile>
+ <tile id="923">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-31_3_1.png"/>
+ </tile>
+ <tile id="924">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-31_4_1.png"/>
+ </tile>
+ <tile id="925">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-32_1_1.png"/>
+ </tile>
+ <tile id="926">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-32_2_1.png"/>
+ </tile>
+ <tile id="927">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-32_3_1.png"/>
+ </tile>
+ <tile id="928">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-32_4_1.png"/>
+ </tile>
+ <tile id="929">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-36_1_1.png"/>
+ </tile>
+ <tile id="930">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-36_2_1.png"/>
+ </tile>
+ <tile id="931">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-36_3_1.png"/>
+ </tile>
+ <tile id="932">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-36_4_1.png"/>
+ </tile>
+ <tile id="933">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-37_1_1.png"/>
+ </tile>
+ <tile id="934">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-37_2_1.png"/>
+ </tile>
+ <tile id="935">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-37_3_1.png"/>
+ </tile>
+ <tile id="936">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-37_4_1.png"/>
+ </tile>
+ <tile id="937">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-38_1_1.png"/>
+ </tile>
+ <tile id="938">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-38_2_1.png"/>
+ </tile>
+ <tile id="939">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-38_3_1.png"/>
+ </tile>
+ <tile id="940">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-38_4_1.png"/>
+ </tile>
+ <tile id="941">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-39_1_1.png"/>
+ </tile>
+ <tile id="942">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-39_2_1.png"/>
+ </tile>
+ <tile id="943">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-39_3_1.png"/>
+ </tile>
+ <tile id="944">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-39_4_1.png"/>
+ </tile>
+ <tile id="945">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-01_1_1.png"/>
+ </tile>
+ <tile id="946">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-01_2_1.png"/>
+ </tile>
+ <tile id="947">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-01_3_1.png"/>
+ </tile>
+ <tile id="948">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-01_4_1.png"/>
+ </tile>
+ <tile id="949">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-02_1_1.png"/>
+ </tile>
+ <tile id="950">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-02_2_1.png"/>
+ </tile>
+ <tile id="951">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-02_3_1.png"/>
+ </tile>
+ <tile id="952">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-02_4_1.png"/>
+ </tile>
+ <tile id="953">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-03_1_1.png"/>
+ </tile>
+ <tile id="954">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-03_2_1.png"/>
+ </tile>
+ <tile id="955">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-03_3_1.png"/>
+ </tile>
+ <tile id="956">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-03_4_1.png"/>
+ </tile>
+ <tile id="957">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-04_1_1.png"/>
+ </tile>
+ <tile id="958">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-04_2_1.png"/>
+ </tile>
+ <tile id="959">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-04_3_1.png"/>
+ </tile>
+ <tile id="960">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-04_4_1.png"/>
+ </tile>
+ <tile id="961">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-05_1_1.png"/>
+ </tile>
+ <tile id="962">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-05_2_1.png"/>
+ </tile>
+ <tile id="963">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-05_3_1.png"/>
+ </tile>
+ <tile id="964">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-05_4_1.png"/>
+ </tile>
+ <tile id="965">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-06_1_1.png"/>
+ </tile>
+ <tile id="966">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-06_2_1.png"/>
+ </tile>
+ <tile id="967">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-06_3_1.png"/>
+ </tile>
+ <tile id="968">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-06_4_1.png"/>
+ </tile>
+ <tile id="969">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-07_1_1.png"/>
+ </tile>
+ <tile id="970">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-07_2_1.png"/>
+ </tile>
+ <tile id="971">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-07_3_1.png"/>
+ </tile>
+ <tile id="972">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-07_4_1.png"/>
+ </tile>
+ <tile id="973">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-08_1_1.png"/>
+ </tile>
+ <tile id="974">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-08_2_1.png"/>
+ </tile>
+ <tile id="975">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-08_3_1.png"/>
+ </tile>
+ <tile id="976">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster15-08_4_1.png"/>
+ </tile>
+ <tile id="977">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster21-01_1_1.png"/>
+ </tile>
+ <tile id="978">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster21-01_2_1.png"/>
+ </tile>
+ <tile id="979">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster21-01_3_1.png"/>
+ </tile>
+ <tile id="980">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster21-01_4_1.png"/>
+ </tile>
+ <tile id="981">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster21-02_1_1.png"/>
+ </tile>
+ <tile id="982">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster21-02_2_1.png"/>
+ </tile>
+ <tile id="983">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster21-02_3_1.png"/>
+ </tile>
+ <tile id="984">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster21-02_4_1.png"/>
+ </tile>
+ <tile id="985">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster21-03_1_1.png"/>
+ </tile>
+ <tile id="986">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster21-03_2_1.png"/>
+ </tile>
+ <tile id="987">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster21-03_3_1.png"/>
+ </tile>
+ <tile id="988">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster21-03_4_1.png"/>
+ </tile>
+ <tile id="989">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster22-01_1_1.png"/>
+ </tile>
+ <tile id="990">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster22-01_2_1.png"/>
+ </tile>
+ <tile id="991">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster22-01_3_1.png"/>
+ </tile>
+ <tile id="992">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster22-01_4_1.png"/>
+ </tile>
+ <tile id="993">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster22-02_1_1.png"/>
+ </tile>
+ <tile id="994">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster22-02_2_1.png"/>
+ </tile>
+ <tile id="995">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster22-02_3_1.png"/>
+ </tile>
+ <tile id="996">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster22-02_4_1.png"/>
+ </tile>
+ <tile id="997">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster22-03_1_1.png"/>
+ </tile>
+ <tile id="998">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster22-03_2_1.png"/>
+ </tile>
+ <tile id="999">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster22-03_3_1.png"/>
+ </tile>
+ <tile id="1000">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster22-03_4_1.png"/>
+ </tile>
+ <tile id="1001">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster23-01_1_1.png"/>
+ </tile>
+ <tile id="1002">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster23-01_2_1.png"/>
+ </tile>
+ <tile id="1003">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster23-01_3_1.png"/>
+ </tile>
+ <tile id="1004">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster23-01_4_1.png"/>
+ </tile>
+ <tile id="1005">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster23-02_1_1.png"/>
+ </tile>
+ <tile id="1006">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster23-02_2_1.png"/>
+ </tile>
+ <tile id="1007">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster23-02_3_1.png"/>
+ </tile>
+ <tile id="1008">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster23-02_4_1.png"/>
+ </tile>
+ <tile id="1009">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster24-01_1_1.png"/>
+ </tile>
+ <tile id="1010">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster24-01_2_1.png"/>
+ </tile>
+ <tile id="1011">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster24-01_3_1.png"/>
+ </tile>
+ <tile id="1012">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster24-01_4_1.png"/>
+ </tile>
+ <tile id="1013">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster24-02_1_1.png"/>
+ </tile>
+ <tile id="1014">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster24-02_2_1.png"/>
+ </tile>
+ <tile id="1015">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster24-02_3_1.png"/>
+ </tile>
+ <tile id="1016">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster25-01_1_1.png"/>
+ </tile>
+ <tile id="1017">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster25-01_2_1.png"/>
+ </tile>
+ <tile id="1018">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster25-01_3_1.png"/>
+ </tile>
+ <tile id="1019">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster25-02_1_1.png"/>
+ </tile>
+ <tile id="1020">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster25-02_2_1.png"/>
+ </tile>
+ <tile id="1021">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster25-02_3_1.png"/>
+ </tile>
+ <tile id="1022">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster25-02_4_1.png"/>
+ </tile>
+ <tile id="1023">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster25-03_1_1.png"/>
+ </tile>
+ <tile id="1024">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster25-03_2_1.png"/>
+ </tile>
+ <tile id="1025">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster26-01_1_1.png"/>
+ </tile>
+ <tile id="1026">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster26-01_2_1.png"/>
+ </tile>
+ <tile id="1027">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster26-01_3_1.png"/>
+ </tile>
+ <tile id="1028">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster26-01_4_1.png"/>
+ </tile>
+ <tile id="1029">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster26-02_1_1.png"/>
+ </tile>
+ <tile id="1030">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster26-02_2_1.png"/>
+ </tile>
+ <tile id="1031">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster26-02_3_1.png"/>
+ </tile>
+ <tile id="1032">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster26-03_1_1.png"/>
+ </tile>
+ <tile id="1033">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster26-03_2_1.png"/>
+ </tile>
+ <tile id="1034">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster26-03_3_1.png"/>
+ </tile>
+ <tile id="1035">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster26-03_4_1.png"/>
+ </tile>
+ <tile id="1036">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster27-01_1_1.png"/>
+ </tile>
+ <tile id="1037">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster27-01_2_1.png"/>
+ </tile>
+ <tile id="1038">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster27-01_3_1.png"/>
+ </tile>
+ <tile id="1039">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster27-01_4_1.png"/>
+ </tile>
+ <tile id="1040">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster27-02_1_1.png"/>
+ </tile>
+ <tile id="1041">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster27-02_2_1.png"/>
+ </tile>
+ <tile id="1042">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster27-02_3_1.png"/>
+ </tile>
+ <tile id="1043">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster27-02_4_1.png"/>
+ </tile>
+ <tile id="1044">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster28-01_1_1.png"/>
+ </tile>
+ <tile id="1045">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster28-01_2_1.png"/>
+ </tile>
+ <tile id="1046">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster28-01_3_1.png"/>
+ </tile>
+ <tile id="1047">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster28-01_4_1.png"/>
+ </tile>
+ <tile id="1048">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster28-02_1_1.png"/>
+ </tile>
+ <tile id="1049">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster28-02_2_1.png"/>
+ </tile>
+ <tile id="1050">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster28-02_3_1.png"/>
+ </tile>
+ <tile id="1051">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster29-01_1_1.png"/>
+ </tile>
+ <tile id="1052">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster29-01_2_1.png"/>
+ </tile>
+ <tile id="1053">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster29-01_3_1.png"/>
+ </tile>
+ <tile id="1054">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster29-01_4_1.png"/>
+ </tile>
+ <tile id="1055">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster29-02_1_1.png"/>
+ </tile>
+ <tile id="1056">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster29-02_2_1.png"/>
+ </tile>
+ <tile id="1057">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster29-02_3_1.png"/>
+ </tile>
+ <tile id="1058">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster29-03_1_1.png"/>
+ </tile>
+ <tile id="1059">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster29-03_2_1.png"/>
+ </tile>
+ <tile id="1060">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster29-03_3_1.png"/>
+ </tile>
+ <tile id="1061">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster29-03_4_1.png"/>
+ </tile>
+ <tile id="1062">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster29-04_1_1.png"/>
+ </tile>
+ <tile id="1063">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster29-04_2_1.png"/>
+ </tile>
+ <tile id="1064">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster29-04_3_1.png"/>
+ </tile>
+ <tile id="1065">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster31-01_1_1.png"/>
+ </tile>
+ <tile id="1066">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster31-01_2_1.png"/>
+ </tile>
+ <tile id="1067">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster31-01_3_1.png"/>
+ </tile>
+ <tile id="1068">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster31-01_4_1.png"/>
+ </tile>
+ <tile id="1069">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster31-02_1_1.png"/>
+ </tile>
+ <tile id="1070">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster31-02_2_1.png"/>
+ </tile>
+ <tile id="1071">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster31-02_3_1.png"/>
+ </tile>
+ <tile id="1072">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster32-01_1_1.png"/>
+ </tile>
+ <tile id="1073">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster32-01_2_1.png"/>
+ </tile>
+ <tile id="1074">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster32-01_3_1.png"/>
+ </tile>
+ <tile id="1075">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster32-01_4_1.png"/>
+ </tile>
+ <tile id="1076">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster32-02_1_1.png"/>
+ </tile>
+ <tile id="1077">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster33-01_1_1.png"/>
+ </tile>
+ <tile id="1078">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster33-01_2_1.png"/>
+ </tile>
+ <tile id="1079">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster33-01_3_1.png"/>
+ </tile>
+ <tile id="1080">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster33-01_4_1.png"/>
+ </tile>
+ <tile id="1081">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster33-02_1_1.png"/>
+ </tile>
+ <tile id="1082">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster34-01_1_1.png"/>
+ </tile>
+ <tile id="1083">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster34-01_2_1.png"/>
+ </tile>
+ <tile id="1084">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster34-01_3_1.png"/>
+ </tile>
+ <tile id="1085">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster35-01_1_1.png"/>
+ </tile>
+ <tile id="1086">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster35-01_2_1.png"/>
+ </tile>
+ <tile id="1087">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster36-01_1_1.png"/>
+ </tile>
+ <tile id="1088">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster36-01_2_1.png"/>
+ </tile>
+ <tile id="1089">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster36-01_3_1.png"/>
+ </tile>
+ <tile id="1090">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster36-02_1_1.png"/>
+ </tile>
+ <tile id="1091">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster36-02_2_1.png"/>
+ </tile>
+ <tile id="1092">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster36-02_3_1.png"/>
+ </tile>
+ <tile id="1093">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster36-02_4_1.png"/>
+ </tile>
+ <tile id="1094">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster37-01_1_1.png"/>
+ </tile>
+ <tile id="1095">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster37-01_2_1.png"/>
+ </tile>
+ <tile id="1096">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster37-01_3_1.png"/>
+ </tile>
+ <tile id="1097">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster37-01_4_1.png"/>
+ </tile>
+ <tile id="1098">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster37-02_1_1.png"/>
+ </tile>
+ <tile id="1099">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster38-01_1_1.png"/>
+ </tile>
+ <tile id="1100">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster38-01_2_1.png"/>
+ </tile>
+ <tile id="1101">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster38-02_1_1.png"/>
+ </tile>
+ <tile id="1102">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster38-02_2_1.png"/>
+ </tile>
+ <tile id="1103">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster38-02_3_1.png"/>
+ </tile>
+ <tile id="1104">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster39-01_1_1.png"/>
+ </tile>
+ <tile id="1105">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster39-01_2_1.png"/>
+ </tile>
+ <tile id="1106">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster39-01_3_1.png"/>
+ </tile>
+ <tile id="1107">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster40-01_1_1.png"/>
+ </tile>
+ <tile id="1108">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster40-01_2_1.png"/>
+ </tile>
+ <tile id="1109">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster41-01_1_1.png"/>
+ </tile>
+ <tile id="1110">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster41-01_2_1.png"/>
+ </tile>
+ <tile id="1111">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster42-01_1_1.png"/>
+ </tile>
+ <tile id="1112">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster42-01_2_1.png"/>
+ </tile>
+ <tile id="1113">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster42-01_3_1.png"/>
+ </tile>
+ <tile id="1114">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster42-01_4_1.png"/>
+ </tile>
+ <tile id="1115">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-01_1_1.png"/>
+ </tile>
+ <tile id="1116">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-01_2_1.png"/>
+ </tile>
+ <tile id="1117">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-01_3_1.png"/>
+ </tile>
+ <tile id="1118">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-01_4_1.png"/>
+ </tile>
+ <tile id="1119">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-02_1_1.png"/>
+ </tile>
+ <tile id="1120">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-02_2_1.png"/>
+ </tile>
+ <tile id="1121">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-02_3_1.png"/>
+ </tile>
+ <tile id="1122">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-02_4_1.png"/>
+ </tile>
+ <tile id="1123">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-03_1_1.png"/>
+ </tile>
+ <tile id="1124">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-03_2_1.png"/>
+ </tile>
+ <tile id="1125">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-03_3_1.png"/>
+ </tile>
+ <tile id="1126">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-03_4_1.png"/>
+ </tile>
+ <tile id="1127">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-04_1_1.png"/>
+ </tile>
+ <tile id="1128">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-04_2_1.png"/>
+ </tile>
+ <tile id="1129">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-04_3_1.png"/>
+ </tile>
+ <tile id="1130">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-04_4_1.png"/>
+ </tile>
+ <tile id="1131">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-05_1_1.png"/>
+ </tile>
+ <tile id="1132">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-05_2_1.png"/>
+ </tile>
+ <tile id="1133">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-05_3_1.png"/>
+ </tile>
+ <tile id="1134">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-05_4_1.png"/>
+ </tile>
+ <tile id="1135">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-06_1_1.png"/>
+ </tile>
+ <tile id="1136">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-06_2_1.png"/>
+ </tile>
+ <tile id="1137">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-06_3_1.png"/>
+ </tile>
+ <tile id="1138">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-06_4_1.png"/>
+ </tile>
+ <tile id="1139">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-07_1_1.png"/>
+ </tile>
+ <tile id="1140">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-07_2_1.png"/>
+ </tile>
+ <tile id="1141">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-07_3_1.png"/>
+ </tile>
+ <tile id="1142">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster50-07_4_1.png"/>
+ </tile>
+ <tile id="1143">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-01_1_1.png"/>
+ </tile>
+ <tile id="1144">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-01_2_1.png"/>
+ </tile>
+ <tile id="1145">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-01_3_1.png"/>
+ </tile>
+ <tile id="1146">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-01_4_1.png"/>
+ </tile>
+ <tile id="1147">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-02_1_1.png"/>
+ </tile>
+ <tile id="1148">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-02_2_1.png"/>
+ </tile>
+ <tile id="1149">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-02_3_1.png"/>
+ </tile>
+ <tile id="1150">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-02_4_1.png"/>
+ </tile>
+ <tile id="1151">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-03_1_1.png"/>
+ </tile>
+ <tile id="1152">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-03_2_1.png"/>
+ </tile>
+ <tile id="1153" class="Author">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-03_3_1.png"/>
+ </tile>
+ <tile id="1154">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-03_4_1.png"/>
+ </tile>
+ <tile id="1155">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-04_1_1.png"/>
+ </tile>
+ <tile id="1156">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-04_2_1.png"/>
+ </tile>
+ <tile id="1157">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-04_3_1.png"/>
+ </tile>
+ <tile id="1158">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-04_4_1.png"/>
+ </tile>
+ <tile id="1159">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-06_1_1.png"/>
+ </tile>
+ <tile id="1161">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-06_3_1.png"/>
+ </tile>
+ <tile id="1162">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-06_4_1.png"/>
+ </tile>
+ <tile id="1163">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-07_1_1.png"/>
+ </tile>
+ <tile id="1164">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-07_2_1.png"/>
+ </tile>
+ <tile id="1165">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-07_3_1.png"/>
+ </tile>
+ <tile id="1166">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-07_4_1.png"/>
+ </tile>
+ <tile id="1167">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC02-01_1_1.png"/>
+ </tile>
+ <tile id="1168">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC02-01_2_1.png"/>
+ </tile>
+ <tile id="1169">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC02-01_3_1.png"/>
+ </tile>
+ <tile id="1170">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC02-01_4_1.png"/>
+ </tile>
+ <tile id="1171">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC02-02_1_1.png"/>
+ </tile>
+ <tile id="1172">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC03-01_1_1.png"/>
+ </tile>
+ <tile id="1173">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC03-01_2_1.png"/>
+ </tile>
+ <tile id="1174">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC03-01_3_1.png"/>
+ </tile>
+ <tile id="1175">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC03-01_4_1.png"/>
+ </tile>
+ <tile id="1176">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC03-02_1_1.png"/>
+ </tile>
+ <tile id="1177">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC03-02_2_1.png"/>
+ </tile>
+ <tile id="1178">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC03-02_3_1.png"/>
+ </tile>
+ <tile id="1179">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC03-02_4_1.png"/>
+ </tile>
+ <tile id="1180">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC04-01_3_1.png"/>
+ </tile>
+ <tile id="1181">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC04-01_4_1.png"/>
+ </tile>
+ <tile id="1182">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver01_1_1.png"/>
+ </tile>
+</tileset>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tileset version="1.9" tiledversion="1.9.1" name="BaseAsset" tilewidth="32" tileheight="32" tilecount="170" columns="10">
+ <image source="motaAsset.jpg" width="320" height="544"/>
+ <tile id="0" class="GreenSlime"/>
+ <tile id="1" class="GreenSlime"/>
+ <tile id="2" class="RedSlime"/>
+ <tile id="3" class="RedSlime"/>
+ <tile id="6" class="Bat"/>
+ <tile id="7" class="Bat"/>
+ <tile id="10" class="Skeleton"/>
+ <tile id="11" class="Skeleton"/>
+ <tile id="12" class="SkeletonWarrior"/>
+ <tile id="13" class="SkeletonWarrior"/>
+ <tile id="14" class="SkeletonCaptain"/>
+ <tile id="15" class="SkeletonCaptain"/>
+ <tile id="16" class="Priest"/>
+ <tile id="17" class="Priest"/>
+ <tile id="50" class="GhostSoldier"/>
+ <tile id="51" class="GhostSoldier"/>
+ <tile id="58" class="Zeno"/>
+ <tile id="59" class="Zeno"/>
+ <tile id="98" class="OldMan"/>
+ <tile id="99" class="OldMan"/>
+ <tile id="108" class="Merchant"/>
+ <tile id="109" class="Merchant"/>
+ <tile id="116" class="AltarLeft"/>
+ <tile id="117" class="Altar"/>
+ <tile id="118" class="AltarRight"/>
+ <tile id="119" class="Altar"/>
+ <tile id="123" class="RedGem"/>
+ <tile id="124" class="BlueGem"/>
+ <tile id="126" class="IronSword"/>
+ <tile id="136" class="IronShield"/>
+ <tile id="141" class="Mattock"/>
+ <tile id="142" class="HolyWater"/>
+ <tile id="143" class="YellowKey"/>
+ <tile id="144" class="BlueKey"/>
+ <tile id="145" class="RedKey"/>
+ <tile id="155" class="MechanismDoor"/>
+ <tile id="156" class="YellowDoor">
+  <properties>
+   <property name="unit" value="yellowDoor"/>
+  </properties>
+ </tile>
+ <tile id="157" class="BlueDoor"/>
+ <tile id="158" class="RedDoor"/>
+ <tile id="159" class="IronDoor"/>
+ <tile id="160" class="Wall"/>
+ <tile id="162" class="DownStair"/>
+ <tile id="163" class="UpStair">
+  <properties>
+   <property name="unit" value="upStair"/>
+  </properties>
+ </tile>
+ <tile id="164" class="Lava"/>
+ <tile id="165" class="Lava"/>
+ <tile id="166" class="Star"/>
+ <tile id="167" class="Star"/>
+ <tile id="168" class="Ground"/>
+ <tile id="169" class="Ground"/>
+</tileset>

@@ -1,0 +1,52 @@
+ManifestFileVersion: 0
+CRC: 1123279036
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f73869a783b4fd25a3ba769306132c42
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 8f1dad6b63c4456bb93104e8dbb9ca00
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 89
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3b4124a9944f0f743bf5caa6ae32b694, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6c93899bf825947ccbea3b21765c5415, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 141efe723f989d541a2203d882def759, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/Star.prefab
+- Assets/Prefabs/Lava.prefab
+- Assets/Prefabs/Ground.prefab
+- Assets/Prefabs/GreenSlime.prefab
+- Assets/Prefabs/RedSlime.prefab
+- Assets/Prefabs/Wall.prefab
+- Assets/Prefabs/Zeno.prefab
+- Assets/Maps/motaAsset.jpg
+Dependencies: []
