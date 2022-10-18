@@ -20,6 +20,22 @@ public class TriggerArea
     public List<string> keys;
     public List<string> values;
 
+    // 不会被存储到存档
+    [NonSerialized]
+    private Dictionary<string, string> _settings;
+
+    public Dictionary<string, string> settings
+    {
+        get
+        {
+            if (_settings == null)
+            {
+                _settings = ToDict();
+            }
+            return _settings;
+        }
+    }
+
     public TriggerArea()
     {
         this.keys = new List<string>();
@@ -55,6 +71,4 @@ public class TriggerArea
         }
         return dict;
     }
-
-    
 }

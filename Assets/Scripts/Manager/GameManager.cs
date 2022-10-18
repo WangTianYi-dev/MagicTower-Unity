@@ -913,16 +913,40 @@ public class GameManager : BaseManager
     #region 触发区域
 
     UnityAction OnTriggerAreaDone = new UnityAction(()=> { });
-    UnityEvent curTriggerAreaOver = new UnityEvent();
+
+    /// <summary>
+    /// 前提条件判断器
+    /// </summary>
+    Dictionary<string, Func<TriggerArea, bool>> prerequsiteJudges = new Dictionary<string, Func<TriggerArea, bool>>
+    {
+        {
+            "collision",
+            (area) =>
+            {
+                return area.position == player.position;
+            }
+        }
+    };
+
+    private void TriggerAreaHandler(TriggerArea area)
+    {
+        string prerequsite = area.settings.ContainsKey("prerequsite") ? area.settings["prerequsite"] : "collision";
+        if (prerequsiteJudges[prerequsite](area))
+        {
+            TriggerByArea(area);
+        }
+    }
 
     /// <summary>
     /// 由区域激活的触发
     /// </summary>
     private void TriggerByArea(TriggerArea area)
     {
-        Dictionary<string, string> settings = area.ToDict();
-        curTriggerAreaOver.AddListener(OnTriggerAreaDone);
-        switch (settings["type"])
+
+        var settings = area.settings;
+        curTriggerOver.AddListener(OnTriggerAreaDone);
+        string triggerType = settings.ContainsKey("type") ? settings["type"] : "chat";
+        switch (triggerType)
         {
             case "chat":
                 {

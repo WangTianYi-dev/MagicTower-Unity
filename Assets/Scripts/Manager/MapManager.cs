@@ -158,6 +158,7 @@ public class MapManager : BaseManager
         }
         RefreshEntities(curTilemap);
         UIManager.instance.RefreshAreaName(name);
+        RefreshTriggerAreas();
     }
 
 
@@ -169,6 +170,7 @@ public class MapManager : BaseManager
         UnitLayer.instance.Refresh(tilemap);
     }
 
+    #region 实体（entity）处理
 
     /// <summary>
     /// 将e从当前的tilemap中移除并摧毁其gameobject
@@ -244,7 +246,7 @@ public class MapManager : BaseManager
     /// <param name="name">替换者的名字</param>
     public void ReplaceGroundEntity(Vector2Int pos, GameObject obj)
     {
-        GameManager.instance.RemoveEntity(groundEntityDict[pos]);
+        RemoveEntity(groundEntityDict[pos]);
         groundEntityDict.Add(pos, groundLayer.CreateEntity(obj, pos));
     }
 
@@ -255,10 +257,25 @@ public class MapManager : BaseManager
     /// <param name="name">替换者的名字</param>
     public void ReplaceUnitEntity(Vector2Int pos, string name)
     {
-        Destroy(unitEntityDict[pos].gameObject);
+        RemoveEntity(unitEntityDict[pos]);
         unitEntityDict.Add(pos, unitLayer.CreateEntity(name, pos));
     }
+    #endregion
 
+    #region 触发区域（TriggerArea）
+
+    private List<TriggerArea> triggerAreas = new List<TriggerArea>();
+
+    public void RefreshTriggerAreas()
+    {
+        triggerAreas = new List<TriggerArea>(curTilemap.triggerAreas);
+    }
+
+    public void RemoveTriggerArea(TriggerArea area)
+    {
+        triggerAreas.Remove(area);
+        curTilemap.triggerAreas.Remove(area);
+    }
 
     public void Save2Archive(Archive archive)
     {
@@ -288,5 +305,5 @@ public class MapManager : BaseManager
         RefreshEntities(curTilemap);
     }
 
-        
+    #endregion
 }
