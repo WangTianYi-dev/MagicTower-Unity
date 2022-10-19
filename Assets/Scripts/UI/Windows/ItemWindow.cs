@@ -64,8 +64,7 @@ public class ItemWindow : BaseWindow, IPointerClickHandler
             curSelect = item;
             item.SelectMode();
             print(item.intro);
-            //ShowIntro(item.intro);
-            ShowIntro("朴实无华的破墙镐，可以破开一堵墙\n用一次就会坏，是镐子质量太差还是墙质量太好呢？");
+            ShowIntro(item.intro);
         }
     }
 

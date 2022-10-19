@@ -68,7 +68,7 @@ public class PromptWindow : BaseWindow, IPointerClickHandler
     {
         if (!ShowNextSentence())
         {
-            GameManager.instance.CurTriggerSuccess();
+            GameManager.instance.TriggerSuccess();
             UIManager.instance.SwitchWindow("GameWindow");
         }
     }

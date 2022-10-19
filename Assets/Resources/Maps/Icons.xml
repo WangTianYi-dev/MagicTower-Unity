@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset version="1.9" tiledversion="1.9.1" name="Icons" tilewidth="32" tileheight="32" tilecount="543" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
+ <tile id="499" class="Mud">
+  <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item04-XXMT01_1_1.png"/>
+ </tile>
  <tile id="0">
   <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item01-01_1_1.png"/>
  </tile>
@@ -697,7 +700,7 @@
  <tile id="231">
   <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item02-08_3_4.png"/>
  </tile>
- <tile id="232">
+ <tile id="232" class="Intellion">
   <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item02-09_1_1.png"/>
  </tile>
  <tile id="233">
@@ -1497,9 +1500,6 @@
  </tile>
  <tile id="498">
   <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item03-22_4_4.png"/>
- </tile>
- <tile id="499">
-  <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item04-XXMT01_1_1.png"/>
  </tile>
  <tile id="500">
   <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item04-XXMT01_1_2.png"/>

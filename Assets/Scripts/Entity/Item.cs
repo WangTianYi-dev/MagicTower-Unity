@@ -9,6 +9,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Linq;
+using System;
 
 public class Item : Entity
 {
@@ -26,6 +27,7 @@ public class Item : Entity
 		base.Start();
 		internalName = ResServer.instance.GetEntityName(this);
 		this.type = UnitType.Item;
+		this.introText = ItemIntro[internalName];
 		this.passable = true;
 		if (introText == null || introText == "")
 			introText = ItemIntro[internalName.ToLower()];
@@ -51,4 +53,47 @@ public class Item : Entity
             "增加勇士（攻击+防御）* 10的生命\n这种质量的圣水，外面要卖1000金币，魔塔里却俯拾即是，难怪有人来这寻宝"
         }
     };
+
+	public static Dictionary<string, Func<bool>> ItemEffects = new Dictionary<string, Func<bool>>
+	{
+		{
+			"mattock",
+			() =>
+			{
+				var mapmngr = MapManager.instance;
+				var player = Player.instance;
+				var uimngr = UIManager.instance;
+				var facingPos = player.position + player.playerDir;
+				if (!mapmngr.PosInMap(facingPos))
+				{
+					uimngr.PopMessage("目标在地图外");
+					return false;
+				}
+				if (mapmngr.groundEntityDict[facingPos].nameInGame == "墙")
+				{
+					mapmngr.ReplaceGroundEntity(facingPos, mapmngr.groundEntityDict[player.position].gameObject);
+					return true;
+				}
+				else
+				{
+					uimngr.PopMessage("镐只能对墙起作用");
+					return false;
+				}
+			}
+		},
+		{
+			"holywater",
+            () =>
+            {
+                var mapmngr = MapManager.instance;
+                var player = Player.instance;
+                var uimngr = UIManager.instance;
+                long amount = (player.property.DEF + player.property.ATK) * 10;
+				uimngr.PopMessage($"使用圣水，增加{amount}生命");
+				player.SetPropertyValue("hitpoint", amount + player.property.HP);
+				uimngr.RefreshUI();
+				return true;
+            }
+        }
+	};
 }

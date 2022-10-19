@@ -11,6 +11,8 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System;
+using System.Linq;
 
 public class ManualWindow : BaseWindow, IPointerClickHandler
 {
@@ -49,12 +51,16 @@ public class ManualWindow : BaseWindow, IPointerClickHandler
     /// 刷新图鉴内容
     /// </summary>
     /// <param name="enemySet">当前区域的怪物集合</param>
-    public void RefreshEntries(HashSet<Enemy> enemySet)
+    public void RefreshEntries(List<Enemy> enemySet)
     {
         InitPanel();
         int len = enemySet.Count;
         panel.sizeDelta = new Vector2(panel.rect.width, Mathf.Max(view.rect.height, // 面板区域的高度
-            (manualEntry.GetComponent<RectTransform>().rect.height + 4) * len));
+            (manualEntry.GetComponent<RectTransform>().rect.height + 6) * len));
+        var ee = from e in enemySet 
+                 orderby e.property.HP
+                 select e;
+
         foreach (var enemy in enemySet)
         {
             GameObject entry = Util.Inst(manualEntry, panel, Vector2Int.zero);

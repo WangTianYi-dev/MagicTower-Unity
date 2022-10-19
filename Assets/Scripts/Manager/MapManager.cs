@@ -264,7 +264,7 @@ public class MapManager : BaseManager
 
     #region 触发区域（TriggerArea）
 
-    private List<TriggerArea> triggerAreas = new List<TriggerArea>();
+    public List<TriggerArea> triggerAreas { get; private set; } = new List<TriggerArea>();
 
     public void RefreshTriggerAreas()
     {

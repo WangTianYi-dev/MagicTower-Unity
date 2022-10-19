@@ -7,6 +7,8 @@
  <tile id="3" class="RedSlime"/>
  <tile id="6" class="Bat"/>
  <tile id="7" class="Bat"/>
+ <tile id="8" class="BigBat"/>
+ <tile id="9" class="BigBat"/>
  <tile id="10" class="Skeleton"/>
  <tile id="11" class="Skeleton"/>
  <tile id="12" class="SkeletonWarrior"/>
@@ -15,6 +17,10 @@
  <tile id="15" class="SkeletonCaptain"/>
  <tile id="16" class="Priest"/>
  <tile id="17" class="Priest"/>
+ <tile id="20" class="Zombie"/>
+ <tile id="21" class="Zombie"/>
+ <tile id="48" class="Soldier"/>
+ <tile id="49" class="Soldier"/>
  <tile id="50" class="GhostSoldier"/>
  <tile id="51" class="GhostSoldier"/>
  <tile id="58" class="Zeno"/>
@@ -30,6 +36,8 @@
  <tile id="123" class="RedGem"/>
  <tile id="124" class="BlueGem"/>
  <tile id="126" class="IronSword"/>
+ <tile id="133" class="RedBottle"/>
+ <tile id="134" class="BlueBottle"/>
  <tile id="136" class="IronShield"/>
  <tile id="141" class="Mattock"/>
  <tile id="142" class="HolyWater"/>

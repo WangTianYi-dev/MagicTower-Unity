@@ -168,8 +168,7 @@ public class GameManager : BaseManager
         }
         if (groundEntity != null) groundEntity.AfterMoveTo();
         if (unitEntity != null) unitEntity.AfterMoveTo();
-
-        
+        ActivateTriggerAreas();
     }
 
     public void AfterBlocked(Vector2Int cord)
@@ -516,7 +515,6 @@ public class GameManager : BaseManager
             {"yellowkey", YellowKeyAdd },
             {"bluekey", BlueKeyAdd },
             {"redkey", RedKeyAdd },
-            // TODO
         };
     #endregion
     #endregion
@@ -596,7 +594,7 @@ public class GameManager : BaseManager
 
     #region 菜单项相关
 
-    public HashSet<Enemy> GetEnemySet()
+    public List<Enemy> GetEnemys()
     {
         var enemySet = new HashSet<Enemy>();
         var nameSet = new HashSet<string>();
@@ -612,7 +610,7 @@ public class GameManager : BaseManager
             }
         }
 
-        return enemySet;
+        return enemySet.ToList();
     }
 
     #endregion
@@ -636,10 +634,23 @@ public class GameManager : BaseManager
 
     #region 事件处理
 
+
+
     /// <summary>
     /// 触发结束的事件
     /// </summary>
-    public UnityEvent curTriggerOver = new UnityEvent();
+    public UnityEvent triggerOver = new UnityEvent();
+
+    public void TriggerSuccess()
+    {
+        triggerOver.Invoke();
+        triggerOver.RemoveAllListeners();
+    }
+
+    public void TriggerFailed()
+    {
+        triggerOver.RemoveAllListeners();
+    }
 
     /// <summary>
     /// 传送目标的正则
@@ -647,30 +658,12 @@ public class GameManager : BaseManager
     Regex targetRgx = new Regex(@"\[\s*(?<mapName>[^\s,]+)\s*,\s*(?<x>\d+)\s*,\s*(?<y>\d+)\s*\]");
 
     /// <summary>
-    /// 当前触发成功，invoke curTriggerOver
-    /// </summary>
-    public void CurTriggerSuccess()
-    {
-        curTriggerOver.Invoke();
-        curTriggerOver.RemoveAllListeners();
-    }
-
-    /// <summary>
-    /// 当前触发失败
-    /// </summary>
-    public void CurTriggerFailed()
-    {
-        curTriggerOver.RemoveAllListeners();
-    }
-
-    /// <summary>
     /// 由实体激活的触发
     /// </summary>
     /// <param name="entity">触发实体</param>
     public void TriggerByEntity(TriggerEntity entity)
     {
-        curTriggerOver.RemoveAllListeners();
-        curTriggerOver.AddListener(entity.OnTriggerDone);
+        triggerOver.AddListener(entity.OnTriggerDone);
         Dictionary<string, string> settings = entity.setting;
         switch (entity.triggerType)
         {
@@ -720,7 +713,7 @@ public class GameManager : BaseManager
                         Debug.LogError($"非法的目标：{entity.setting["target"]}");
                     }
                 }
-                CurTriggerSuccess();
+                TriggerSuccess();
                 break;
             default:
                 Debug.LogError($"不支持的触发类型：{entity.triggerType}");
@@ -758,6 +751,7 @@ public class GameManager : BaseManager
             mapmngr.ChangeMap(map);
         }
         player.TransportTransform(pos);
+        AfterMove(pos);
     }
 
 
@@ -795,54 +789,17 @@ public class GameManager : BaseManager
 
     public void UseItem(string name)
     {
-        if (itemEffects.ContainsKey(name))
+        if (Item.ItemEffects.ContainsKey(name))
         {
-            if (itemEffects[name]())
+            if (Item.ItemEffects[name]())
             {
                 player.ConsumeItem(name);
             }
         }
         else
         {
-            print($"{name} not exist");
+            print($"{name}'s effect not exist");
         }
-    }
-
-    public delegate bool ItemEffect();
-
-    public static Dictionary<string, ItemEffect> itemEffects = new Dictionary<string, ItemEffect>
-    {
-        { "mattock", new ItemEffect(Mattock) },
-        { "holywater", new ItemEffect(HolyWater) }
-    };
-
-    private static bool Mattock()
-    {
-        var facingPos = player.position + player.playerDir;
-        if (!mapmngr.PosInMap(facingPos))
-        {
-            uimngr.PopMessage("目标在地图外");
-            return false;
-        }
-        if (mapmngr.groundEntityDict[facingPos].nameInGame == "墙")
-        {
-            mapmngr.ReplaceGroundEntity(facingPos, mapmngr.groundEntityDict[player.position].gameObject);
-            return true;
-        }
-        else
-        {
-            uimngr.PopMessage("镐只能对墙起作用");
-            return false;
-        }
-    }
-
-    private static bool HolyWater()
-    {
-        long amount = (player.property.DEF + player.property.ATK) * 10;
-        uimngr.PopMessage($"使用圣水，增加{amount}生命");
-        HitpointAdd(amount);
-        uimngr.RefreshUI();
-        return true;
     }
 
     #endregion
@@ -912,7 +869,16 @@ public class GameManager : BaseManager
 
     #region 触发区域
 
-    UnityAction OnTriggerAreaDone = new UnityAction(()=> { });
+    /// <summary>
+    /// 在AfterMove中被调用
+    /// </summary>
+    private void ActivateTriggerAreas()
+    {
+        foreach (var tArea in mapmngr.triggerAreas)
+        {
+            TriggerAreaHandler(tArea);
+        }
+    }
 
     /// <summary>
     /// 前提条件判断器
@@ -937,6 +903,20 @@ public class GameManager : BaseManager
         }
     }
 
+
+    private UnityAction OnTriggerAreaDone(TriggerArea area)
+    {
+        UnityAction action = new UnityAction(()=> { });
+        if (area.settings.ContainsKey("dieafterdone"))
+        {
+            action += () =>
+            {
+                mapmngr.RemoveTriggerArea(area);
+            };
+        }
+        return action;
+    }
+
     /// <summary>
     /// 由区域激活的触发
     /// </summary>
@@ -944,7 +924,7 @@ public class GameManager : BaseManager
     {
 
         var settings = area.settings;
-        curTriggerOver.AddListener(OnTriggerAreaDone);
+        triggerOver.AddListener(OnTriggerAreaDone(area));
         string triggerType = settings.ContainsKey("type") ? settings["type"] : "chat";
         switch (triggerType)
         {
@@ -983,8 +963,9 @@ public class GameManager : BaseManager
                     {
                         Debug.LogError($"非法的目标：{settings["target"]}");
                     }
+                    TriggerSuccess();
                 }
-                CurTriggerSuccess();
+                
                 break;
             default:
                 Debug.LogError($"不支持的触发类型：{settings["type"]}");

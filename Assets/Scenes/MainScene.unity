@@ -627,7 +627,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &86316631
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8589,7 +8589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 797f0a600795a414eb0cc2d89c0b29bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curTriggerOver:
+  triggerOver:
     m_PersistentCalls:
       m_Calls: []
   altarCount: 0

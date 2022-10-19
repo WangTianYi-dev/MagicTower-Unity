@@ -4,6 +4,24 @@
  <tile id="1160" class="CrazyOldMan">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-06_2_1.png"/>
  </tile>
+ <tile id="1153" class="Author">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-03_3_1.png"/>
+ </tile>
+ <tile id="817" class="BladeMaster">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-05_2_1.png"/>
+ </tile>
+ <tile id="804">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-02_1_1.png"/>
+ </tile>
+ <tile id="803">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-01_4_1.png"/>
+ </tile>
+ <tile id="697">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-02_4_1.png"/>
+ </tile>
+ <tile id="1171" class="Blood">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC02-02_1_1.png"/>
+ </tile>
  <tile id="455">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver02_1_1.png"/>
  </tile>
@@ -730,9 +748,6 @@
  <tile id="696">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-02_3_1.png"/>
  </tile>
- <tile id="697">
-  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-02_4_1.png"/>
- </tile>
  <tile id="698">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster07-03_1_1.png"/>
  </tile>
@@ -859,7 +874,7 @@
  <tile id="739">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-01_3_1.png"/>
  </tile>
- <tile id="740">
+ <tile id="740" class="MagicSergeant">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster08-01_4_1.png"/>
  </tile>
  <tile id="741">
@@ -1048,12 +1063,6 @@
  <tile id="802">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-01_3_1.png"/>
  </tile>
- <tile id="803">
-  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-01_4_1.png"/>
- </tile>
- <tile id="804">
-  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-02_1_1.png"/>
- </tile>
  <tile id="805">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-02_2_1.png"/>
  </tile>
@@ -1089,9 +1098,6 @@
  </tile>
  <tile id="816">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-05_1_1.png"/>
- </tile>
- <tile id="817">
-  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-05_2_1.png"/>
  </tile>
  <tile id="818">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-05_3_1.png"/>
@@ -2098,9 +2104,6 @@
  <tile id="1152">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-03_2_1.png"/>
  </tile>
- <tile id="1153" class="Author">
-  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-03_3_1.png"/>
- </tile>
  <tile id="1154">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC01-03_4_1.png"/>
  </tile>
@@ -2148,9 +2151,6 @@
  </tile>
  <tile id="1170">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC02-01_4_1.png"/>
- </tile>
- <tile id="1171">
-  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC02-02_1_1.png"/>
  </tile>
  <tile id="1172">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC03-01_1_1.png"/>

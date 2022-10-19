@@ -187,10 +187,13 @@ public class Player : Figure
         switch (name)
         {
             case "hp":
+            case "hitpoint":
                 return property.HP;
             case "atk":
+            case "attack":
                 return property.ATK;
             case "def":
+            case "defense":
                 return property.DEF;
             case "coin":
                 return property.Coin;
@@ -206,12 +209,15 @@ public class Player : Figure
         switch (name)
         {
             case "hp":
+            case "hitpoint":
                 property.HP = value;
                 break;
             case "atk":
+            case "attack":
                 property.ATK = value;
                 break;
             case "def":
+            case "defense":
                 property.DEF = value;
                 break;
             case "coin":

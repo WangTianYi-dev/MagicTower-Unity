@@ -141,7 +141,7 @@ public class GameWindow : BaseWindow
     public void OnManualButtonClick()
     {
         UIManager.instance.OpenWindow("ManualWindow");
-        var s = GameManager.instance.GetEnemySet();
+        var s = GameManager.instance.GetEnemys();
         ManualWindow.instance.RefreshEntries(s);
     }
 

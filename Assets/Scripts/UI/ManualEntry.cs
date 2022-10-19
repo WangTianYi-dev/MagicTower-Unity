@@ -14,36 +14,34 @@ public class ManualEntry : MonoBehaviour
 {
     private Image imgHead;
 
-    private Text monsterName, HP, ATK, DEF, coin, damage, round, threshold, special;
+    private Text monsterName, prop, damage, round;
 
     // Start is called before the first frame update
     void Awake()
     {
         imgHead = transform.Find("ImgHead").GetComponent<Image>();
         monsterName = transform.Find("Name").GetComponent<Text>();
-        HP = transform.Find("HP").GetComponent<Text>();
-        ATK = transform.Find("ATK").GetComponent<Text>();
-        DEF = transform.Find("DEF").GetComponent<Text>();
-        coin = transform.Find("Coin").GetComponent<Text>();
+        prop = transform.Find("HP").GetComponent<Text>();
         damage = transform.Find("Damage").GetComponent<Text>();
         round = transform.Find("Round").GetComponent<Text>();
-        threshold = transform.Find("ATKthreshold").GetComponent<Text>();
-        special = transform.Find("Special").GetComponent<Text>();
     }
 
     public void ShowInfo(Enemy enemy)
     {
         imgHead.sprite = enemy.gameObject.GetComponent<SpriteRenderer>().sprite;
         monsterName.text = enemy.nameInGame;
-        HP.text = "ÉúÃü£º" + enemy.property.HP.ToString();
-        ATK.text = "¹¥»÷£º" + enemy.property.ATK.ToString();
-        DEF.text = "·ÀÓù£º" + enemy.property.DEF.ToString();
-        coin.text = "½ð±Ò£º" + enemy.property.Coin.ToString();
+        var p = enemy.property;
+        prop.text = $"ÉúÃü: {p.HP} ¹¥»÷: {p.ATK} ·ÀÓù: {p.DEF} ½ð±Ò: {p.Coin}";
+        //prop.text = "ÉúÃü£º" + enemy.property.HP.ToString();
+        //ATK.text = "¹¥»÷£º" + enemy.property.ATK.ToString();
+        //DEF.text = "·ÀÓù£º" + enemy.property.DEF.ToString();
+        //coin.text = "½ð±Ò£º" + enemy.property.Coin.ToString();
         enemy.RefreshDamege();
         CombatInfo info = CombatCalc.GetCombatInfo(Player.instance, enemy);
-        damage.text = "ÉËº¦£º" + ((info.damage != -1) ? info.damage.ToString() : "ÎÞÇî");
-        round.text = "»ØºÏÊý£º" + ((info.round != -1) ? info.round.ToString() : "ÎÞÇî");
-        threshold.text = "¹¥»÷ÁÙ½ç£º" + info.threshold.ToString();
+        damage.text = (info.damage != -1) ? $"¹À¼ÆÉËº¦: {info.damage}" : "ÄãÎÞ·¨¹¥»÷";
+        //round.text = "»ØºÏÊý£º" + ((info.round != -1) ? info.round.ToString() : "ÎÞÇî");
+        round.text = info.round != -1 ? $"»ØºÏÊý: {info.round} ¹¥»÷ÁÙ½ç: {info.threshold}" : "";
+        //threshold.text = "¹¥»÷ÁÙ½ç£º" + info.threshold.ToString();
     }
     
 }

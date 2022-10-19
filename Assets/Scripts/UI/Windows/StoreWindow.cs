@@ -65,7 +65,7 @@ public class StoreWindow : BaseWindow, IPointerClickHandler
                         print(t);
                         if (Invoke(t))
                         {
-                            GameManager.instance.curTriggerOver.Invoke();
+                            GameManager.instance.TriggerSuccess();
                             if (closeAfterDone)
                             {
                                 UIManager.instance.SwitchWindow("GameWindow");
@@ -95,6 +95,7 @@ public class StoreWindow : BaseWindow, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        GameManager.instance.TriggerFailed();
         UIManager.instance.SwitchWindow("GameWindow");
     }
 }
