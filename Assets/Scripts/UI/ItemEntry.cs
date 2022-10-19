@@ -22,16 +22,13 @@ public class ItemEntry : MonoBehaviour, IPointerClickHandler
 
     Text textCount;
 
-    [HideInInspector]
-    public string intro;
-
     private void Awake()
     {
         image = GetComponent<Image>();
         textCount = transform.Find("Text").GetComponent<Text>();
     }
 
-    public void Refresh(string name, int count, Sprite source, string intro)
+    public void Refresh(string name, int count, Sprite source)
     {
         
         itemName = name;
@@ -41,8 +38,6 @@ public class ItemEntry : MonoBehaviour, IPointerClickHandler
         {
             textCount.text = count.ToString();
         }
-        
-        this.intro = intro;
     }
 
     // ÓÉItemWindowµ÷ÓÃ

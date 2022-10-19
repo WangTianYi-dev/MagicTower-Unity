@@ -47,7 +47,7 @@ public class Enemy : Figure
     {
         base.BeforeCollision();
         RefreshDamege();
-        if (0 < damage && damage < Player.instance.externalProperty.HP)
+        if (0 < damage && damage <= Player.instance.externalProperty.HP)
         {
             passable = true;
         }

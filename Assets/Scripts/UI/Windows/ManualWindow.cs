@@ -61,7 +61,7 @@ public class ManualWindow : BaseWindow, IPointerClickHandler
                  orderby e.property.HP
                  select e;
 
-        foreach (var enemy in enemySet)
+        foreach (var enemy in ee)
         {
             GameObject entry = Util.Inst(manualEntry, panel, Vector2Int.zero);
             entry.transform.localScale = Vector3.one;

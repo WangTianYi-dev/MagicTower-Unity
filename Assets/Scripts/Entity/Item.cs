@@ -25,10 +25,14 @@ public class Item : Entity
 	protected override void Start()
 	{
 		base.Start();
-		internalName = ResServer.instance.GetEntityName(this);
+		internalName = ResServer.instance.GetEntityName(this).ToLower();
 		this.type = UnitType.Item;
 		this.introText = ItemIntro[internalName];
 		this.passable = true;
+		if (messageAfterCollect == "")
+		{
+			messageAfterCollect = $"获得{nameInGame}";
+		}
 		if (introText == null || introText == "")
 			introText = ItemIntro[internalName.ToLower()];
 	}

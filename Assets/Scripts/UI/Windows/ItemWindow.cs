@@ -63,8 +63,7 @@ public class ItemWindow : BaseWindow, IPointerClickHandler
             }
             curSelect = item;
             item.SelectMode();
-            print(item.intro);
-            ShowIntro(item.intro);
+            ShowIntro(Item.ItemIntro[item.itemName]);
         }
     }
 
@@ -90,8 +89,7 @@ public class ItemWindow : BaseWindow, IPointerClickHandler
                 var originalItem = ResServer.instance.GetObject(item.Key);
                 entry.GetComponent<ItemEntry>().Refresh(
                     item.Key, item.Value,
-                    originalItem.GetComponent<SpriteRenderer>().sprite,
-                    originalItem.GetComponent<Item>().introText
+                    originalItem.GetComponent<SpriteRenderer>().sprite
                 );
                 entry.GetComponent<ItemEntry>().DeselectMode();
             }

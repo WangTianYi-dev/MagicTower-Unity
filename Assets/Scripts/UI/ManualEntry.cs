@@ -31,7 +31,7 @@ public class ManualEntry : MonoBehaviour
         imgHead.sprite = enemy.gameObject.GetComponent<SpriteRenderer>().sprite;
         monsterName.text = enemy.nameInGame;
         var p = enemy.property;
-        prop.text = $"ÉúÃü: {p.HP} ¹¥»÷: {p.ATK} ·ÀÓù: {p.DEF} ½ğ±Ò: {p.Coin}";
+        prop.text = $"ÉúÃü: {p.HP} ¹¥»÷: {p.ATK} ·ÀÓù: {p.DEF}   ½ğ±Ò: {p.Coin}";
         //prop.text = "ÉúÃü£º" + enemy.property.HP.ToString();
         //ATK.text = "¹¥»÷£º" + enemy.property.ATK.ToString();
         //DEF.text = "·ÀÓù£º" + enemy.property.DEF.ToString();
