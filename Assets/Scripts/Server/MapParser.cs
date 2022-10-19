@@ -134,6 +134,7 @@ public class MapParser
 
     public void FetchMapByName(string name)
     {
+        tmxList.Clear();
         TextAsset ast = FetchRawMap(name);
         mapName = ast.name;
         doc.LoadXml(ast.text);

@@ -10,10 +10,10 @@
  <tile id="817" class="BladeMaster">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-05_2_1.png"/>
  </tile>
- <tile id="804">
+ <tile id="804" class="MercenaryCaptain">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-02_1_1.png"/>
  </tile>
- <tile id="803">
+ <tile id="803" class="Succubus">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster13-01_4_1.png"/>
  </tile>
  <tile id="697">
@@ -21,6 +21,9 @@
  </tile>
  <tile id="1171" class="Blood">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/NPC02-02_1_1.png"/>
+ </tile>
+ <tile id="624" class="Sheldon">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-04_4_1.png"/>
  </tile>
  <tile id="455">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver02_1_1.png"/>
@@ -528,9 +531,6 @@
  </tile>
  <tile id="623">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-04_3_1.png"/>
- </tile>
- <tile id="624">
-  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-04_4_1.png"/>
  </tile>
  <tile id="625">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-05_1_1.png"/>
@@ -1924,7 +1924,7 @@
  <tile id="1092">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster36-02_3_1.png"/>
  </tile>
- <tile id="1093">
+ <tile id="1093" class="Princess">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster36-02_4_1.png"/>
  </tile>
  <tile id="1094">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="11" height="11" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="7">
+<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="11" height="11" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="8">
  <tileset firstgid="1" source="BaseAsset.xml"/>
  <tileset firstgid="171" source="Icons.xml"/>
  <tileset firstgid="714" source="Characters.xml"/>
@@ -21,17 +21,17 @@
  </layer>
  <layer id="2" name="Unit" width="11" height="11">
   <data encoding="csv">
-163,0,0,0,0,0,0,0,0,0,164,
+163,0,0,0,0,135,0,0,0,0,164,
 161,161,161,161,161,160,161,161,161,161,161,
-0,54,159,0,35,135,35,0,159,6,0,
+0,0,159,0,35,135,35,0,159,6,0,
 0,0,161,161,161,156,161,161,161,0,0,
-47,46,161,0,0,0,0,0,161,19,24,
-0,0,161,1411,2033,2034,2035,15,161,0,0,
+47,0,161,0,0,0,0,0,161,19,24,
+0,0,161,29,2033,2034,2035,15,161,0,0,
 0,18,161,1338,2041,2042,2043,1518,161,9,0,
 18,0,161,1531,2049,2050,2051,1517,161,0,9,
 0,0,161,0,0,59,0,0,161,0,0,
-0,0,161,0,161,156,161,0,161,0,0,
-0,39,0,161,0,403,0,161,0,34,0
+0,0,161,0,161,0,161,0,161,0,0,
+0,39,0,161,0,0,0,161,0,0,0
 </data>
  </layer>
  <objectgroup id="5" name="Trigger">
@@ -43,6 +43,14 @@
   <object id="6" name="stair" class="stair" x="335.506" y="15.5647">
    <properties>
     <property name="target" value="[第3层,10,10]"/>
+   </properties>
+  </object>
+  <object id="7" name="chat" x="174.671" y="16.8618">
+   <properties>
+    <property name="dialog">&quot;勇士透过门缝看见了奇特的景象：&quot;
+“勇士（心想）：那是……魔族的二号人物，魔法警卫首领，芝诺！我在\“反龙族战争胜利七十周年纪念仪式\”上见过他！他在跟一群人开会？那位是……天啊，我怎么会在这种地方，赶紧溜！来时的入口消失了，找找有没有别的出路。”</property>
+    <property name="dieafterdone" value=""/>
+    <property name="type" value="chat"/>
    </properties>
   </object>
  </objectgroup>

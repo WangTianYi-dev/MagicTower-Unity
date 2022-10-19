@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="11" height="11" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="11">
+<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="11" height="11" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="12">
  <tileset firstgid="1" source="BaseAsset.xml"/>
  <tileset firstgid="171" source="Characters.xml"/>
  <tileset firstgid="1354" source="Icons.xml"/>
@@ -23,7 +23,7 @@
 164,1331,9,1342,0,1853,0,0,143,144,0,
 0,0,0,0,0,0,0,0,0,0,0,
 4,124,4,0,144,0,144,145,144,0,0,
-134,8,8,157,124,0,124,134,124,0,1853,
+134,8,12,157,124,0,124,134,124,0,1853,
 4,125,4,0,1,0,0,0,157,0,0,
 0,157,0,0,0,157,8,125,17,0,0,
 134,12,134,0,0,0,0,0,0,0,0,
@@ -60,5 +60,13 @@ Good luck, have fun!&quot;</property>
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="6" name="Trigger"/>
+ <objectgroup id="6" name="Trigger">
+  <object id="11" name="chat" x="145" y="17">
+   <properties>
+    <property name="dialog" value="&quot;这是一个提示信息&quot;"/>
+    <property name="dieafterdone" value=""/>
+    <property name="type" value="chat"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

@@ -259,7 +259,8 @@ public class GameManager : BaseManager
         {
             if (MoveByPos(route.First.Value)) // 若勇士接收到信息
             {
-                route.RemoveFirst();
+                if (route.Count > 0) 
+                    route.RemoveFirst();
                 GroundLayer.instance.RenderLine(route);
             }
         }
@@ -930,6 +931,7 @@ public class GameManager : BaseManager
         {
             case "chat":
                 {
+                    PlayerStop();
                     var dialog = Parser.LoadDialog(settings["dialog"]);
                     ShowDialog(dialog);
                 }

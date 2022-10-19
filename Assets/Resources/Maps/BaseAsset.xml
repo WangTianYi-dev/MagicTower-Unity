@@ -5,20 +5,37 @@
  <tile id="1" class="GreenSlime"/>
  <tile id="2" class="RedSlime"/>
  <tile id="3" class="RedSlime"/>
+ <tile id="4" class="BigSlime"/>
+ <tile id="5" class="BigSlime"/>
  <tile id="6" class="Bat"/>
  <tile id="7" class="Bat"/>
  <tile id="8" class="BigBat"/>
  <tile id="9" class="BigBat"/>
  <tile id="10" class="Skeleton"/>
  <tile id="11" class="Skeleton"/>
- <tile id="12" class="SkeletonWarrior"/>
- <tile id="13" class="SkeletonWarrior"/>
- <tile id="14" class="SkeletonCaptain"/>
- <tile id="15" class="SkeletonCaptain"/>
+ <tile id="12" class="SkeletonB"/>
+ <tile id="13" class="SkeletonB"/>
+ <tile id="14" class="SkeletonA"/>
+ <tile id="15" class="SkeletonA"/>
  <tile id="16" class="Priest"/>
  <tile id="17" class="Priest"/>
+ <tile id="18" class="SuperionPriest"/>
+ <tile id="19" class="SuperionPriest"/>
  <tile id="20" class="Zombie"/>
  <tile id="21" class="Zombie"/>
+ <tile id="22" class="ZombieKnight"/>
+ <tile id="23" class="ZombieKnight"/>
+ <tile id="28" class="SlimeLord"/>
+ <tile id="29" class="SlimeLord"/>
+ <tile id="34" class="GateKeeperA"/>
+ <tile id="35" class="GateKeeperA"/>
+ <tile id="36" class="GateKeeperB"/>
+ <tile id="37" class="GateKeeperB"/>
+ <tile id="38" class="GateKeeperC"/>
+ <tile id="39" class="GateKeeperC"/>
+ <tile id="44" class="Knight"/>
+ <tile id="46" class="Swordsman"/>
+ <tile id="47" class="Swordsman"/>
  <tile id="48" class="Soldier"/>
  <tile id="49" class="Soldier"/>
  <tile id="50" class="GhostSoldier"/>
