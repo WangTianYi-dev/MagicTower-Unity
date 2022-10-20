@@ -34,6 +34,7 @@
  <tile id="38" class="GateKeeperC"/>
  <tile id="39" class="GateKeeperC"/>
  <tile id="44" class="Knight"/>
+ <tile id="45" class="Knight"/>
  <tile id="46" class="Swordsman"/>
  <tile id="47" class="Swordsman"/>
  <tile id="48" class="Soldier"/>
