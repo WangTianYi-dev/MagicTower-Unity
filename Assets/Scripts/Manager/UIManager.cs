@@ -18,6 +18,8 @@ public class UIManager : BaseManager
         instance = this;
     }
 
+    public GameObject floatMessagePrefab;
+
     // 游戏主窗口的快捷方式
     private GameWindow gameWindow;
 
@@ -26,6 +28,8 @@ public class UIManager : BaseManager
     private List<BaseWindow> Windows = new List<BaseWindow>();
 
     private Dictionary<string, BaseWindow> windowDict = new Dictionary<string, BaseWindow>();
+
+    public GameObject floatMessageGO;
 
     public string currentWindow { get; private set; }
 
@@ -92,6 +96,12 @@ public class UIManager : BaseManager
         gameWindow.ShowMessage(message);
     }
 
+    public void FloatMessage(string message, Vector2Int logicPos)
+    {
+        GameWindow.instance.gameArea.InstCanvasObject(floatMessageGO, logicPos, MapManager.instance.boxSize);
+        floatMessageGO.GetComponent<FloatMessage>().Refresh(message);
+    }
+
     /// <summary>
     /// 刷新当前区域名称
     /// </summary>
@@ -99,5 +109,17 @@ public class UIManager : BaseManager
     public void RefreshAreaName(string name)
     {
         gameWindow.RefreshAreaName(name);
+    }
+
+    
+
+    /// <summary>
+    /// 显示浮动信息（如伤害），默认产生位置为当前格子的中间
+    /// </summary>
+    /// <param name="pos">逻辑位置</param>
+    /// <param name="msg"></param>
+    public void ShowFloatMessage(Vector2Int pos, string msg)
+    {
+
     }
 }

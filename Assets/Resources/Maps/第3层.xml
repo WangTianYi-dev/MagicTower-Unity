@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="11" height="11" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="10">
+<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="11" height="11" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="13">
  <tileset firstgid="1" source="BaseAsset.xml"/>
  <tileset firstgid="171" source="Characters.xml"/>
  <tileset firstgid="1354" source="Icons.xml"/>
  <objectgroup id="4" name="Setting">
-  <object id="2" name="stair" class="stair" x="16.8734" y="18.553">
-   <properties>
-    <property name="killself" value=""/>
-    <property name="target" value="[第2层,0,9]"/>
-   </properties>
-  </object>
   <object id="7" x="144" y="336">
    <properties>
     <property name="dialog">&quot;作者：
@@ -21,13 +15,36 @@
     <property name="killAfterDone" value=""/>
    </properties>
   </object>
+  <object id="10" x="335.938" y="113.709">
+   <properties>
+    <property name="dialog">&quot;勇者：又是这个疯子！&quot;
+&quot;老头：疯子？你说的是我哥哥吧，其实他没有疯，只是看到了我们都没有看到的东西。&quot;
+“勇者：那你们兄弟俩来这鬼地方干什么？”
+“老头：你不是本地人吧。这座塔可是我们这儿的宝地，有的人来这里寻宝，而我们则是来这里修仙。你看，我年纪轻轻，只有60岁就达到了开光境，而我的哥哥更是年仅70岁就达到融合境，这座塔的作用恐怖如斯！”
+“勇者：（修仙的人这么可怕吗？）咳咳……那你们怎么出去呢？我现在出不去了，魔族的芝诺就在下面，好可怕。”
+“老头：芝诺？那个芝诺？他怎么会来这里，我没见啊？哦，难道你是来救公主的？（看见稀有动物的眼神）怀着来救公主的目的进入魔塔的人，入口会对他自动关闭，还会看到奇怪的景象，年轻人，好自为之……”</property>
+    <property name="killAfterDone" value=""/>
+   </properties>
+  </object>
+  <object id="11" name="stair" class="stair" x="335.938" y="17.7265">
+   <properties>
+    <property name="target" value="[第2层,9,10]"/>
+    <property name="type" value="transport"/>
+   </properties>
+  </object>
+  <object id="12" name="stair" class="stair" x="13.8353" y="14.7">
+   <properties>
+    <property name="target" value="[第4层,1,10]"/>
+    <property name="type" value="transport"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer id="1" name="Ground" width="11" height="11">
   <data encoding="csv">
 169,169,169,161,169,169,169,161,169,161,169,
 169,161,169,161,169,161,169,169,169,161,169,
-169,169,169,169,169,161,169,161,169,169,169,
-161,161,169,161,169,169,169,169,169,161,169,
+169,161,169,169,169,161,169,161,169,169,169,
+169,161,161,161,169,169,169,169,169,161,169,
 169,169,169,169,161,169,161,161,169,169,169,
 169,161,161,169,169,169,169,169,169,161,169,
 169,169,169,169,161,169,161,161,169,169,169,
@@ -39,17 +56,17 @@
  </layer>
  <layer id="2" name="Unit" width="11" height="11">
   <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,163,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,158,124,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,157,0,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,
-142,12,0,0,0,0,0,0,0,0,0
+164,158,7,0,3,124,17,0,124,0,163,
+12,0,2,0,0,0,0,125,2,0,0,
+0,0,0,124,2,0,0,0,3,158,124,
+134,0,0,0,0,0,7,0,0,0,99,
+17,0,2,0,0,0,0,0,7,157,0,
+0,0,0,22,125,4,0,3,0,0,0,
+4,125,0,7,0,0,0,0,12,0,17,
+0,7,0,0,0,2,0,134,0,0,0,
+137,14,18,0,7,0,9,0,124,0,0,
+0,0,0,0,9,0,0,0,0,125,7,
+142,13,158,0,0,0,134,3,3,7,0
 </data>
  </layer>
  <objectgroup id="6" name="Trigger"/>

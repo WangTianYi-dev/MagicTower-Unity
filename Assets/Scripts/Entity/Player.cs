@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEditor;
+using UnityEngine.Events;
 
 public class Player : Figure
 {
@@ -124,6 +125,18 @@ public class Player : Figure
         transform.position = tpos;
     }
 
+    private List<Action> actionAfterMoved = new List<Action>(); // 勇士移动完成之后触发
+
+
+    /// <summary>
+    /// 注册当前移动完成后的动作
+    /// </summary>
+    /// <param name="action"></param>
+    public void RegisterAfterMovedAction(Action action)
+    {
+        actionAfterMoved.Add(action);
+    }
+
     private void Update()
     {
         switch (playerState)
@@ -132,6 +145,11 @@ public class Player : Figure
                 if (MoveTransform()) // 如果当前移动完成
                 {
                     playerState = State.Idle;
+                    foreach (var action in actionAfterMoved)
+                    {
+                        action.Invoke();
+                    }
+                    actionAfterMoved.Clear();
                 }
                 break;
             case State.Idle:

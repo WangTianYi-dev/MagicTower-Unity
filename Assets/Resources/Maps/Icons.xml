@@ -4,6 +4,9 @@
  <tile id="499" class="Mud">
   <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item04-XXMT01_1_1.png"/>
  </tile>
+ <tile id="232" class="Intellion">
+  <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item02-09_1_1.png"/>
+ </tile>
  <tile id="0">
   <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item01-01_1_1.png"/>
  </tile>
@@ -699,9 +702,6 @@
  </tile>
  <tile id="231">
   <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item02-08_3_4.png"/>
- </tile>
- <tile id="232" class="Intellion">
-  <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item02-09_1_1.png"/>
  </tile>
  <tile id="233">
   <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item02-09_1_2.png"/>

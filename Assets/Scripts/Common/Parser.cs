@@ -230,18 +230,19 @@ public static class Parser
         {
             var s = new StringBuilder();
             char ch;
-            for (; ; )
+            for (; ss.HasNext(); )
             {
                 ch = ss.Next();
+                if (ch == '\\')
+                {
+                    s.Append(ss.Next());
+                    continue;
+                }
                 if (IsQuote(ch))
                 {
                     break;
                 }
                 s.Append(ch);
-                if (ch == '\\')
-                {
-                    s.Append(ss.Next());
-                }
             }
             return s.ToString();
         };

@@ -37,6 +37,8 @@ public class GameWindow : BaseWindow
 
     private PopMessage popMessage;
 
+    public GameArea gameArea { get; private set; }
+
     // 区域名称
     private Text areaName;
 
@@ -67,7 +69,7 @@ public class GameWindow : BaseWindow
 
         weapon = transform.Find("LeftPin/Equip/SwordImage").GetComponent<Image>();
         armor = transform.Find("LeftPin/Equip/ShieldImage").GetComponent<Image>();
-
+        gameArea = transform.Find("CenterPin/GameArea").GetComponent<GameArea>();
     }
 
 
@@ -162,6 +164,7 @@ public class GameWindow : BaseWindow
 
     public void OnLoadButtonClicked()
     {
+        
         UIManager.instance.OpenWindow("ArchiveWindow");
         ArchiveWindow.instance.Refresh(GameManager.instance.GetMetasOrdered(), ArchiveEntry.Type.Load);
     }
@@ -183,4 +186,6 @@ public class GameWindow : BaseWindow
     {
         UIManager.instance.PopMessage("暂未实现此功能");
     }
+    
+    
 }

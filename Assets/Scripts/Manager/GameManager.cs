@@ -162,13 +162,14 @@ public class GameManager : BaseManager
 
     public void AfterMove(Vector2Int cord)
     {
+        print($"aftermove: {cord}");
         if (unitEntity is Enemy)
         {
             BuffAfterBattle(unitEntity as Enemy);
         }
         if (groundEntity != null) groundEntity.AfterMoveTo();
         if (unitEntity != null) unitEntity.AfterMoveTo();
-        ActivateTriggerAreas();
+        player.RegisterAfterMovedAction(ActivateTriggerAreas);
     }
 
     public void AfterBlocked(Vector2Int cord)
@@ -251,6 +252,7 @@ public class GameManager : BaseManager
     {
         player.playerState = State.Idle;
         route.Clear();
+        GroundLayer.instance.RenderLine(route);
     }
 
     private void CheckInput()
@@ -985,7 +987,7 @@ public class GameManager : BaseManager
     /// <returns></returns>
     public List<(string, Action)> GetFlyList()
     {
-        var list = new List<(string, Action)>();
+        var list = new HashSet<(string, Action)>();
         foreach (string str in mapmngr.mapnameList)
         {
             Tilemap tilemap = mapmngr.tilemapCache[str];
@@ -999,7 +1001,7 @@ public class GameManager : BaseManager
             };
             list.Add((mapName, action));
         }
-        return list;
+        return list.ToList();
     }
 
     #endregion

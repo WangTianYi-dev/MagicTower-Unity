@@ -41,13 +41,6 @@ public class Block : Entity
     public override void AfterMoveTo()
     {
         base.AfterMoveTo();
-        DestroyBlock();
-    }
-    
-
-
-    public void DestroyBlock()
-    {
-        Destroy(gameObject);
+        Util.RemoveEntity(this);
     }
 }

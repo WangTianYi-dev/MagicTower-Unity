@@ -13,10 +13,14 @@ using UnityEngine.UI;
 public class GameArea : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     private Image image;
+    private RectTransform rectTran;
+
+
 
     private void Start()
     {
         image = GetComponent<Image>();
+        rectTran = GetComponent<RectTransform>();
     }
 
 
@@ -48,5 +52,20 @@ public class GameArea : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         float x = position.x / image.rectTransform.rect.width + 0.5f;
         float y = position.y / image.rectTransform.rect.height + 0.5f;
         GameManager.instance.TouchUp(x, y);
+    }
+
+    /// <summary>
+    /// 生成UI物体，默认在格子中间
+    /// </summary>
+    /// <param name="go">prefab，默认锚点为中心</param>
+    /// <param name="logicPos"></param>
+    /// <param name="size"></param>
+    public GameObject InstCanvasObject(GameObject GO, Vector2Int logicPos, Vector2Int logicalSize)
+    {
+        Vector2 cellSize = rectTran.sizeDelta / logicalSize;
+        Vector2 pos = cellSize * logicPos;
+        var newGO = Instantiate(GO, transform);
+        newGO.GetComponent<RectTransform>().position = pos;
+        return newGO;
     }
 }

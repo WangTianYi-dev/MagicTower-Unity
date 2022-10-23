@@ -10,7 +10,6 @@ using UnityEngine.EventSystems;
 using System.Collections.Generic;
 using System;
 using System.Collections;
-using UnityEditor.Tilemaps;
 
 //using DG.Tweening;
 public class StoreWindow : BaseWindow, IPointerClickHandler

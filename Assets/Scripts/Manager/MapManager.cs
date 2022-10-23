@@ -73,6 +73,13 @@ public class MapManager : BaseManager
         }
     }
 
+    public Vector2Int boxSize
+    {
+        get
+        {
+            return new Vector2Int(mapWidth, mapHeight);
+        }
+    }
 
     public GroundLayer groundLayer;
     public UnitLayer unitLayer;
@@ -304,6 +311,7 @@ public class MapManager : BaseManager
         curTilemap = tilemapCache[archive.curMap];
         RefreshEntities(curTilemap);
     }
-
     #endregion
+
+    
 }
