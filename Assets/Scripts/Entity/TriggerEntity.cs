@@ -20,7 +20,7 @@ public abstract class TriggerEntity : Entity
     protected override void Start()
     {
         base.Start();
-        setting = GameManager.instance.RequestSetting(position);
+        setting = GameManager.instance.RequestSetting(logicPos);
         if (setting.ContainsKey("type"))
         {
             this.triggerType = setting["type"];

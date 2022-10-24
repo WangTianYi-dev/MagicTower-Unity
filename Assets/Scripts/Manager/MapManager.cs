@@ -81,7 +81,9 @@ public class MapManager : BaseManager
         }
     }
 
+    [HideInInspector]
     public GroundLayer groundLayer;
+    [HideInInspector]
     public UnitLayer unitLayer;
 
 
@@ -147,7 +149,7 @@ public class MapManager : BaseManager
         print($"changeMap: {name}");
         if (curTilemap != null)
         {
-            curTilemap.lastPos = Player.instance.position;
+            curTilemap.lastPos = Player.instance.logicPos;
             tilemapCache[curTilemap.mapName] = curTilemap;
         }
         groundEntityDict.Clear();
@@ -185,17 +187,17 @@ public class MapManager : BaseManager
     /// <param name="e"></param>
     public void RemoveEntity(Entity e)
     {
-        if (unitEntityDict.ContainsKey(e.position) && unitEntityDict[e.position] == e)
+        if (unitEntityDict.ContainsKey(e.logicPos) && unitEntityDict[e.logicPos] == e)
         {
-            unitEntityDict.Remove(e.position);
-            curTilemap.unit[e.position.x, e.position.y] = "";
+            unitEntityDict.Remove(e.logicPos);
+            curTilemap.unit[e.logicPos.x, e.logicPos.y] = "";
             Destroy(e.gameObject);
 
         }
-        else if (groundEntityDict.ContainsKey(e.position) && groundEntityDict[e.position] == e)
+        else if (groundEntityDict.ContainsKey(e.logicPos) && groundEntityDict[e.logicPos] == e)
         {
-            groundEntityDict.Remove(e.position);
-            curTilemap.ground[e.position.x, e.position.y] = "";
+            groundEntityDict.Remove(e.logicPos);
+            curTilemap.ground[e.logicPos.x, e.logicPos.y] = "";
             Destroy(e.gameObject);
         }
         else

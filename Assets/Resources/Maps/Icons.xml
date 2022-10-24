@@ -7,6 +7,21 @@
  <tile id="232" class="Intellion">
   <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item02-09_1_1.png"/>
  </tile>
+ <tile id="513" class="FanGu">
+  <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item04-XXMT02_1_1.png"/>
+ </tile>
+ <tile id="514" class="LiuShi">
+  <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item04-XXMT02_1_2.png"/>
+ </tile>
+ <tile id="515" class="TianLing">
+  <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item04-XXMT02_1_3.png"/>
+ </tile>
+ <tile id="516" class="ShenHong">
+  <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item04-XXMT02_1_4.png"/>
+ </tile>
+ <tile id="521" class="HuangZhe">
+  <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item04-XXMT02_3_1.png"/>
+ </tile>
  <tile id="0">
   <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item01-01_1_1.png"/>
  </tile>
@@ -1540,18 +1555,6 @@
  <tile id="512">
   <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item04-XXMT01_4_3.png"/>
  </tile>
- <tile id="513">
-  <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item04-XXMT02_1_1.png"/>
- </tile>
- <tile id="514">
-  <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item04-XXMT02_1_2.png"/>
- </tile>
- <tile id="515">
-  <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item04-XXMT02_1_3.png"/>
- </tile>
- <tile id="516">
-  <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item04-XXMT02_1_4.png"/>
- </tile>
  <tile id="517">
   <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item04-XXMT02_2_1.png"/>
  </tile>
@@ -1563,9 +1566,6 @@
  </tile>
  <tile id="520">
   <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item04-XXMT02_2_4.png"/>
- </tile>
- <tile id="521">
-  <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item04-XXMT02_3_1.png"/>
  </tile>
  <tile id="522">
   <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item04-XXMT02_3_2.png"/>

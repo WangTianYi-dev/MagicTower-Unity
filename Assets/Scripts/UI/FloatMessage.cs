@@ -22,32 +22,24 @@ public class FloatMessage : MonoBehaviour
     [Header("Õ£¡Ù ±º‰")]
     public float appendDuration;
 
-    private Text text;
-
 
     public void Refresh(string message)
     {
-        text.text = message;
+        print($"Refresh: {message}");
+        GetComponent<Text>().text = message;
     }
 
 
     private void DoFloat()
     {
-        RectTransform rectTran = text.rectTransform;
-        Color c = text.color;
-        text.color = new Color(c.r, c.g, c.b, 0);
+        Color c = GetComponent<Text>().color;
+        GetComponent<Text>().color = new Color(c.r, c.g, c.b, 0);
         Sequence seq = DOTween.Sequence();
-        Tweener move1 = rectTran.DOMoveY(rectTran.position.y + floatDistance,
+        Tweener move1 = GetComponent<RectTransform>().DOMoveY(GetComponent<RectTransform>().position.y + floatDistance,
             floatDuration);
-        Tweener alpha1 = text.DOColor(c, floatDuration);
+        Tweener alpha1 = GetComponent<Text>().DOColor(c, floatDuration);
         seq.Append(alpha1);
         seq.Join(move1);
-    }
-
-
-    private void Awake()
-    {
-        text = GetComponent<Text>();
     }
 
 
@@ -58,10 +50,4 @@ public class FloatMessage : MonoBehaviour
         Destroy(this.gameObject, floatDuration + appendDuration);
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -60,10 +60,13 @@ public class Enemy : Figure
     {
         base.AfterMoveTo();
         // 这里直接减内部属性的生命值
-        Player.instance.property.HP -= damage;
+        var dam = damage;
+        Player.instance.property.HP -= dam;
         Player.instance.property.Coin += this.property.Coin;
         DestroySelf();
         UIManager.instance.PopMessage($"{nameInGame}被打败了，金币+{property.Coin}");
+        print($"damage: {damage}");
+        UIManager.instance.FloatMessage((-dam).ToString(), this.logicPos);
     }
 
     public override void AfterBlocked()

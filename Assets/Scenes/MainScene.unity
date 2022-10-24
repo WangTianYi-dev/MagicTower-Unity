@@ -8649,8 +8649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c300ad1b562b63a4793738d57b01988d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatMessagePrefab: {fileID: 0}
-  floatMessageGO: {fileID: 0}
+  floatMessageGO: {fileID: 5322457759851506611, guid: 63599f351ae5f484f9ee0cfe26caef12, type: 3}
 --- !u!114 &1251406243
 MonoBehaviour:
   m_ObjectHideFlags: 0

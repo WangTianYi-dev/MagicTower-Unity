@@ -67,7 +67,7 @@ public class Item : Entity
 				var mapmngr = MapManager.instance;
 				var player = Player.instance;
 				var uimngr = UIManager.instance;
-				var facingPos = player.position + player.playerDir;
+				var facingPos = player.logicPos + player.playerDir;
 				if (!mapmngr.PosInMap(facingPos))
 				{
 					uimngr.PopMessage("目标在地图外");
@@ -75,7 +75,7 @@ public class Item : Entity
 				}
 				if (mapmngr.groundEntityDict[facingPos].nameInGame == "墙")
 				{
-					mapmngr.ReplaceGroundEntity(facingPos, mapmngr.groundEntityDict[player.position].gameObject);
+					mapmngr.ReplaceGroundEntity(facingPos, mapmngr.groundEntityDict[player.logicPos].gameObject);
 					return true;
 				}
 				else

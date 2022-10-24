@@ -7,7 +7,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class EffectLayer : MonoBehaviour
 {
     public static EffectLayer instance { get; private set; }

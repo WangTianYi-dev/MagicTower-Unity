@@ -15,6 +15,7 @@ using UnityEngine.Events;
 using System.IO;
 using DG.Tweening;
 
+
 public class GameManager : BaseManager
 {
     public static GameManager instance { get; private set; }
@@ -125,7 +126,7 @@ public class GameManager : BaseManager
     {
         if (player.RecvMoveMsg(dir)) // 如果player接受了移动信息
         {
-            var cord = player.position + dir;
+            var cord = player.logicPos + dir;
             BeforeMove(cord);
             if (PlayerPassable(cord)) // pass
             {
@@ -168,7 +169,10 @@ public class GameManager : BaseManager
             BuffAfterBattle(unitEntity as Enemy);
         }
         if (groundEntity != null) groundEntity.AfterMoveTo();
-        if (unitEntity != null) unitEntity.AfterMoveTo();
+        if (unitEntity != null)
+        {
+            unitEntity.AfterMoveTo();
+        }
         player.RegisterAfterMovedAction(ActivateTriggerAreas);
     }
 
@@ -186,15 +190,15 @@ public class GameManager : BaseManager
     public bool MoveByPos(Vector2Int cord)
     {
         Vector2Int dir;
-        if (cord.x > player.position.x)
+        if (cord.x > player.logicPos.x)
         {
             dir = Vector2Int.right;
         }
-        else if (cord.x < player.position.x)
+        else if (cord.x < player.logicPos.x)
         {
             dir = Vector2Int.left;
         }
-        else if (cord.y > player.position.y)
+        else if (cord.y > player.logicPos.y)
         {
             dir = Vector2Int.up;
         }
@@ -229,7 +233,7 @@ public class GameManager : BaseManager
         {
             var passableGrid = MapManager.instance.GetPassableGrid();
             LinkedList<Vector2Int> rt = Router.Route(passableGrid,
-                Player.instance.position,
+                Player.instance.logicPos,
                 new Vector2Int((int)(x * mapHeight), (int)(y * mapWidth)));
 
             if (rt.Count == 0)
@@ -642,6 +646,8 @@ public class GameManager : BaseManager
     /// <summary>
     /// 触发结束的事件
     /// </summary>
+    /// 
+    [HideInInspector]
     public UnityEvent triggerOver = new UnityEvent();
 
     public void TriggerSuccess()
@@ -696,6 +702,20 @@ public class GameManager : BaseManager
 
             case "transport":
                 {
+                    if (entity.setting["target"].ToLower().Contains("lastpos"))
+                    {
+                        Regex r = new Regex(@"\[\s*(?<mapName>[^\s,]+)");
+                        Match ma = r.Match(entity.setting["target"]);
+                        if (ma.Success)
+                        {
+                            entity.setting["target"] = entity.setting["target"].ToLower();
+                            var l = mapmngr.tilemapCache[ma.Groups["mapName"].Value].lastPos;
+
+                            entity.setting["target"].Replace("lastpos", $"{l.x}, {l.y}");
+
+
+                        }
+                    }
                     var m = targetRgx.Match(entity.setting["target"]);
                     if (m.Success)
                     {
@@ -708,6 +728,17 @@ public class GameManager : BaseManager
                                     int.Parse(m.Groups["x"].Value),
                                     int.Parse(m.Groups["y"].Value)
                                 )
+                            )
+                        );
+                    }
+                    // TODO 需要重写
+                    else if (entity.setting["target"].ToLower().Contains("lastpos"))
+                    {
+                        StartCoroutine(
+                            // 使用协程以避免组件执行顺序问题可能产生的bug
+                            PlayerTransPortCoroutine(
+                                m.Groups["mapName"].Value,
+                                mapmngr.tilemapCache[m.Groups["mapName"].Value].lastPos
                             )
                         );
                     }
@@ -809,9 +840,12 @@ public class GameManager : BaseManager
 
     #region 交易
 
+
     /// <summary>
     /// 祭坛交易次数
     /// </summary>
+    /// 
+    [HideInInspector]
     public int altarCount = 0;
 
 
@@ -892,7 +926,7 @@ public class GameManager : BaseManager
             "collision",
             (area) =>
             {
-                return area.position == player.position;
+                return area.position == player.logicPos;
             }
         }
     };
@@ -1056,7 +1090,7 @@ public class GameManager : BaseManager
         archive.version = 0;
         archive.mapArchive = new List<MapArchive>();
         mapmngr.Save2Archive(archive);
-        archive.curPos = player.position;
+        archive.curPos = player.logicPos;
         archive.altarCount = altarCount;
         player.SaveArchive(archive);
         return archive;

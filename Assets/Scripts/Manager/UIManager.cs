@@ -18,8 +18,6 @@ public class UIManager : BaseManager
         instance = this;
     }
 
-    public GameObject floatMessagePrefab;
-
     // 游戏主窗口的快捷方式
     private GameWindow gameWindow;
 
@@ -96,10 +94,14 @@ public class UIManager : BaseManager
         gameWindow.ShowMessage(message);
     }
 
+    /// <summary>
+    /// 显示浮动信息（如伤害），默认产生位置为当前格子的中间
+    /// </summary>
     public void FloatMessage(string message, Vector2Int logicPos)
     {
-        GameWindow.instance.gameArea.InstCanvasObject(floatMessageGO, logicPos, MapManager.instance.boxSize);
-        floatMessageGO.GetComponent<FloatMessage>().Refresh(message);
+        print($"FloatMessage: {message} at logicPos: {logicPos}");
+        var obj = GameWindow.instance.gameArea.InstCanvasObject(floatMessageGO, logicPos, MapManager.instance.boxSize);
+        obj.GetComponent<FloatMessage>().Refresh(message);
     }
 
     /// <summary>
@@ -109,17 +111,5 @@ public class UIManager : BaseManager
     public void RefreshAreaName(string name)
     {
         gameWindow.RefreshAreaName(name);
-    }
-
-    
-
-    /// <summary>
-    /// 显示浮动信息（如伤害），默认产生位置为当前格子的中间
-    /// </summary>
-    /// <param name="pos">逻辑位置</param>
-    /// <param name="msg"></param>
-    public void ShowFloatMessage(Vector2Int pos, string msg)
-    {
-
     }
 }

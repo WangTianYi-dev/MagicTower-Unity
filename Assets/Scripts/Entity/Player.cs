@@ -111,7 +111,7 @@ public class Player : Figure
         transform.position = Vector3.MoveTowards(
             transform.position, tpos, moveSpeed * Time.deltaTime
             );
-        if (transform.position == tpos) { position = targetPos; return true; }
+        if (transform.position == tpos) { logicPos = targetPos; return true; }
         else return false;
     }
 
@@ -120,7 +120,7 @@ public class Player : Figure
     /// </summary>
     public void TransportTransform(Vector2Int targetPos)
     {
-        position = targetPos;
+        logicPos = targetPos;
         Vector3 tpos = Util.ApplyOffset(this.transform.gameObject, targetPos);
         transform.position = tpos;
     }

@@ -1,12 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="11" height="11" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="10">
+<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="11" height="11" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="13">
  <editorsettings>
   <export target="../../../../../OneDrive/桌面/第4层..lua" format="lua"/>
  </editorsettings>
  <tileset firstgid="1" source="BaseAsset.xml"/>
  <tileset firstgid="171" source="Characters.xml"/>
  <tileset firstgid="1354" source="Icons.xml"/>
- <objectgroup id="4" name="Setting"/>
+ <objectgroup id="4" name="Setting">
+  <object id="10" name="stair" class="stair" x="19.5" y="15.5">
+   <properties>
+    <property name="target" value="[第3层,lastPos]"/>
+    <property name="type" value="transport"/>
+   </properties>
+  </object>
+  <object id="11" x="176" y="47.5">
+   <properties>
+    <property name="dialog" value="“作者：试玩版中仅有这一个商店，但价格会随购买次数上升，请理性消费。”"/>
+    <property name="killAfterDone" value=""/>
+   </properties>
+  </object>
+  <object id="12" x="336.5" y="50.5">
+   <properties>
+    <property name="dialog">“作者：试玩版福利：正式版中需要打怪甚至解谜才能获得的稀有技能，现在点击就送！你还在等什么，还不给个好评？”
+“勇士：还行，不过我更感兴趣的是，你是怎么在两个地方同时出现的？”
+“作者：很简单，我是高维生物，你所看到的我，只不过是在2维平面上的投影。”
+“勇士：我能说我没听懂吗？不解释清楚今天你别想走。”
+“作者：咳咳……其实是我用了技能\“幻影咒\”创建了分身。”
+“勇士：这就对了，我也要学这个技能，不然差评滚粗。”
+“作者：呃，正式版中会有的，敬请期待。（完了，这代码不会写，溜了溜了）”
+</property>
+    <property name="killAfterDone" value=""/>
+   </properties>
+  </object>
+ </objectgroup>
  <layer id="1" name="Ground" width="11" height="11">
   <data encoding="csv">
 163,169,169,161,169,169,169,161,169,169,169,
@@ -14,8 +40,8 @@
 169,161,169,161,161,161,161,161,161,161,169,
 169,161,169,161,169,169,169,161,169,169,169,
 169,161,169,161,161,161,169,161,161,161,169,
-169,161,169,169,161,169,169,169,161,169,169,
-169,169,169,169,169,169,169,169,169,169,169,
+169,161,169,161,169,169,169,169,169,169,169,
+169,169,169,169,169,161,169,161,169,161,169,
 169,161,169,161,161,161,169,161,161,161,169,
 169,161,169,161,169,161,169,161,169,169,169,
 169,161,169,161,169,161,161,161,161,161,161,
@@ -24,17 +50,17 @@
  </layer>
  <layer id="2" name="Unit" width="11" height="11">
   <data encoding="csv">
-0,0,0,0,117,118,119,0,0,0,0,
-0,0,0,157,7,1324,145,158,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,117,118,119,0,0,1368,1867,
+0,0,0,157,7,1324,134,158,1853,1354,1324,
+137,0,17,0,0,0,0,0,0,0,157,
+157,0,135,0,124,125,144,0,107,157,0,
+12,0,124,0,0,0,0,0,0,0,158,
+157,0,124,0,144,134,17,0,9,145,0,
+144,0,9,11,134,0,157,0,124,0,1,
+158,0,0,0,0,0,3,0,0,0,3,
+144,0,0,0,0,0,134,0,143,14,1,
+158,0,12,0,17,0,0,0,0,0,0,
+1870,0,0,0,7,7,14,144,125,144,0
 </data>
  </layer>
  <objectgroup id="6" name="Trigger"/>

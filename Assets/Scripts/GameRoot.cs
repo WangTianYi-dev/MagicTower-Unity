@@ -50,7 +50,7 @@ public class GameRoot : MonoBehaviour
         //管理层
         GetComponent<GameManager>().Init();
         GameManager.player = playerObj.GetComponent<Player>();
-        GameManager.player.position = playerPos;
+        GameManager.player.logicPos = playerPos;
     }
 
 

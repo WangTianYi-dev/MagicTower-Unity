@@ -126,7 +126,7 @@ MonoBehaviour:
     HP: 1000
     ATK: 10
     DEF: 10
-    Coin: 1000
+    Coin: 0
     yellowKey: 0
     blueKey: 0
     redKey: 0

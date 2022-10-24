@@ -4,6 +4,7 @@
  * feature: 触控消息传递
  */
 
+using DG.Tweening.Plugins;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -63,9 +64,11 @@ public class GameArea : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public GameObject InstCanvasObject(GameObject GO, Vector2Int logicPos, Vector2Int logicalSize)
     {
         Vector2 cellSize = rectTran.sizeDelta / logicalSize;
-        Vector2 pos = cellSize * logicPos;
-        var newGO = Instantiate(GO, transform);
-        newGO.GetComponent<RectTransform>().position = pos;
+        Vector2 pos = cellSize * (logicPos - (rectTran.sizeDelta / 2 / cellSize) + new Vector2(0.5f, 0.0f));
+        print($"cellsize: {cellSize}, pos: {pos}");
+        var newGO = Instantiate(GO, transform, true);
+        newGO.transform.localScale = Vector2.one;
+        newGO.GetComponent<RectTransform>().anchoredPosition = pos;
         return newGO;
     }
 }

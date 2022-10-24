@@ -17,7 +17,7 @@ public abstract class Entity : MonoBehaviour
     /// <summary>
     /// 逻辑位置
     /// </summary>
-    public Vector2Int position { get; set; }
+    public Vector2Int logicPos { get; set; }
 
     
     /// <summary>
@@ -43,7 +43,7 @@ public abstract class Entity : MonoBehaviour
 
     protected virtual void Start()
     {
-        this.position = Util.GetPosition(transform);
+        this.logicPos = Util.GetPosition(transform);
 
     }
 
@@ -56,7 +56,7 @@ public abstract class Entity : MonoBehaviour
     {
         if (effectBeforeCollision != null)
         {
-            EffectLayer.instance.CreateSpriteEffect(position, effectBeforeCollision);
+            EffectLayer.instance.CreateSpriteEffect(logicPos, effectBeforeCollision);
         }
     }
 
@@ -67,7 +67,7 @@ public abstract class Entity : MonoBehaviour
     {
         if (effectAfterMoveTo != null)
         {
-            EffectLayer.instance.CreateSpriteEffect(position, effectAfterMoveTo);
+            EffectLayer.instance.CreateSpriteEffect(logicPos, effectAfterMoveTo);
         }
     }
 
