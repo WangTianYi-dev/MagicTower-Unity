@@ -26,7 +26,7 @@ public class Item : Entity
 	{
 		base.Start();
 		internalName = ResServer.instance.GetEntityName(this).ToLower();
-		this.type = UnitType.Item;
+		this.type = EntityType.Item;
 		this.introText = ItemIntro[internalName];
 		this.passable = true;
 		if (messageAfterCollect == "")

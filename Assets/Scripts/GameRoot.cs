@@ -15,14 +15,11 @@ public class GameRoot : MonoBehaviour
     [Header("生成主角的位置")]
     public Vector2Int playerPos;
 
+    public Property testProperty;
+
     public GameObject playerPrefab;
-    /// <summary>
-    /// 地面层和单位层
-    /// </summary>
-    private GameObject groundLayer, unitLayer;
 
     private GameObject playerObj;
-    private Property originProperty;
     public static GameRoot instance { get; private set; }
 
     /// <summary>
@@ -51,14 +48,16 @@ public class GameRoot : MonoBehaviour
         GetComponent<GameManager>().Init();
         GameManager.player = playerObj.GetComponent<Player>();
         GameManager.player.logicPos = playerPos;
+        if (testProperty.HP != 0)
+        {
+            GameManager.player.property = testProperty;
+        }
     }
 
 
     // Start is called before the first frame update
     void Start()
     {
-        groundLayer = transform.Find("Ground").gameObject;
-        unitLayer = transform.Find("Unit").gameObject;
         playerObj = Util.Inst(playerPrefab, transform, playerPos);
         Init();
         GameManager.instance.InitGame();

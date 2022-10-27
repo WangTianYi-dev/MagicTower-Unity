@@ -4,17 +4,6 @@
  <tileset firstgid="171" source="Characters.xml"/>
  <tileset firstgid="1354" source="Icons.xml"/>
  <objectgroup id="4" name="Setting">
-  <object id="7" x="144" y="336">
-   <properties>
-    <property name="dialog">&quot;作者：
-如果您没有玩过魔塔类游戏，这些是您需要知道的：
-战斗：碰撞到怪物时自动开始战斗，玩家和怪物的基本属性有生命值（血量）、攻击、防御，单次攻击伤害等于攻击力减去对方的防御力，玩家和怪物轮流攻击直到怪物生命值为0。怪物详细信息可以点击右边怪物手册图标查询。
-地图：一种颜色的钥匙开一种颜色的门，一把钥匙只能开一扇门。
-宝物：有的自动使用，如宝石，有的需要点击右边行囊图标手动使用
-&quot;</property>
-    <property name="killAfterDone" value=""/>
-   </properties>
-  </object>
   <object id="10" x="335.938" y="113.709">
    <properties>
     <property name="dialog">&quot;勇者：又是这个疯子！&quot;

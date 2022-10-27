@@ -137,7 +137,6 @@ public class GameManager : BaseManager
             {
                 AfterBlocked(cord);
             }
-            RefreshPlayerExternalProperty();
             UIManager.instance.RefreshUI();
             return true;
         }
@@ -163,15 +162,16 @@ public class GameManager : BaseManager
 
     public void AfterMove(Vector2Int cord)
     {
-        print($"aftermove: {cord}");
-        if (unitEntity is Enemy)
-        {
-            BuffAfterBattle(unitEntity as Enemy);
-        }
         if (groundEntity != null) groundEntity.AfterMoveTo();
         if (unitEntity != null)
         {
             unitEntity.AfterMoveTo();
+        }
+        if (unitEntity is Enemy)
+        {
+            BuffAfterBattle(unitEntity as Enemy);
+            Util.RemoveEntity(unitEntity);
+            RefreshPlayerExternalProperty();
         }
         player.RegisterAfterMovedAction(ActivateTriggerAreas);
     }
@@ -252,11 +252,42 @@ public class GameManager : BaseManager
 
     private LinkedList<Vector2Int> route = new LinkedList<Vector2Int>();
 
+    /// <summary>
+    /// 停止玩家移动并清空路径
+    /// </summary>
     private void PlayerStop()
     {
         player.playerState = State.Idle;
         route.Clear();
         GroundLayer.instance.RenderLine(route);
+    }
+
+    private bool moveable = true;
+
+    /// <summary>
+    /// 暂停玩家移动（须在之前调用PlayerStop）
+    /// </summary>
+    private void PlayerSuspend()
+    {
+        moveable = false;
+    }
+
+    /// <summary>
+    /// 暂停玩家移动并在duration之后恢复（须在之前调用PlayerStop）
+    /// </summary>
+    /// <param name="duration"></param>
+    private void PlayerSuspend(float duration)
+    {
+        moveable = false;
+        StartCoroutine(Util.InvokeAfterSeconds(duration, PlayerResume));
+    }
+
+    /// <summary>
+    /// 恢复移动
+    /// </summary>
+    private void PlayerResume()
+    {
+        moveable = true;
     }
 
     private void CheckInput()
@@ -302,8 +333,7 @@ public class GameManager : BaseManager
         {
             bb.binaryAddition(ref p, ref ep);
         }
-
-        player.externalProperty = p;
+        RefreshPlayerExternalProperty();
         e.externalProperty = ep;
     }
 
@@ -313,6 +343,7 @@ public class GameManager : BaseManager
     /// <param name="e"></param>
     public void BuffAfterBattle(Enemy e)
     {
+        print($"unbuff after {e.nameInGame}");
         // 与战前不同，直接改变player.property
         var unaryBuffs = from buff in playerBuff
                          where buff.unaryAddition != null && buff.launchTime == Buff.LaunchTime.AfterBattle
@@ -334,15 +365,19 @@ public class GameManager : BaseManager
         var instantBuffs = from buff in playerBuff
                            where buff.type == Buff.AdditionType.Instant
                            select buff;
-        foreach (var ib in instantBuffs)
+        List<Buff> cache = new List<Buff>(instantBuffs);
+        foreach (var ib in cache)
         {
             CancelPlayerBuff(ib);
         }
-        
+        player.curSkill = "";
+        RefreshPlayerExternalProperty();
+        uimngr.RefreshUI();
     }
 
 
     #region 装备系统
+
     private Equipment GetEquipment(string name)
     {
         return ResServer.instance.GetObject(name).GetComponent<Equipment>();
@@ -408,8 +443,8 @@ public class GameManager : BaseManager
 
     public void RefreshPlayerExternalProperty()
     {
-        Property p = player.property; 
-        
+        Property p = player.property;
+        print($"innerP: {p}");
         var unaryBuffs = from buff in playerBuff
                          where buff.unaryAddition != null && buff.launchTime == Buff.LaunchTime.AllTime
                          select buff;
@@ -418,6 +453,7 @@ public class GameManager : BaseManager
             buff.unaryAddition(ref p);
         }
         player.externalProperty = p;
+        print($"externalP: {player.externalProperty}");
     }
 
 
@@ -439,7 +475,6 @@ public class GameManager : BaseManager
     public void CancelPlayerBuff(Buff a)
     {
         playerBuff.Remove(a);
-        RefreshPlayerExternalProperty();
     }
 
 
@@ -702,18 +737,17 @@ public class GameManager : BaseManager
 
             case "transport":
                 {
+                    //print(entity.setting["target"]);
                     if (entity.setting["target"].ToLower().Contains("lastpos"))
                     {
-                        Regex r = new Regex(@"\[\s*(?<mapName>[^\s,]+)");
+                        Regex r = new Regex(@"\s*\[\s*(?<mapName>[^\s,]+)");
                         Match ma = r.Match(entity.setting["target"]);
                         if (ma.Success)
                         {
                             entity.setting["target"] = entity.setting["target"].ToLower();
                             var l = mapmngr.tilemapCache[ma.Groups["mapName"].Value].lastPos;
-
-                            entity.setting["target"].Replace("lastpos", $"{l.x}, {l.y}");
-
-
+                            entity.setting["target"] = entity.setting["target"].Replace("lastpos", $"{l.x}, {l.y}");
+                            //print($"after replace: {entity.setting["target"]}");
                         }
                     }
                     var m = targetRgx.Match(entity.setting["target"]);
@@ -728,17 +762,6 @@ public class GameManager : BaseManager
                                     int.Parse(m.Groups["x"].Value),
                                     int.Parse(m.Groups["y"].Value)
                                 )
-                            )
-                        );
-                    }
-                    // TODO 需要重写
-                    else if (entity.setting["target"].ToLower().Contains("lastpos"))
-                    {
-                        StartCoroutine(
-                            // 使用协程以避免组件执行顺序问题可能产生的bug
-                            PlayerTransPortCoroutine(
-                                m.Groups["mapName"].Value,
-                                mapmngr.tilemapCache[m.Groups["mapName"].Value].lastPos
                             )
                         );
                     }
@@ -779,13 +802,17 @@ public class GameManager : BaseManager
     private IEnumerator PlayerTransPortCoroutine(string map, Vector2Int pos)
     {
         yield return null;
+        print($"Transport target: {map}, {pos}");
         PlayerStop();
+        float suspendTime = 0.5f;
+        PlayerSuspend(suspendTime);
         if (mapmngr.curTilemap.mapName != map)
         {
             mapmngr.ChangeMap(map);
         }
         player.TransportTransform(pos);
         AfterMove(pos);
+
     }
 
 
@@ -838,6 +865,52 @@ public class GameManager : BaseManager
 
     #endregion
 
+    #region 技能处理
+    //public void PlayerWearEquipment(string name)
+    //{
+    //    AddEquipmentBuff(name);
+    //    Equipment toDress = GetEquipment(name);
+    //    var toUndress = from e in player.equipmentsWeared
+    //                    where GetEquipment(e).equipmentType == toDress.equipmentType
+    //                    select e;
+    //    var toRmv = new HashSet<string>();
+    //    foreach (var n in toUndress)
+    //    {
+    //        CancelEquipmentBuff(n);
+    //        toRmv.Add(n);
+    //    }
+    //    foreach (var n in toRmv)
+    //    {
+    //        player.equipmentsWeared.Remove(n);
+    //    }
+    //    player.equipmentsWeared.Add(name);
+    //    uimngr.RefreshUI();
+    //}
+
+    public void UseSkill(string name)
+    {
+        if (Skill.SkillBuffDict.ContainsKey(name) && Skill.prerequsiteDict.ContainsKey(name))
+        {
+            if (Skill.prerequsiteDict[name]() == false)
+            {
+                uimngr.PopMessage("技能使用失败");
+                return;
+            }
+            foreach (var buff in Skill.SkillBuffDict[name])
+            {
+                AddPlayerBuff(buff);
+            }
+            player.curSkill = name;
+            uimngr.RefreshUI();
+        }
+        else
+        {
+            print($"{name}'s effect not exist");
+        }
+    }
+
+
+    #endregion
     #region 交易
 
 
@@ -1040,6 +1113,9 @@ public class GameManager : BaseManager
 
     #endregion
 
+
+    public Dictionary<string, string> globalDict = new Dictionary<string, string>();
+
     #region 游戏存档/读档
 
     private string archivePath;
@@ -1092,6 +1168,7 @@ public class GameManager : BaseManager
         mapmngr.Save2Archive(archive);
         archive.curPos = player.logicPos;
         archive.altarCount = altarCount;
+        (archive.globalValues, archive.globalKeys) = Util.CreateKeysAndValues(globalDict);
         player.SaveArchive(archive);
         return archive;
     }
@@ -1165,6 +1242,7 @@ public class GameManager : BaseManager
         mapmngr.LoadArchive(archive);
         uimngr.RefreshUI();
         altarCount = archive.altarCount;
+        globalDict = Util.CreateDictionary(archive.globalKeys, archive.globalValues);
         playerBuff.Clear();
         StartCoroutine(PlayerTransPortCoroutine(archive.curPos));
     }
@@ -1189,9 +1267,11 @@ public class GameManager : BaseManager
         string str = Decryption(bytea);
         Assert.IsTrue(str.StartsWith("DH")); // 防伪标记
         str = str[2..];
-        print(str);
+        //print(str);
         Archive archive = JsonUtility.FromJson<Archive>(str);
         LoadArchive(archive);
+        RefreshPlayerExternalProperty();
+        UIManager.instance.RefreshUI();
     }
 
 
@@ -1219,7 +1299,7 @@ public class GameManager : BaseManager
 
     private void Update()
     {
-        if (UIManager.instance.currentWindow == "GameWindow")
+        if (UIManager.instance.currentWindow == "GameWindow" && moveable)
             CheckInput();
     }
 

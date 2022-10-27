@@ -25,6 +25,12 @@
  <tile id="624" class="Sheldon">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster03-04_4_1.png"/>
  </tile>
+ <tile id="1080" class="Greedy">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster33-01_4_1.png"/>
+ </tile>
+ <tile id="1093" class="Princess">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster36-02_4_1.png"/>
+ </tile>
  <tile id="455">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver02_1_1.png"/>
  </tile>
@@ -1885,9 +1891,6 @@
  <tile id="1079">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster33-01_3_1.png"/>
  </tile>
- <tile id="1080">
-  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster33-01_4_1.png"/>
- </tile>
  <tile id="1081">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster33-02_1_1.png"/>
  </tile>
@@ -1923,9 +1926,6 @@
  </tile>
  <tile id="1092">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster36-02_3_1.png"/>
- </tile>
- <tile id="1093" class="Princess">
-  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster36-02_4_1.png"/>
  </tile>
  <tile id="1094">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster37-01_1_1.png"/>

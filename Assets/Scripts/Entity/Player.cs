@@ -196,7 +196,7 @@ public class Player : Figure
     public HashSet<string> equipmentsWeared { get; private set; } = new HashSet<string>();
     public HashSet<string> equipments { get; private set; } = new HashSet<string>();
     public HashSet<string> skills { get; private set; } = new HashSet<string>();
-    
+    public string curSkill = "";
 
     public long GetPropertyValue(string name)
     {

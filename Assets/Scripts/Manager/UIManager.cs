@@ -33,7 +33,6 @@ public class UIManager : BaseManager
 
     private void RefreshProperty()
     {
-        GameManager.instance.RefreshPlayerExternalProperty();
         gameWindow.RefreshProperty(Player.instance.externalProperty);
     }
 
@@ -42,10 +41,16 @@ public class UIManager : BaseManager
         gameWindow.RefreshEquipment(Player.instance.equipmentsWeared);
     }
 
+    private void RefreshSkill()
+    {
+        gameWindow.RefreshSkill(Player.instance.curSkill);
+    }
+
     public void RefreshUI()
     {
         RefreshProperty();
         RefreshEquipment();
+        RefreshSkill();
     }
 
     public override void Init()
@@ -89,6 +94,8 @@ public class UIManager : BaseManager
         currentWindow = windowName;
     }
 
+    
+
     public void PopMessage(string message)
     {
         gameWindow.ShowMessage(message);
@@ -99,7 +106,7 @@ public class UIManager : BaseManager
     /// </summary>
     public void FloatMessage(string message, Vector2Int logicPos)
     {
-        print($"FloatMessage: {message} at logicPos: {logicPos}");
+        //print($"FloatMessage: {message} at logicPos: {logicPos}");
         var obj = GameWindow.instance.gameArea.InstCanvasObject(floatMessageGO, logicPos, MapManager.instance.boxSize);
         obj.GetComponent<FloatMessage>().Refresh(message);
     }

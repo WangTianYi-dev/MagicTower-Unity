@@ -81,9 +81,9 @@ public class Buff
 
     public enum LaunchTime
     {
-        AllTime, // 总是生效
+        AllTime, // 总是生效（更改面板数据）
         BeforeBattle, // 战前生效
-        AfterBattle, // 战前生效
+        AfterBattle, // 战后生效
     }
 
 
@@ -106,6 +106,4 @@ public class Buff
         this.binaryAddition = binaryAddition;
     }
 
-    
-    
 }

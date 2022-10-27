@@ -65,7 +65,7 @@ public class GameArea : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         Vector2 cellSize = rectTran.sizeDelta / logicalSize;
         Vector2 pos = cellSize * (logicPos - (rectTran.sizeDelta / 2 / cellSize) + new Vector2(0.5f, 0.0f));
-        print($"cellsize: {cellSize}, pos: {pos}");
+        //print($"cellsize: {cellSize}, pos: {pos}");
         var newGO = Instantiate(GO, transform, true);
         newGO.transform.localScale = Vector2.one;
         newGO.GetComponent<RectTransform>().anchoredPosition = pos;

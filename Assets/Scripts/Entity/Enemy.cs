@@ -12,7 +12,7 @@ using System;
 public class Enemy : Figure
 {
     // 伤害
-    public Int64 damage { get; private set; }
+    public long damage;
 
     // 打不过怪物时显示的信息
     public string blockedMessage = "你打不过此怪物！";
@@ -20,7 +20,7 @@ public class Enemy : Figure
     protected override void Awake()
     {
         base.Awake();
-        this.type = UnitType.Enemy;
+        this.type = EntityType.Enemy;
         this.passable = false;
     }
 
@@ -39,6 +39,7 @@ public class Enemy : Figure
     public void RefreshDamege()
     {
         damage = CombatCalc.CalcDamage(Player.instance, this);
+        
     }
 
 
@@ -47,6 +48,7 @@ public class Enemy : Figure
     {
         base.BeforeCollision();
         RefreshDamege();
+        print($"{nameInGame}dam: {damage}");
         if (0 < damage && damage < Player.instance.externalProperty.HP)
         {
             passable = true;
@@ -63,9 +65,7 @@ public class Enemy : Figure
         var dam = damage;
         Player.instance.property.HP -= dam;
         Player.instance.property.Coin += this.property.Coin;
-        DestroySelf();
         UIManager.instance.PopMessage($"{nameInGame}被打败了，金币+{property.Coin}");
-        print($"damage: {damage}");
         UIManager.instance.FloatMessage((-dam).ToString(), this.logicPos);
     }
 

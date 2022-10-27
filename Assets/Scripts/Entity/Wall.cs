@@ -9,7 +9,7 @@ public class Wall : Entity
     protected override void Awake()
     {
         base.Awake();
-        this.type = UnitType.Ground;
+        this.type = EntityType.Ground;
     }
 
     protected override void Start()

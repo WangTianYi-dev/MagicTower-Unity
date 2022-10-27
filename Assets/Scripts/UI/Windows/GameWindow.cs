@@ -8,6 +8,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Globalization;
 
 //using DG.Tweening;
 public class GameWindow : BaseWindow
@@ -31,7 +32,7 @@ public class GameWindow : BaseWindow
     /// </summary>
     private Text CurrentArea;
 
-    private Image weapon, armor, special;
+    private Image weapon, armor, skill;
 
     private Text bottomMessage;
 
@@ -69,6 +70,8 @@ public class GameWindow : BaseWindow
 
         weapon = transform.Find("LeftPin/Equip/SwordImage").GetComponent<Image>();
         armor = transform.Find("LeftPin/Equip/ShieldImage").GetComponent<Image>();
+        skill = transform.Find("LeftPin/Equip/SkillImage").GetComponent<Image>();
+
         gameArea = transform.Find("CenterPin/GameArea").GetComponent<GameArea>();
     }
 
@@ -109,6 +112,20 @@ public class GameWindow : BaseWindow
                     break;
             }
             
+        }
+    }
+
+    public void RefreshSkill(string skillName)
+    {
+        if (skillName == "")
+        {
+            skill.color = Color.clear;
+        }
+        else
+        {
+            var go = ResServer.instance.GetObject(skillName);
+            skill.sprite = go.GetComponent<SpriteRenderer>().sprite;
+            skill.color = Color.white;
         }
     }
 
@@ -154,6 +171,12 @@ public class GameWindow : BaseWindow
         ItemWindow.instance.ShowIntro("勇者打开了他的四次元口袋！");
     }
 
+    public void OnSkillButtonClicked()
+    {
+        UIManager.instance.OpenWindow("SkillWindow");
+        SkillWindow.instance.Refresh(Player.instance.skills);
+        SkillWindow.instance.ShowIntro("勇士屏息静气，准备发动技能");
+    }
 
     public void OnSaveButtonClicked()
     {

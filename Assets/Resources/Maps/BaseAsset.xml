@@ -45,6 +45,8 @@
  <tile id="59" class="Zeno"/>
  <tile id="98" class="OldMan"/>
  <tile id="99" class="OldMan"/>
+ <tile id="106" class="Jack"/>
+ <tile id="107" class="Jack"/>
  <tile id="108" class="Merchant"/>
  <tile id="109" class="Merchant"/>
  <tile id="116" class="AltarLeft"/>

@@ -46,7 +46,7 @@ public static class CombatCalc
     public static Int64 CalcDamage(Figure ATKer, Figure DEFer)
     {
         Property ATKerProperty = ATKer.externalProperty, DEFerProperty = DEFer.externalProperty;
-
+        Debug.Log($"Player prop: {ATKerProperty}");
         return BaseDamage(ATKerProperty, DEFerProperty);
     }
 

@@ -25,7 +25,7 @@ public class FloatMessage : MonoBehaviour
 
     public void Refresh(string message)
     {
-        print($"Refresh: {message}");
+        //print($"Refresh: {message}");
         GetComponent<Text>().text = message;
     }
 

@@ -23,4 +23,9 @@ public struct Property
         p.Coin = Coin;
         return p;
     }
+
+    public override string ToString()
+    {
+        return $"HP: {HP}, ATK: {ATK}, DEF: {DEF}, COIN: {Coin}";
+    }
 }

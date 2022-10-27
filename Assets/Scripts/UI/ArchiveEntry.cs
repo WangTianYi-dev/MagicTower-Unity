@@ -11,6 +11,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.Assertions;
 using Mono.Cecil;
+using System;
 
 public class ArchiveEntry : MonoBehaviour, IPointerClickHandler
 {
@@ -52,20 +53,35 @@ public class ArchiveEntry : MonoBehaviour, IPointerClickHandler
         index.text = "新存档";
     }
 
+    IEnumerator Load()
+    {
+        yield return null;
+        UIManager.instance.SwitchWindow("GameWindow");
+        //UIManager.instance.PopMessage($"存档{internalIndex}号读取成功！");
+    }
+
+    IEnumerator Save()
+    {
+        yield return null;
+        UIManager.instance.SwitchWindow("GameWindow");
+        UIManager.instance.PopMessage($"存档{internalIndex}号保存成功！");
+    }
 
     public void OnPointerClick(PointerEventData eventData)
     {
         if (type == Type.Load)
         {
             GameManager.instance.LoadGame(this.internalIndex);
-            UIManager.instance.SwitchWindow("GameWindow");
-            UIManager.instance.PopMessage($"存档{internalIndex}号读取成功！");
+            StartCoroutine(Load());
+            //UIManager.instance.SwitchWindow("GameWindow");
+            //UIManager.instance.PopMessage($"存档{internalIndex}号读取成功！");
         }
         else if (type == Type.Save)
         {
             GameManager.instance.SaveGame(this.internalIndex);
-            UIManager.instance.SwitchWindow("GameWindow");
-            UIManager.instance.PopMessage($"存档{internalIndex}号保存成功！");
+            StartCoroutine(Save());
+            //UIManager.instance.SwitchWindow("GameWindow");
+            //UIManager.instance.PopMessage($"存档{internalIndex}号保存成功！");
         }
         
     }

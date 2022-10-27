@@ -72,9 +72,39 @@ public class Altar : Store
         {
             return new List<Func<bool>>
             {
-                GameManager.instance.CreateTransaction("coin", nextPrice.ToString(), "hp", (nextAddition*100).ToString()),
-                GameManager.instance.CreateTransaction("coin", nextPrice.ToString(), "atk", nextAddition.ToString()),
-                GameManager.instance.CreateTransaction("coin", nextPrice.ToString(), "def", nextAddition.ToString()),
+                ()=>
+                { 
+                    var tran = 
+                        GameManager.instance.CreateTransaction(
+                            "coin", nextPrice.ToString(), "hp", 
+                            (nextAddition*100).ToString());
+                    if (tran())
+                    {
+                        GameManager.instance.altarCount += 1;
+                        return true;
+                    }
+                    return false;
+                },
+                ()=>
+                {
+                    var tran = GameManager.instance.CreateTransaction("coin", nextPrice.ToString(), "atk", nextAddition.ToString());
+                    if (tran())
+                    {
+                        GameManager.instance.altarCount += 1;
+                        return true;
+                    }
+                    return false;
+                },
+                ()=>
+                {
+                    var tran = GameManager.instance.CreateTransaction("coin", nextPrice.ToString(), "def", nextAddition.ToString());
+                    if (tran())
+                    {
+                        GameManager.instance.altarCount += 1;
+                        return true;
+                    }
+                    return false;
+                }
             };
         }
     }
@@ -89,7 +119,8 @@ public class Altar : Store
     public override void OnTriggerDone()
     {
         base.OnTriggerDone();
-        GameManager.instance.altarCount += 1;
+        //GameManager.instance.altarCount += 1;
+        //print($"altarcount: {GameManager.instance.altarCount}");
         StoreWindow.instance.Refresh(message, transactions);
     }
 }

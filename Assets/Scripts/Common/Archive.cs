@@ -29,6 +29,9 @@ public class Archive
     public int altarCount; // 祭坛购买次数
     public List<TriggerArea> triggerAreas;
     // 创建Archive的方法在GameManager中
+
+    public List<string> globalKeys;
+    public List<string> globalValues;
 }
 
 
@@ -49,6 +52,7 @@ public class MapArchive
     public List<SettingArchive> settings;
     public List<TriggerArea> triggerAreas;
     public Vector2Int lastPos;
+    
     public MapArchive(Tilemap tilemap)
     {
         name = tilemap.mapName;

@@ -38,7 +38,7 @@ public abstract class Entity : MonoBehaviour
     [Header("移动后生成的SpriteEffect物体")]
     public GameObject effectAfterMoveTo;
 
-    public UnitType type { get; protected set; }
+    public EntityType type { get; protected set; }
 
 
     protected virtual void Start()

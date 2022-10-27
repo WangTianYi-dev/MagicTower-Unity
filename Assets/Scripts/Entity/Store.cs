@@ -19,7 +19,6 @@ public class Store : NPC
         base.Start(); 
         this.passable = false;
         this.triggerType = this.triggerType == "" ? "trade" : this.triggerType;
-
     }
 
 

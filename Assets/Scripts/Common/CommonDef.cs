@@ -11,12 +11,13 @@ using System;
 /// <summary>
 /// 单位类型
 /// </summary>
-public enum UnitType
+public enum EntityType
 {
     Ground,
     Enemy,
     Event,
     Item,
+    Skill,
     Block
 }
 

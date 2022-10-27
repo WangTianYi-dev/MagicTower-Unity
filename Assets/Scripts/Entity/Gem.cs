@@ -24,7 +24,7 @@ public class Gem : Entity
 	protected override void Start()
 	{
 		base.Start();
-		this.type = UnitType.Item;
+		this.type = EntityType.Item;
 		this.passable = true;
 	}
 

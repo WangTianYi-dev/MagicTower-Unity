@@ -61,9 +61,9 @@ public class StoreWindow : BaseWindow, IPointerClickHandler
                 (
                     () =>
                     {
-                        print(t);
                         if (Invoke(t))
                         {
+
                             GameManager.instance.TriggerSuccess();
                             if (closeAfterDone)
                             {

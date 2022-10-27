@@ -146,7 +146,7 @@ public class MapManager : BaseManager
 
     public void ChangeMap(string name)
     {
-        print($"changeMap: {name}");
+        //print($"changeMap: {name}");
         if (curTilemap != null)
         {
             curTilemap.lastPos = Player.instance.logicPos;
@@ -156,12 +156,12 @@ public class MapManager : BaseManager
         unitEntityDict.Clear();
         if (tilemapCache.ContainsKey(name))
         {
-            print("countains");
+            //print("countains ");
             curTilemap = tilemapCache[name];
         }
         else
         {
-            print("loadnew");
+            //print("loadnew");
             curTilemap = LoadNewMap(name);
             AddMap(curTilemap);
         }

@@ -79,7 +79,10 @@ public class Util : MonoBehaviour
         return Inside(cordin.x, leftDown.x, rightUp.x) && Inside(cordin.y, leftDown.y, rightUp.y);
     }
 
-
+    /// <summary>
+    /// 清除transform的所有children
+    /// </summary>
+    /// <param name="tr"></param>
     public static void ClearChildren(Transform tr)
     {
         for (int i = 0; i < tr.childCount; i++)
@@ -88,9 +91,47 @@ public class Util : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// 只是MapManager.instance.RemoveEntity的快捷方式
+    /// </summary>
+    /// <param name="e"></param>
     public static void RemoveEntity(Entity e)
     {
         MapManager.instance.RemoveEntity(e);
+    }
+
+    /// <summary>
+    /// duration之后执行action
+    /// </summary>
+    /// <param name="duration"></param>
+    /// <param name="action"></param>
+    /// <returns></returns>
+    public static IEnumerator InvokeAfterSeconds(float duration, Action action = null)
+    {
+        yield return new WaitForSeconds(duration);
+        action?.Invoke();
+    }
+
+    public static Dictionary<string, string> CreateDictionary(List<string> keys, List<string> values)
+    {
+        var dict = new Dictionary<string, string>();
+        Debug.Assert(keys.Count == values.Count);
+        for (int i = 0; i < keys.Count; i++)
+        {
+            dict[keys[i]] = values[i];
+        }
+        return dict;
+    }
+
+    public static (List<string>, List<string>) CreateKeysAndValues(Dictionary<string, string> dict)
+    {
+        List<string> keys = new List<string>();
+        List<string> values = new List<string>();
+        foreach (var kvp in dict)
+        {
+            keys.Add(kvp.Key);
+            values.Add(kvp.Value);
+        }
+        return (keys, values);
     }
 }

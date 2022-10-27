@@ -37,7 +37,7 @@ public class Equipment : Entity
             internalName = ResServer.instance.GetEntityName(this);
         }
 		internalName = internalName.ToLower();
-		this.type = UnitType.Item;
+		this.type = EntityType.Item;
 		this.passable = true;
 	}
 
