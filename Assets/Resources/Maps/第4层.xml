@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="11" height="11" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="14">
+<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="11" height="11" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="16">
  <editorsettings>
   <export target="../../../../../OneDrive/桌面/第4层..lua" format="lua"/>
  </editorsettings>
@@ -37,6 +37,24 @@
     <property name="type" value="altar"/>
    </properties>
   </object>
+  <object id="15" x="272" y="113.5">
+   <properties>
+    <property name="dialog">“杰克：哇啊啊啊~魔物大人饶命，我真的不是来偷东西的！我是来投奔魔族的！人族，不行！魔族，行！谢尔顿大人，高！芝诺大人，硬！古顿大人，又高又硬！饶我一命吧……”
+“勇士：（无言）”
+“杰克：咦……你不是魔族？而且你还打败了那只大蝙蝠！兄弟好身手，我叫杰克，快救我出去，我什么都能答应你！”
+“勇士：看你这身行头也不像是有钱人，那么你会做什么？”
+“杰克：嘿嘿，少侠有所不知，在下身为一名盗贼，数十年来从未失手，靠的就是低调和认怂。钱财这里不缺，不如给你开一个门吧，开锁可是在下的看家本领。”
+“勇士：一个门？我巴不得你把所有门都给我开了。”
+“杰克：大哥，我开门也是需要时间的，你的时间非常值钱！普通的门用钥匙不就行了嘛。你有没有遇到过那种花门或是铁门，用钥匙开不了的，我帮你开了。”
+“勇士：那就2层的门吧。”
+“杰克：2层？2层没有特殊的门啊。”
+“勇士：（看来老头说的没错，我的确看到了特殊的景象）那你看哪个门有价值就开了吧。”
+“杰克：我看5层的门就不错，得嘞，我先走一步，你可要跟上啊！”
+</property>
+    <property name="killAfterDone" value=""/>
+    <property name="type" value="chat"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer id="1" name="Ground" width="11" height="11">
   <data encoding="csv">
@@ -58,7 +76,7 @@
 0,0,0,0,117,118,119,0,0,134,1867,
 0,0,134,157,7,1324,134,158,1853,144,1324,
 137,0,17,0,0,0,0,0,0,0,157,
-157,0,135,0,124,125,144,0,107,157,0,
+157,0,135,0,124,125,144,0,107,157,9,
 12,0,124,0,0,0,157,0,0,0,158,
 157,0,124,0,144,134,17,0,9,145,0,
 144,0,9,11,134,0,157,0,124,0,1,

@@ -14,7 +14,7 @@ using System.Text.RegularExpressions;
 using UnityEngine.Events;
 using System.IO;
 using DG.Tweening;
-
+using System.Transactions;
 
 public class GameManager : BaseManager
 {
@@ -676,25 +676,169 @@ public class GameManager : BaseManager
 
     #region 事件处理
 
+    private class EventNode
+    {
+        public bool done;
+        public bool invoked;
+        public Action action;
+        public EventNode(Action action)
+        {
+            this.action = action;
+            done = false;
+            invoked = false;
+        }
+        public void Invoke()
+        {
+            action();
+            invoked = true;
+        }
+    }
+
+    Queue<EventNode> eventQueue = new Queue<EventNode>();
+
+    private void HandleEvent()
+    {
+        if (eventQueue.Count > 0)
+        {
+            if (eventQueue.First().done)
+            {
+                eventQueue.Dequeue();
+            }
+            else if (!eventQueue.First().invoked)
+            {
+                eventQueue.First().Invoke();
+            }
+        }
+    }
+
+    public void CurrentEventDone()
+    {
+        Debug.Assert(eventQueue.Count > 0);
+        eventQueue.First().done = true;
+    }
+
+    public void AddEvent(Action action)
+    {
+        eventQueue.Enqueue(new EventNode(action));
+    }
+
+    private void HandleTrigger(Dictionary<string, string> settings, Entity entity = null)
+    {
+        if (settings.ContainsKey("script"))
+        {
+            AddEvent(() => { ScriptManager.instance.DoString(settings["script"]); });
+        }
+        switch (settings["type"])
+        {
+            case "chat":
+                {
+                    AddEvent(() =>
+                        {
+                            var dialog = Parser.LoadDialog(settings["dialog"]);
+                            ShowDialog(dialog);
+                        }
+                    );
+                }
+                break;
+            case "trade":
+                {
+                    AddEvent(() =>
+                        {
+                            string raw = settings["transactions"];
+                            List<Func<bool>> transactions = ParseTransactions(raw);
+                            string message = settings["message"];
+                            uimngr.OpenWindow("StoreWindow");
+                            StoreWindow.instance.Refresh(message, transactions, settings.ContainsKey("dieafterdone"));
+                        }   
+                    );
+                }
+                break;
+
+            case "altar":
+                {
+                    AddEvent(() =>
+                    {
+                        if (entity == null)
+                        {
+                            Debug.LogError($"triggerType altar must bind to an entity!");
+                            return;
+                        }
+                        var altar = entity as Altar;
+                        uimngr.OpenWindow("StoreWindow");
+                        StoreWindow.instance.Refresh(altar.message, altar.transactions);
+                    });
+                }
+                break;
+
+            case "transport":
+                {
+                    AddEvent(() =>
+                    {
+                        //print(entity.setting["target"]);
+                        if (settings["target"].ToLower().Contains("lastpos"))
+                        {
+                            Regex r = new Regex(@"\s*\[\s*(?<mapName>[^\s,]+)");
+                            Match ma = r.Match(settings["target"]);
+                            if (ma.Success)
+                            {
+                                settings["target"] = settings["target"].ToLower();
+                                var l = mapmngr.tilemapCache[ma.Groups["mapName"].Value].lastPos;
+                                settings["target"] = settings["target"].Replace("lastpos", $"{l.x}, {l.y}");
+                                //print($"after replace: {entity.setting["target"]}");
+                            }
+                        }
+                        var m = targetRgx.Match(settings["target"]);
+                        if (m.Success)
+                        {
+                            print($"mapName: {m.Groups["mapName"]}, {m.Groups["x"]}, {m.Groups["y"]}");
+                            StartCoroutine(
+                                // 使用协程以避免组件执行顺序问题可能产生的bug
+                                PlayerTransPortCoroutine(
+                                    m.Groups["mapName"].Value,
+                                    new Vector2Int(
+                                        int.Parse(m.Groups["x"].Value),
+                                        int.Parse(m.Groups["y"].Value)
+                                    )
+                                )
+                            );
+                        }
+                        else
+                        {
+                            Debug.LogError($"非法的目标：{settings["target"]}");
+                        }
+                        CurrentEventDone();
+                    });
+                }
+                //AddEvent(() => { TriggerSuccess(); });
+                
+                break;
+            case "none":
+                break;
+            default:
+                Debug.LogError($"不支持的触发类型：{settings["type"]}");
+                break;
+        }
+
+    }
 
 
     /// <summary>
     /// 触发结束的事件
     /// </summary>
-    /// 
-    [HideInInspector]
-    public UnityEvent triggerOver = new UnityEvent();
+    ///// 
+    //[HideInInspector]
+    //public UnityEvent triggerOver = new UnityEvent();
 
-    public void TriggerSuccess()
-    {
-        triggerOver.Invoke();
-        triggerOver.RemoveAllListeners();
-    }
+    //public void TriggerSuccess()
+    //{
+    //    triggerOver.Invoke();
+    //    triggerOver.RemoveAllListeners();
+    //}
 
-    public void TriggerFailed()
-    {
-        triggerOver.RemoveAllListeners();
-    }
+    //public void TriggerFailed()
+    //{
+    //    triggerOver.RemoveAllListeners();
+    //}
 
     /// <summary>
     /// 传送目标的正则
@@ -707,76 +851,9 @@ public class GameManager : BaseManager
     /// <param name="entity">触发实体</param>
     public void TriggerByEntity(TriggerEntity entity)
     {
-        triggerOver.AddListener(entity.OnTriggerDone);
         Dictionary<string, string> settings = entity.setting;
-        switch (entity.triggerType)
-        {
-            case "chat":
-                {
-                    var dialog = Parser.LoadDialog(entity.setting["dialog"]);
-                    ShowDialog(dialog);
-                }
-                break;
-            case "trade":
-                {
-                    string raw = settings["transactions"];
-                    List<Func<bool>> transactions = ParseTransactions(raw);
-                    string message = settings["message"];
-                    uimngr.OpenWindow("StoreWindow");
-                    StoreWindow.instance.Refresh(message, transactions, settings.ContainsKey("dieafterdone"));
-                }
-                break;
-
-            case "altar":
-                {
-                    var altar = entity as Altar;
-                    uimngr.OpenWindow("StoreWindow");
-                    StoreWindow.instance.Refresh(altar.message, altar.transactions);
-                }
-                break;
-
-            case "transport":
-                {
-                    //print(entity.setting["target"]);
-                    if (entity.setting["target"].ToLower().Contains("lastpos"))
-                    {
-                        Regex r = new Regex(@"\s*\[\s*(?<mapName>[^\s,]+)");
-                        Match ma = r.Match(entity.setting["target"]);
-                        if (ma.Success)
-                        {
-                            entity.setting["target"] = entity.setting["target"].ToLower();
-                            var l = mapmngr.tilemapCache[ma.Groups["mapName"].Value].lastPos;
-                            entity.setting["target"] = entity.setting["target"].Replace("lastpos", $"{l.x}, {l.y}");
-                            //print($"after replace: {entity.setting["target"]}");
-                        }
-                    }
-                    var m = targetRgx.Match(entity.setting["target"]);
-                    if (m.Success)
-                    {
-                        print($"mapName: {m.Groups["mapName"]}, {m.Groups["x"]}, {m.Groups["y"]}");
-                        StartCoroutine(
-                            // 使用协程以避免组件执行顺序问题可能产生的bug
-                            PlayerTransPortCoroutine(
-                                m.Groups["mapName"].Value,
-                                new Vector2Int(
-                                    int.Parse(m.Groups["x"].Value),
-                                    int.Parse(m.Groups["y"].Value)
-                                )
-                            )
-                        );
-                    }
-                    else
-                    {
-                        Debug.LogError($"非法的目标：{entity.setting["target"]}");
-                    }
-                }
-                TriggerSuccess();
-                break;
-            default:
-                Debug.LogError($"不支持的触发类型：{entity.triggerType}");
-                break;
-        }
-        
+        HandleTrigger(settings, entity);
+        AddEvent(() => { entity.OnTriggerDone(); CurrentEventDone(); });
     }
 
 
@@ -1034,54 +1111,8 @@ public class GameManager : BaseManager
     {
 
         var settings = area.settings;
-        triggerOver.AddListener(OnTriggerAreaDone(area));
-        string triggerType = settings.ContainsKey("type") ? settings["type"] : "chat";
-        switch (triggerType)
-        {
-            case "chat":
-                {
-                    PlayerStop();
-                    var dialog = Parser.LoadDialog(settings["dialog"]);
-                    ShowDialog(dialog);
-                }
-                break;
-            case "trade":
-                {
-                    string raw = settings["transactions"];
-                    List<Func<bool>> transactions = ParseTransactions(raw);
-                    string message = settings["message"];
-                    StoreWindow.instance.Refresh(message, transactions, settings.ContainsKey("dieafterdone"));
-                }
-                break;
-            case "transport":
-                {
-                    var m = targetRgx.Match(settings["target"]);
-                    if (m.Success)
-                    {
-                        print($"{m.Groups["mapName"]}, {m.Groups["x"]}, {m.Groups["y"]}");
-                        StartCoroutine(
-                            // 使用协程以避免组件执行顺序问题可能产生的bug
-                            PlayerTransPortCoroutine(
-                                m.Groups["mapName"].Value,
-                                new Vector2Int(
-                                    int.Parse(m.Groups["x"].Value),
-                                    int.Parse(m.Groups["y"].Value)
-                                )
-                            )
-                        );
-                    }
-                    else
-                    {
-                        Debug.LogError($"非法的目标：{settings["target"]}");
-                    }
-                    TriggerSuccess();
-                }
-                
-                break;
-            default:
-                Debug.LogError($"不支持的触发类型：{settings["type"]}");
-                break;
-        }
+        HandleTrigger(settings);
+        AddEvent(() => { OnTriggerAreaDone(area); CurrentEventDone(); });
     }
 
     #endregion
@@ -1238,6 +1269,7 @@ public class GameManager : BaseManager
 
     private void LoadArchive(Archive archive)
     {
+        eventQueue.Clear();
         player.LoadArchive(archive);
         mapmngr.LoadArchive(archive);
         uimngr.RefreshUI();
@@ -1301,6 +1333,7 @@ public class GameManager : BaseManager
     {
         if (UIManager.instance.currentWindow == "GameWindow" && moveable)
             CheckInput();
+        HandleEvent();
     }
 
     

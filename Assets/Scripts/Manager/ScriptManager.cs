@@ -51,22 +51,41 @@ public class ScriptManager : MonoBehaviour
 
     private LuaEnv luaEnv = new LuaEnv();
 
-    private LuaTable scriptEnv;
-
     private void SetInterface()
     {
         var t = typeof(ScriptInterface);
         MethodInfo[] methods = t.GetMethods();
         foreach (MethodInfo method in methods)
         {
-
+            if (method.DeclaringType == t)
+            {
+                luaEnv.DoString($"{method.Name} = CS.ScriptInterface.{method.Name}");
+            }
         }
     }
 
     private void Awake()
     {
         instance = this;
-        scriptEnv = luaEnv.NewTable();
+        SetInterface();
+    }
+
+    public void DoString(string str)
+    {
+        LuaTable env = luaEnv.NewTable();
+        // 为每个脚本设置一个独立的环境，可一定程度上防止脚本间全局变量、函数冲突
+        LuaTable meta = luaEnv.NewTable();
+        meta.Set("__index", luaEnv.Global);
+        env.SetMetaTable(meta);
+        meta.Dispose();
+
+        env.Set("self", this);
+        luaEnv.DoString(str, "chunk", env);
+    }
+
+    private void Start()
+    {
+        DoString("Log(\"Lua says Hello!\")");
     }
 
     // Update is called once per frame

@@ -65,7 +65,8 @@ public class DialogWindow : BaseWindow, IPointerClickHandler
     {
         if (!ShowNextSentence())
         {
-            GameManager.instance.TriggerSuccess();
+            //GameManager.instance.TriggerSuccess();
+            GameManager.instance.CurrentEventDone();
             UIManager.instance.SwitchWindow("GameWindow");
         }
     }

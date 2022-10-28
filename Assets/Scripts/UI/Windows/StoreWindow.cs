@@ -63,11 +63,10 @@ public class StoreWindow : BaseWindow, IPointerClickHandler
                     {
                         if (Invoke(t))
                         {
-
-                            GameManager.instance.TriggerSuccess();
+                            //GameManager.instance.TriggerSuccess();
                             if (closeAfterDone)
                             {
-                                UIManager.instance.SwitchWindow("GameWindow");
+                                OnPointerClick(null);
                             }
                             UIManager.instance.RefreshUI();
                         }
@@ -94,7 +93,8 @@ public class StoreWindow : BaseWindow, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        GameManager.instance.TriggerFailed();
+        //GameManager.instance.TriggerFailed();
+        GameManager.instance.CurrentEventDone();
         UIManager.instance.SwitchWindow("GameWindow");
     }
 }
