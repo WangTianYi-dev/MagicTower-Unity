@@ -12,6 +12,7 @@ using System;
 public class Enemy : Figure
 {
     // 伤害
+    [HideInInspector]
     public long damage;
 
     // 打不过怪物时显示的信息

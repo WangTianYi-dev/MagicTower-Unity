@@ -124,7 +124,7 @@ MonoBehaviour:
   effectAfterKilled: {fileID: 0}
   property:
     HP: 144
-    ATK: 308
+    ATK: 258
     DEF: 22
     Coin: 30
     yellowKey: 0

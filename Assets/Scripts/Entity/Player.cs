@@ -146,16 +146,12 @@ public class Player : Figure
 
     #region 技能和物品
 
-
-
     protected override void Awake()
     {
         base.Awake();
         instance = this;
         animator = GetComponent<Animator>();
     }
-
-
 
     // 物品列表
     public Dictionary<string, int> items { get; private set; } = new Dictionary<string, int>();

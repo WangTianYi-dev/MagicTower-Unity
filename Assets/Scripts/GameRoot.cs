@@ -16,6 +16,9 @@ public class GameRoot : MonoBehaviour
     public Vector2Int playerPos;
 
     public Property testProperty;
+    public List<string> testItems;
+    public List<string> testSkills;
+    public List<string> testEquips;
 
     public GameObject playerPrefab;
 
@@ -51,6 +54,27 @@ public class GameRoot : MonoBehaviour
         if (testProperty.HP != 0)
         {
             GameManager.player.property = testProperty;
+        }
+        if (testEquips != null)
+        {
+            foreach (var e in testEquips)
+            {
+                Player.instance.equipments.Add(e);
+            }
+        }
+        if (testItems != null)
+        {
+            foreach (var e in testItems)
+            {
+                Player.instance.GetItem(e);
+            }
+        }
+        if (testSkills != null)
+        {
+            foreach (var e in testSkills)
+            {
+                Player.instance.skills.Add(e);
+            }
         }
     }
 

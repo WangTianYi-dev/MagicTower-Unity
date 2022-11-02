@@ -9648,6 +9648,9 @@ MonoBehaviour:
     yellowKey: 100
     blueKey: 100
     redKey: 100
+  testItems: []
+  testSkills: []
+  testEquips: []
   playerPrefab: {fileID: 8426827403028683041, guid: f784dd1d516c548ddaae79384102d20f, type: 3}
 --- !u!114 &1251406242
 MonoBehaviour:
