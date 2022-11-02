@@ -11,22 +11,20 @@ using UnityEngine;
 
 public class NPC : TriggerEntity
 {
-    protected string defaultType = "chat";
+
     // Start is called before the first frame update
     protected override void Start()
     {
         base.Start();    
         this.passable = false;
-        this.triggerType = defaultType;
-        if (this.setting.ContainsKey("type"))
+        if (!this.setting.ContainsKey("type"))
         {
-            this.triggerType = setting["type"];
+            setting["type"] = "chat";
         }
     }
 
     public override void BeforeCollision()
     {
         base.BeforeCollision();
-        GameManager.instance.TriggerByEntity(this);
     }
 }

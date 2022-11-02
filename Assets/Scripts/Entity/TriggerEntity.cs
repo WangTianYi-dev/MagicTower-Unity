@@ -1,7 +1,7 @@
 /*
- * file: TriggerArea.cs
+ * file: TriggerEntity.cs
  * author: DeamonHook
- * feature: 触发区域，如NPC和楼梯等
+ * feature: 触发entity，如NPC和楼梯等
  */
 
 using System.Collections;
@@ -12,18 +12,14 @@ using UnityEngine;
 public abstract class TriggerEntity : Entity
 {
     // 注意：setting的key均为小写
-    public Dictionary<string, string> setting {get; private set;}
-
-    [Header("默认触发类型")]
-    public string triggerType;
+    public Dictionary<string, string> setting;
 
     protected override void Start()
     {
         base.Start();
-        setting = GameManager.instance.RequestSetting(logicPos);
-        if (setting.ContainsKey("type"))
+        if (setting == null)
         {
-            this.triggerType = setting["type"];
+            setting = GameManager.instance.RequestSetting(logicPos);
         }
     }
 
@@ -33,5 +29,11 @@ public abstract class TriggerEntity : Entity
         {
             GameManager.instance.RemoveEntity(this);
         }
+    }
+
+    public override void BeforeCollision()
+    {
+        base.BeforeCollision();
+        GameManager.instance.TriggerByEntity(this);
     }
 }

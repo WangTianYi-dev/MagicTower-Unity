@@ -22,6 +22,18 @@
  <tile id="521" class="HuangZhe">
   <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item04-XXMT02_3_1.png"/>
  </tile>
+ <tile id="539" class="YellowGem">
+  <image width="32" height="32" source="../../Sprites/Items/newitem_04.png"/>
+ </tile>
+ <tile id="540" class="YellowGemT2">
+  <image width="32" height="32" source="../../Sprites/Items/newitem_08.png"/>
+ </tile>
+ <tile id="541">
+  <image width="32" height="32" source="../../Sprites/Items/newitem_12.png"/>
+ </tile>
+ <tile id="542">
+  <image width="32" height="32" source="../../Sprites/Items/newitem_16.png"/>
+ </tile>
  <tile id="0">
   <image width="32" height="32" source="../../魔塔吧素材库/Icons/Item01-01_1_1.png"/>
  </tile>
@@ -1617,17 +1629,5 @@
  </tile>
  <tile id="538">
   <image width="32" height="32" source="../../魔塔吧素材库/Icons/NPC04-01_2_3.png"/>
- </tile>
- <tile id="539" class="YellowGem">
-  <image width="32" height="32" source="../../Sprites/Items/newitem_04.png"/>
- </tile>
- <tile id="540" class="YellowGemT2">
-  <image width="32" height="32" source="../../Sprites/Items/newitem_08.png"/>
- </tile>
- <tile id="541">
-  <image width="32" height="32" source="../../Sprites/Items/newitem_12.png"/>
- </tile>
- <tile id="542">
-  <image width="32" height="32" source="../../Sprites/Items/newitem_16.png"/>
  </tile>
 </tileset>

@@ -28,15 +28,21 @@ public class Gem : Entity
 		this.passable = true;
 	}
 
+	public override void AfterKilled()
+	{
+		base.AfterKilled();
+        foreach (var addition in this.additions)
+        {
+            GameManager.instance.ApplyAddition(addition);
+        }
+        DestroySelf();
+        UIManager.instance.PopMessage(messageAfterCollect);
+    }
+
 	public override void AfterMoveTo()
 	{
 		base.AfterMoveTo();
-		foreach (var addition in this.additions)
-		{
-			GameManager.instance.ApplyAddition(addition);
-		}
-		DestroySelf();
-		UIManager.instance.PopMessage(messageAfterCollect);
+		AfterKilled();
 	}
 }
 

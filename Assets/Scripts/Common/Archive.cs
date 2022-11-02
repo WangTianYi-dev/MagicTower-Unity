@@ -52,7 +52,8 @@ public class MapArchive
     public List<SettingArchive> settings;
     public List<TriggerArea> triggerAreas;
     public Vector2Int lastPos;
-    
+    public List<string> mapSettingKeys, mapSettingValues;
+
     public MapArchive(Tilemap tilemap)
     {
         name = tilemap.mapName;
@@ -75,6 +76,7 @@ public class MapArchive
         {
             settings.Add(new SettingArchive(s));
         }
+        (mapSettingKeys, mapSettingValues) = Util.CreateKeysAndValuesList(tilemap.mapSetting);
     }
 
     private string[,] ConvertTo2Dim(List<string> l)
@@ -98,11 +100,12 @@ public class MapArchive
         tilemap.unit = ConvertTo2Dim(unit);
         tilemap.ground = ConvertTo2Dim(ground);
         tilemap.triggerAreas = new List<TriggerArea>(triggerAreas);
-        tilemap.setting = new Dictionary<Vector2Int, List<KeyValuePair<string, string>>>();
+        tilemap.setting = new Dictionary<Vector2Int, Dictionary<string, string>>();
         foreach (var p in settings)
         {
-            tilemap.setting.Add(new Vector2Int(p.x, p.y), p.ToSettingValue());
+            tilemap.setting.Add(new Vector2Int(p.x, p.y), Util.CreateDictionaryViaLists(p.keys, p.values));
         }
+        tilemap.mapSetting = Util.CreateDictionaryViaLists(mapSettingKeys, mapSettingValues);
         return tilemap;
     }
 }
@@ -115,7 +118,7 @@ public class SettingArchive
     public List<string> values;
 
     // 将一个单独的设置转化为存档
-    public SettingArchive(KeyValuePair<Vector2Int, List<KeyValuePair<string, string>>> setting)
+    public SettingArchive(KeyValuePair<Vector2Int, Dictionary<string, string>> setting)
     {
         x = setting.Key.x;
         y = setting.Key.y;

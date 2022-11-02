@@ -18,7 +18,7 @@ public class Altar : Store
     {
         base.Start(); 
         this.passable = false;
-        this.triggerType = this.triggerType == "" ? "altar" : this.triggerType;
+        setting["type"] = "altar";
     }
 
     /// <summary>
@@ -78,32 +78,38 @@ public class Altar : Store
                         GameManager.instance.CreateTransaction(
                             "coin", nextPrice.ToString(), "hp", 
                             (nextAddition*100).ToString());
+                    bool res = false;
                     if (tran())
                     {
                         GameManager.instance.altarCount += 1;
-                        return true;
+                        res = true;
                     }
-                    return false;
+                    StoreWindow.instance.Refresh(message, transactions);
+                    return res;
                 },
                 ()=>
                 {
                     var tran = GameManager.instance.CreateTransaction("coin", nextPrice.ToString(), "atk", nextAddition.ToString());
+                    bool res = false;
                     if (tran())
                     {
                         GameManager.instance.altarCount += 1;
-                        return true;
+                        res = true;
                     }
-                    return false;
+                    StoreWindow.instance.Refresh(message, transactions);
+                    return res;
                 },
                 ()=>
                 {
                     var tran = GameManager.instance.CreateTransaction("coin", nextPrice.ToString(), "def", nextAddition.ToString());
+                    bool res = false;
                     if (tran())
                     {
                         GameManager.instance.altarCount += 1;
-                        return true;
+                        res = true;
                     }
-                    return false;
+                    StoreWindow.instance.Refresh(message, transactions);
+                    return res;
                 }
             };
         }
@@ -113,14 +119,10 @@ public class Altar : Store
     public override void BeforeCollision()
     {
         base.BeforeCollision();
-        GameManager.instance.TriggerByEntity(this);
     }
 
     public override void OnTriggerDone()
     {
         base.OnTriggerDone();
-        //GameManager.instance.altarCount += 1;
-        //print($"altarcount: {GameManager.instance.altarCount}");
-        StoreWindow.instance.Refresh(message, transactions);
     }
 }

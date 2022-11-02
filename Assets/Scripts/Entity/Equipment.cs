@@ -41,12 +41,18 @@ public class Equipment : Entity
 		this.passable = true;
 	}
 
-	public override void AfterMoveTo()
+    public override void AfterKilled()
+    {
+        base.AfterKilled();
+        Player.instance.equipments.Add(internalName);
+        UIManager.instance.PopMessage(messageAfterCollect);
+        GameManager.instance.RemoveEntity(this);
+    }
+
+    public override void AfterMoveTo()
 	{
 		base.AfterMoveTo();
-        Player.instance.equipments.Add(internalName);
-		UIManager.instance.PopMessage(messageAfterCollect);
-		GameManager.instance.RemoveEntity(this);
+        AfterKilled();
 	}
 
     
@@ -79,7 +85,7 @@ public class Equipment : Entity
                     new UnaryAddition(
                         (ref Property self) =>
                         {
-                            self.ATK += (long)(self.ATK * 0.1);
+                            self.DEF += (long)(self.DEF * 0.1);
                         }
                     ),
                     null

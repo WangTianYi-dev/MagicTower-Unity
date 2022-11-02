@@ -74,6 +74,7 @@
  <tile id="158" class="RedDoor"/>
  <tile id="159" class="IronDoor"/>
  <tile id="160" class="Wall"/>
+ <tile id="161" class="IceWall"/>
  <tile id="162" class="DownStair"/>
  <tile id="163" class="UpStair">
   <properties>

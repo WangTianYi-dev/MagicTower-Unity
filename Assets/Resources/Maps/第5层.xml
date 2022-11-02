@@ -1,45 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="11" height="11" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="12">
+<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="11" height="11" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="14">
  <tileset firstgid="1" source="BaseAsset.xml"/>
  <tileset firstgid="171" source="Characters.xml"/>
  <tileset firstgid="1354" source="Icons.xml"/>
- <objectgroup id="4" name="Setting"/>
+ <objectgroup id="4" name="Setting">
+  <properties>
+   <property name="onEnter">if VerifyGlobal(&quot;4fjack&quot;, &quot;true&quot;) and not VerifyGlobal(&quot;5fjack&quot;, &quot;true&quot;) then
+    Log(&quot;Create Jack&quot;)
+    SetGlobal(&quot;5fjack&quot;, &quot;true&quot;)
+    local jackx, jacky = 0, 2
+    CreateUnitEntity(&quot;jack&quot;, jackx, jacky)
+    AddSetting(&quot;type&quot;, &quot;chat&quot;, jackx, jacky)
+    local dialog = [[
+        &quot;杰克：大哥呀，你终于来了，我在开门的时候看见一大堆骷髅拥着芝诺上了楼，你没听错，就是那个魔法警卫芝诺呀……还好小弟及时躲到了这里，现在我们快跑吧！&quot;
+        &quot;勇士：跑？你跑吧，我跑不出去，也不想跑，我倒想会会这位芝诺，看他在搞什么鬼。&quot;
+        &quot;杰克：大哥，生命要紧啊，那个芝诺出了名的杀人像割草一样，连自己人都杀，他的副官就没有活过1年的，别去招惹他呀。想想爱你的人，还有你爱的人，别干傻事！&quot;
+        &quot;勇士：很遗憾，这两样东西我都没有，一无所有的人，还能失去什么？把前面的门开了，你就走吧，顺着我来时的路就行。&quot;
+        &quot;（杰克开完门就走了）&quot;
+    ]]
+    AddSetting(&quot;dialog&quot;, dialog, jackx, jacky)
+    AddSetting(&quot;dieafterdone&quot;, &quot;&quot;, jackx, jacky)
+    local onkilled = [[
+        KillUnitEntity(5, 3)
+        ]]
+    AddSetting(&quot;onkilled&quot;, onkilled, jackx, jacky);
+end</property>
+   <property name="onLeave" value="Log(&quot;OnLeave&quot;)"/>
+  </properties>
+  <object id="13" name="stair" class="stair" x="338" y="336.5">
+   <properties>
+    <property name="target" value="[第4层, 9, 0]"/>
+    <property name="type" value="transport"/>
+   </properties>
+  </object>
+ </objectgroup>
  <layer id="1" name="Ground" width="11" height="11">
   <data encoding="csv">
+169,169,162,169,162,169,162,169,162,169,169,
+169,162,162,169,162,169,162,169,162,162,169,
+169,169,162,169,162,169,162,169,162,169,169,
+169,162,162,169,162,169,162,169,162,162,169,
+169,169,169,169,162,169,162,169,169,169,169,
+169,162,162,162,162,169,162,162,162,162,169,
 169,169,169,169,169,169,169,169,169,169,169,
-169,169,169,169,169,169,169,169,169,169,169,
-169,169,169,169,169,169,169,169,169,169,169,
-169,169,169,169,169,169,169,169,169,169,169,
-169,169,169,169,169,169,169,169,169,169,169,
-169,169,169,169,169,169,169,169,169,169,169,
-169,169,169,169,169,169,169,169,169,169,169,
-169,169,169,169,169,169,169,169,169,169,169,
-169,169,169,169,169,169,169,169,169,169,169,
-169,169,169,169,169,169,169,169,169,169,169,
-169,169,169,169,169,169,169,169,169,169,169
+162,162,162,162,162,169,162,162,162,162,162,
+169,162,169,169,169,169,169,169,169,162,169,
+169,169,169,162,169,162,169,162,169,169,169,
+169,162,169,169,169,169,169,169,169,162,169
 </data>
  </layer>
  <layer id="2" name="Unit" width="11" height="11">
   <data encoding="csv">
+143,135,0,1893,0,16,0,1893,0,135,143,
+0,0,0,1893,0,14,0,1893,0,0,0,
+0,135,0,145,0,14,0,145,0,135,0,
+0,0,0,144,0,0,0,144,0,0,0,
+0,134,0,144,0,0,0,144,0,134,0,
+156,0,0,0,0,0,0,0,0,0,156,
 0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,156,0,0,0,0,0,
+0,0,125,124,9,0,7,134,0,0,0,
+145,157,1893,0,134,0,134,0,2,158,0,
+144,0,124,125,14,0,7,134,0,0,163
 </data>
  </layer>
- <objectgroup id="6" name="Trigger">
-  <object id="11" x="177.5" y="285.5">
-   <properties>
-    <property name="script" value="Log(&quot;scripting log!&quot;)"/>
-    <property name="type" value="none"/>
-   </properties>
-  </object>
- </objectgroup>
+ <objectgroup id="6" name="Trigger"/>
 </map>

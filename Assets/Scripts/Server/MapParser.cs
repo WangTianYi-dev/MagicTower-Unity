@@ -203,9 +203,9 @@ public class MapParser
         return TranLayer(unit);
     }
 
-    public Dictionary<Vector2Int, List<KeyValuePair<string, string>>> GetSetting()
+    public Dictionary<Vector2Int, Dictionary<string, string>> GetSetting()
     {
-        var setting = new Dictionary<Vector2Int, List<KeyValuePair<string, string>>>();
+        var setting = new Dictionary<Vector2Int, Dictionary<string, string>>();
 
         var node = rootElem.SelectSingleNode("./objectgroup[@name='Setting']");
         var lst = node.SelectNodes("./object");
@@ -218,20 +218,17 @@ public class MapParser
             int iy = (int)(y / tileHeight);
             Vector2Int v = TranCord(ix, iy);
 
-            var content = new List<KeyValuePair<string, string>>();
+            var content = new Dictionary<string, string>();
             var prptyLst = r.SelectNodes("./properties/property");
 
             foreach (XmlNode prpty in prptyLst)
             {
-                var name = prpty.Attributes["name"].Value;
+                var name = prpty.Attributes["name"].Value.ToLower();
                 var value =
                     prpty.Attributes["value"] == null ?
                     prpty.InnerText :
                     prpty.Attributes["value"].Value;
-                content.Add
-                (
-                    new KeyValuePair<string, string>(name, value)
-                );
+                content[name] = value;
             }
             setting[v] = content;
         }
@@ -239,11 +236,27 @@ public class MapParser
         return setting;
     }
 
+    public Dictionary<string, string> GetMapSetting()
+    {
+        Dictionary<string, string> mapSetting = new Dictionary<string, string>();
+        var node = rootElem.SelectSingleNode("./objectgroup[@name='Setting']");
+        var propList = node.SelectNodes("./properties/property");
+        foreach (XmlNode n in propList)
+        {
+            var name = n.Attributes["name"].Value.ToLower();
+            var value =
+                    n.Attributes["value"] == null ?
+                    n.InnerText :
+                    n.Attributes["value"].Value;
+            mapSetting.Add(name, value);
+        }
+        return mapSetting;
+    }
+
 
     public List<TriggerArea> GetTriggers()
     {
         var triggers = new List<TriggerArea>();
-        //var setting = new Dictionary<Vector2Int, List<KeyValuePair<string, string>>>();
 
         var node = rootElem.SelectSingleNode("./objectgroup[@name='Trigger']");
         var lst = node.SelectNodes("./object");
@@ -263,7 +276,7 @@ public class MapParser
 
             foreach (XmlNode prpty in prptyLst)
             {
-                var name = prpty.Attributes["name"].Value;
+                var name = prpty.Attributes["name"].Value.ToLower();
                 var value =
                     prpty.Attributes["value"] == null ?
                     prpty.InnerText :
@@ -291,7 +304,9 @@ public class MapParser
         tilemap.ground = GetGround();
         tilemap.setting = GetSetting();
         tilemap.triggerAreas = GetTriggers();
+        tilemap.mapSetting = GetMapSetting();
         return tilemap;
     }
+
 
 }

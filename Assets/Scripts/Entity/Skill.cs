@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
-using UnityEditor.UI;
 using UnityEngine;
 using static Buff;
 
@@ -26,13 +25,18 @@ public class Skill : Entity
         this.passable = true;
     }
 
+    public override void AfterKilled()
+    {
+        base.AfterKilled();
+        Player.instance.skills.Add(internalName);
+        UIManager.instance.PopMessage(messageAfterCollect);
+        GameManager.instance.RemoveEntity(this);
+    }
 
     public override void AfterMoveTo()
     {
         base.AfterMoveTo();
-        Player.instance.skills.Add(internalName);
-        UIManager.instance.PopMessage(messageAfterCollect);
-        GameManager.instance.RemoveEntity(this);
+        AfterKilled();
     }
 
     // 介绍信息，key为小写
@@ -42,6 +46,11 @@ public class Skill : Entity
             "fangu",
             "剑技：凡骨（等级1）\n消耗：50点生命  效果：攻击+10，防御—10\n勇者在战斗中领悟的技能\n平庸的凡人，如果坚定决死的意志，也能灿烂地绽放"
         },
+        {
+            "shenhong",
+            "剑技：深红（封印的）\n消耗：无 效果：无\n魔族的传奇人物，冥界之主，吸血鬼——格勒第的成名绝技，奇怪的是，此剑技" +
+            "似乎拒绝了勇士的使用，没有任何效果"
+        }
     };
 
     /// <summary>
@@ -60,6 +69,10 @@ public class Skill : Entity
                 Player.instance.property.HP -= 50;
                 return true;
             }
+        },
+        {
+            "shenhong",
+            () => {return true; }
         }
     };
 
@@ -81,6 +94,10 @@ public class Skill : Entity
                     null
                 )
             }
+        },
+        {
+            "shenhong",
+            new List<Buff>()
         }
     };
 }

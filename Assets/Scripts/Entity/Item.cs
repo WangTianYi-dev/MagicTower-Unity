@@ -37,16 +37,22 @@ public class Item : Entity
 			introText = ItemIntro[internalName.ToLower()];
 	}
 
+	public override void AfterKilled()
+	{
+		base.AfterKilled();
+        GameManager.instance.GetItem(internalName);
+        UIManager.instance.PopMessage(messageAfterCollect);
+        GameManager.instance.RemoveEntity(this);
+    }
+
 	public override void AfterMoveTo()
 	{
 		base.AfterMoveTo();
-		GameManager.instance.GetItem(internalName);
-		UIManager.instance.PopMessage(messageAfterCollect);
-		GameManager.instance.RemoveEntity(this);
+		AfterKilled();
 	}
 
-    // key为小写
-    public static Dictionary<string, string> ItemIntro = new Dictionary<string, string>
+	// key为小写
+	public static Dictionary<string, string> ItemIntro = new Dictionary<string, string>
     {
         {
             "mattock",
@@ -54,7 +60,8 @@ public class Item : Entity
         },
         {
             "holywater",
-            "增加勇士（攻击+防御）* 10的生命\n这种质量的圣水，外面要卖1000金币，魔塔里却俯拾即是，难怪有人来这寻宝"
+            "增加勇士（攻击+防御）* 10的生命\n这种质量的圣水，外面要卖1000金币，魔塔里却俯拾即是，难怪有人来这寻宝。喝下可以获得神的祝福，" +
+            "当然，强大的人有资格获得更多的祝福。"
         }
     };
 

@@ -18,12 +18,10 @@ public class SkillEntry : MonoBehaviour, IPointerClickHandler
     // 绑定到image组件上
     Image image;
 
-    Text textCount;
 
     private void Awake()
     {
         image = GetComponent<Image>();
-        textCount = transform.Find("Text").GetComponent<Text>();
     }
 
     public void Refresh(string name, Sprite source)

@@ -14,10 +14,9 @@ public class TransportArea : NPC
 
     protected override void Start()
     {
-        defaultType = "transport";
         base.Start();
-        
         this.passable = true;
+        setting["type"] = "transport";
     }
 
     public override void BeforeCollision()

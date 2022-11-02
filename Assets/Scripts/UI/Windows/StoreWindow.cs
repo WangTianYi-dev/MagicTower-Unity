@@ -68,6 +68,8 @@ public class StoreWindow : BaseWindow, IPointerClickHandler
                             {
                                 OnPointerClick(null);
                             }
+                            
+                            GameManager.instance.RefreshPlayerExternalProperty();
                             UIManager.instance.RefreshUI();
                         }
                     }
@@ -93,7 +95,6 @@ public class StoreWindow : BaseWindow, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        //GameManager.instance.TriggerFailed();
         GameManager.instance.CurrentEventDone();
         UIManager.instance.SwitchWindow("GameWindow");
     }

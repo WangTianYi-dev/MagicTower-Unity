@@ -100,6 +100,9 @@ MonoBehaviour:
   nameInGame: "2\u7EA7\u9EC4\u5B9D\u77F3"
   passable: 0
   effectBeforeCollision: {fileID: 0}
-  effectAfterMoveTo: {fileID: 0}
-  messageAfterCollect: 
-  additions: []
+  effectAfterKilled: {fileID: 0}
+  messageAfterCollect: "\u83B7\u5F972\u7EA7\u9EC4\u5B9D\u77F3\uFF0C\u5168\u5C5E\u6027\u589E\u52A0"
+  additions:
+  - 'attack: +3'
+  - 'defense: +3'
+  - 'hitpoint: +300'

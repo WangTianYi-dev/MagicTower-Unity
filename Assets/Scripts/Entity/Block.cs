@@ -21,6 +21,10 @@ public class Block : Entity
     {
         base.Start();
         this.passable = false;
+        if (blockedMessage == "")
+        {
+            blockedMessage = "无法通行";
+        }
     }
 
     public override void BeforeCollision()
@@ -38,9 +42,15 @@ public class Block : Entity
         UIManager.instance.PopMessage(blockedMessage);
     }
 
+    public override void AfterKilled()
+    {
+        base.AfterKilled();
+        Util.KillEntity(this);
+    }
+
     public override void AfterMoveTo()
     {
         base.AfterMoveTo();
-        Util.RemoveEntity(this);
+        AfterKilled();
     }
 }

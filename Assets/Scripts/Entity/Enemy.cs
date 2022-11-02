@@ -27,9 +27,9 @@ public class Enemy : Figure
     protected override void Start()
     {
         base.Start();
-        if (this.effectAfterMoveTo == null)
+        if (this.effectAfterKilled == null)
         {
-            this.effectAfterMoveTo = ResServer.instance.GetObject("DefeatedEffect");
+            this.effectAfterKilled = ResServer.instance.GetObject("DefeatedEffect");
         }
     }
 
@@ -49,7 +49,7 @@ public class Enemy : Figure
         base.BeforeCollision();
         RefreshDamege();
         print($"{nameInGame}dam: {damage}");
-        if (0 < damage && damage < Player.instance.externalProperty.HP)
+        if (0 <= damage && damage < Player.instance.externalProperty.HP)
         {
             passable = true;
         }
@@ -57,17 +57,18 @@ public class Enemy : Figure
         { passable = false; }
     }
 
-
-    public override void AfterMoveTo()
+    public override void AfterKilled()
     {
-        base.AfterMoveTo();
+        base.AfterKilled();
         // 这里直接减内部属性的生命值
+        print("enemy attack");
         var dam = damage;
         Player.instance.property.HP -= dam;
         Player.instance.property.Coin += this.property.Coin;
         UIManager.instance.PopMessage($"{nameInGame}被打败了，金币+{property.Coin}");
         UIManager.instance.FloatMessage((-dam).ToString(), this.logicPos);
     }
+
 
     public override void AfterBlocked()
     {

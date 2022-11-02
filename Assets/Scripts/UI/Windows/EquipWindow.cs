@@ -41,6 +41,8 @@ public class EquipWindow: BaseWindow, IPointerClickHandler
         treasureBox = transform.Find("Window/CurrentEquipment/Treasure").GetComponent<Image>();
         treasureBox.color = Color.clear;
         intro = transform.Find("Window/Introduction/Text").GetComponent<Text>();
+        weaponBox.color = Color.white;
+        curSelect = Equipment.EquipmentType.Weapon;
     }
 
 

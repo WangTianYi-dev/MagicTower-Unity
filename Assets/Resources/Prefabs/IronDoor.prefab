@@ -100,6 +100,6 @@ MonoBehaviour:
   nameInGame: "\u94C1\u95E8"
   passable: 0
   effectBeforeCollision: {fileID: 0}
-  effectAfterMoveTo: {fileID: 0}
+  effectAfterKilled: {fileID: 4623379004121983253, guid: 85516399753b6874eba7cfa586d82b4e, type: 3}
   requirement: 
   blockedMessage: "\u65E0\u6CD5\u901A\u884C"

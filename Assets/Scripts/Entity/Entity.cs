@@ -36,7 +36,7 @@ public abstract class Entity : MonoBehaviour
     public GameObject effectBeforeCollision;
     
     [Header("移动后生成的SpriteEffect物体")]
-    public GameObject effectAfterMoveTo;
+    public GameObject effectAfterKilled;
 
     public EntityType type { get; protected set; }
 
@@ -65,9 +65,13 @@ public abstract class Entity : MonoBehaviour
     /// </summary>
     public virtual void AfterMoveTo() 
     {
-        if (effectAfterMoveTo != null)
+    }
+
+    public virtual void AfterKilled()
+    {
+        if (effectAfterKilled != null)
         {
-            EffectLayer.instance.CreateSpriteEffect(logicPos, effectAfterMoveTo);
+            EffectLayer.instance.CreateSpriteEffect(logicPos, effectAfterKilled);
         }
     }
 
@@ -78,7 +82,7 @@ public abstract class Entity : MonoBehaviour
 
     public void DestroySelf()
     {
-        MapManager.instance.RemoveEntity(this);
+        MapManager.instance.KillEntity(this);
     }
 
     public bool IsSame(Entity another)

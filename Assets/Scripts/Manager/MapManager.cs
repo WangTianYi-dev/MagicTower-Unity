@@ -41,7 +41,7 @@ public class MapManager : BaseManager
         }
     }
 
-    public List<string> mapnameList;
+    public HashSet<string> mapnameList = new HashSet<string>();
 
     /// <summary>
     /// 通过坐标访问Unit层覆盖物
@@ -135,14 +135,12 @@ public class MapManager : BaseManager
         return map;
     }
 
-
     private void AddMap(Tilemap map)
     {
         string name = map.mapName;
         mapnameList.Add(name);
         tilemapCache.Add(name, map);
     }
-
 
     public void ChangeMap(string name)
     {
@@ -151,9 +149,11 @@ public class MapManager : BaseManager
         {
             curTilemap.lastPos = Player.instance.logicPos;
             tilemapCache[curTilemap.mapName] = curTilemap;
+            if (curTilemap.mapSetting.ContainsKey("onleave"))
+            {
+                ScriptManager.instance.DoString(curTilemap.mapSetting["onleave"]);
+            }
         }
-        groundEntityDict.Clear();
-        unitEntityDict.Clear();
         if (tilemapCache.ContainsKey(name))
         {
             //print("countains ");
@@ -168,8 +168,11 @@ public class MapManager : BaseManager
         RefreshEntities(curTilemap);
         UIManager.instance.RefreshAreaName(name);
         RefreshTriggerAreas();
+        if (curTilemap.mapSetting.ContainsKey("onenter"))
+        {
+            ScriptManager.instance.DoString(curTilemap.mapSetting["onenter"]);
+        }
     }
-
 
     public void RefreshEntities(Tilemap tilemap)
     {
@@ -180,19 +183,32 @@ public class MapManager : BaseManager
     }
 
     #region 实体（entity）处理
-
     /// <summary>
     /// 将e从当前的tilemap中移除并摧毁其gameobject
     /// </summary>
     /// <param name="e"></param>
-    public void RemoveEntity(Entity e)
+    public void KillEntity(Entity e)
     {
+        if (e == null) return;
+        if (curTilemap.setting.ContainsKey(e.logicPos))
+        {
+            if (curTilemap.setting[e.logicPos].ContainsKey("onkilled"))
+            {
+                string instruct = curTilemap.setting[e.logicPos]["onkilled"];
+                GameManager.instance.AddEvent(() =>
+                    {
+                        ScriptManager.instance.DoString(instruct);
+                        GameManager.instance.CurrentEventDone();
+                    }
+                    );
+            }
+            curTilemap.setting.Remove(e.logicPos);
+        }
         if (unitEntityDict.ContainsKey(e.logicPos) && unitEntityDict[e.logicPos] == e)
         {
             unitEntityDict.Remove(e.logicPos);
             curTilemap.unit[e.logicPos.x, e.logicPos.y] = "";
             Destroy(e.gameObject);
-
         }
         else if (groundEntityDict.ContainsKey(e.logicPos) && groundEntityDict[e.logicPos] == e)
         {
@@ -238,37 +254,80 @@ public class MapManager : BaseManager
     }
 
     /// <summary>
-    /// 替换地面层特定位置上的实体
+    /// 替换ground层特定位置上的实体
     /// </summary>
     /// <param name="pos">位置</param>
-    /// <param name="name">替换者的名字</param>
-    public void ReplaceGroundEntity(Vector2Int pos, string name)
+    /// <param name="name">替换者的内部名字</param>
+    public GameObject ReplaceGroundEntity(Vector2Int pos, string name)
     {
-        Destroy(groundEntityDict[pos].gameObject);
-        groundEntityDict.Add(pos, groundLayer.CreateEntity(name, pos));
+        print($"ReplaceGroundEntity name {name} at {pos}");
+        if (groundEntityDict.ContainsKey(pos))
+        {
+            KillEntity(unitEntityDict[pos]);
+        }
+        curTilemap.ground[pos.x, pos.y] = name.ToLower();
+        return groundLayer.AddEntity(name, pos);
     }
 
     /// <summary>
-    /// 替换地面层特定位置上的实体
+    /// 替换Ground层特定位置上的实体
     /// </summary>
     /// <param name="pos">位置</param>
     /// <param name="name">替换者的名字</param>
-    public void ReplaceGroundEntity(Vector2Int pos, GameObject obj)
+    public GameObject ReplaceGroundEntity(Vector2Int pos, GameObject go)
     {
-        RemoveEntity(groundEntityDict[pos]);
-        groundEntityDict.Add(pos, groundLayer.CreateEntity(obj, pos));
+        if (groundEntityDict.ContainsKey(pos))
+        {
+            KillEntity(groundEntityDict[pos]);
+        }
+        curTilemap.ground[pos.x, pos.y] = name.ToLower();
+        return groundLayer.AddEntity(name, pos);
     }
 
     /// <summary>
-    /// 替换地面层特定位置上的实体
+    /// 替换Unit层特定位置上的实体
     /// </summary>
     /// <param name="pos">位置</param>
-    /// <param name="name">替换者的名字</param>
-    public void ReplaceUnitEntity(Vector2Int pos, string name)
+    /// <param name="name">替换者的内部名字</param>
+    public GameObject ReplaceUnitEntity(Vector2Int pos, string name)
     {
-        RemoveEntity(unitEntityDict[pos]);
-        unitEntityDict.Add(pos, unitLayer.CreateEntity(name, pos));
+        print($"ReplaceUnitEntity name {name} at {pos}");
+        if (unitEntityDict.ContainsKey(pos))
+        {
+            KillEntity(unitEntityDict[pos]);
+        }
+        curTilemap.unit[pos.x, pos.y] = name.ToLower();
+        return unitLayer.AddEntity(name, pos);
     }
+
+    /// <summary>
+    /// 为pos处的entity（仅unit层）添加setting
+    /// </summary>
+    /// <param name="pos"></param>
+    /// <param name="key"></param>
+    /// <param name="value"></param>
+    public void AddSetting(Vector2Int pos, string key, string value)
+    {
+        key = key.ToLower();
+        if (!curTilemap.setting.ContainsKey(pos))
+        {
+            curTilemap.setting[pos] = new Dictionary<string, string>();
+        }
+        curTilemap.setting[pos][key] = value;
+        if (unitEntityDict.ContainsKey(pos))
+        {
+            if (unitEntityDict[pos] is TriggerEntity)
+            {
+                var te = unitEntityDict[pos] as TriggerEntity;
+                if (te.setting == null)
+                {
+                    te.setting = new Dictionary<string, string>();
+                }
+                te.setting[key] = value;
+            }
+        }
+    }
+
     #endregion
 
     #region 触发区域（TriggerArea）
@@ -280,7 +339,7 @@ public class MapManager : BaseManager
         triggerAreas = new List<TriggerArea>(curTilemap.triggerAreas);
     }
 
-    public void RemoveTriggerArea(TriggerArea area)
+    public void KillTriggerArea(TriggerArea area)
     {
         triggerAreas.Remove(area);
         curTilemap.triggerAreas.Remove(area);
@@ -303,6 +362,7 @@ public class MapManager : BaseManager
     public void LoadArchive(Archive archive)
     {
         tilemapCache.Clear();
+        mapnameList.Clear();
         // TODO
         foreach (var atm in archive.mapArchive)
         {

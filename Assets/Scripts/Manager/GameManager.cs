@@ -13,8 +13,7 @@ using UnityEngine.Assertions;
 using System.Text.RegularExpressions;
 using UnityEngine.Events;
 using System.IO;
-using DG.Tweening;
-using System.Transactions;
+
 
 public class GameManager : BaseManager
 {
@@ -83,7 +82,7 @@ public class GameManager : BaseManager
         ShowPrompt(new List<string>
         {
             "童年小游戏《魔塔》的重制版，当然，有亿点不一样\n" +
-            "游戏玩法：\n使用方向键移动，或点击可以到达的区域，勇士将自动进行寻路，" +
+            "游戏玩法：\n点击可以到达的区域，勇士将自动进行寻路，不要使用方向键，它一点也不好用，只是我为了视觉平衡加的" +
             "自动拾取，自动战斗，手残也能玩(脑残也许不能)\n" +
             "右边的按键都可以点，至于作用？请君一试便知。\n" +
             "本人保证可以过关，如果卡关？为什么不重新来一遍呢？\n" +
@@ -170,10 +169,10 @@ public class GameManager : BaseManager
         if (unitEntity is Enemy)
         {
             BuffAfterBattle(unitEntity as Enemy);
-            Util.RemoveEntity(unitEntity);
+            Util.KillEntity(unitEntity);
             RefreshPlayerExternalProperty();
         }
-        player.RegisterAfterMovedAction(ActivateTriggerAreas);
+        PeekTriggerAreas(cord);
     }
 
     public void AfterBlocked(Vector2Int cord)
@@ -255,7 +254,7 @@ public class GameManager : BaseManager
     /// <summary>
     /// 停止玩家移动并清空路径
     /// </summary>
-    private void PlayerStop()
+    public void PlayerStop()
     {
         player.playerState = State.Idle;
         route.Clear();
@@ -267,7 +266,7 @@ public class GameManager : BaseManager
     /// <summary>
     /// 暂停玩家移动（须在之前调用PlayerStop）
     /// </summary>
-    private void PlayerSuspend()
+    public void PlayerSuspend()
     {
         moveable = false;
     }
@@ -276,7 +275,7 @@ public class GameManager : BaseManager
     /// 暂停玩家移动并在duration之后恢复（须在之前调用PlayerStop）
     /// </summary>
     /// <param name="duration"></param>
-    private void PlayerSuspend(float duration)
+    public void PlayerSuspend(float duration)
     {
         moveable = false;
         StartCoroutine(Util.InvokeAfterSeconds(duration, PlayerResume));
@@ -444,7 +443,6 @@ public class GameManager : BaseManager
     public void RefreshPlayerExternalProperty()
     {
         Property p = player.property;
-        print($"innerP: {p}");
         var unaryBuffs = from buff in playerBuff
                          where buff.unaryAddition != null && buff.launchTime == Buff.LaunchTime.AllTime
                          select buff;
@@ -453,7 +451,6 @@ public class GameManager : BaseManager
             buff.unaryAddition(ref p);
         }
         player.externalProperty = p;
-        print($"externalP: {player.externalProperty}");
     }
 
 
@@ -614,6 +611,7 @@ public class GameManager : BaseManager
     /// <returns></returns>
     public bool AskRequirement(string requirement)
     {
+        if (requirement == "") return false;
         var match = requirementRegex.Match(requirement);
         if (!match.Success)
         {
@@ -670,8 +668,6 @@ public class GameManager : BaseManager
     }
 
 
-
-
     #endregion
 
     #region 事件处理
@@ -713,8 +709,8 @@ public class GameManager : BaseManager
 
     public void CurrentEventDone()
     {
-        Debug.Assert(eventQueue.Count > 0);
-        eventQueue.First().done = true;
+        if (eventQueue.Count > 0)
+            eventQueue.First().done = true;
     }
 
     public void AddEvent(Action action)
@@ -726,7 +722,7 @@ public class GameManager : BaseManager
     {
         if (settings.ContainsKey("script"))
         {
-            AddEvent(() => { ScriptManager.instance.DoString(settings["script"]); });
+            AddEvent(() => { ScriptManager.instance.DoString(settings["script"]); CurrentEventDone(); });
         }
         switch (settings["type"])
         {
@@ -774,7 +770,6 @@ public class GameManager : BaseManager
                 {
                     AddEvent(() =>
                     {
-                        //print(entity.setting["target"]);
                         if (settings["target"].ToLower().Contains("lastpos"))
                         {
                             Regex r = new Regex(@"\s*\[\s*(?<mapName>[^\s,]+)");
@@ -784,7 +779,6 @@ public class GameManager : BaseManager
                                 settings["target"] = settings["target"].ToLower();
                                 var l = mapmngr.tilemapCache[ma.Groups["mapName"].Value].lastPos;
                                 settings["target"] = settings["target"].Replace("lastpos", $"{l.x}, {l.y}");
-                                //print($"after replace: {entity.setting["target"]}");
                             }
                         }
                         var m = targetRgx.Match(settings["target"]);
@@ -809,10 +803,8 @@ public class GameManager : BaseManager
                         CurrentEventDone();
                     });
                 }
-                //AddEvent(() => { TriggerSuccess(); });
-                
                 break;
-            case "none":
+            case "none" or "":
                 break;
             default:
                 Debug.LogError($"不支持的触发类型：{settings["type"]}");
@@ -863,7 +855,7 @@ public class GameManager : BaseManager
     /// <param name="e"></param>
     public void RemoveEntity(Entity e)
     {
-        mapmngr.RemoveEntity(e);
+        mapmngr.KillEntity(e);
     }
 
     public void Transport(string mapName, Vector2Int pos)
@@ -888,8 +880,7 @@ public class GameManager : BaseManager
             mapmngr.ChangeMap(map);
         }
         player.TransportTransform(pos);
-        AfterMove(pos);
-
+        StartCoroutine(PlayerTransPortCoroutine(pos));
     }
 
 
@@ -898,6 +889,7 @@ public class GameManager : BaseManager
         yield return null;
         PlayerStop();
         player.TransportTransform(pos);
+        AfterMove(pos);
     }
 
 
@@ -1056,36 +1048,34 @@ public class GameManager : BaseManager
 
     #region 触发区域
 
-    /// <summary>
-    /// 在AfterMove中被调用
-    /// </summary>
-    private void ActivateTriggerAreas()
+    private void PeekTriggerAreas(Vector2Int cord)
     {
         foreach (var tArea in mapmngr.triggerAreas)
         {
-            TriggerAreaHandler(tArea);
+            TriggerAreaHandler(tArea, cord);
         }
     }
 
     /// <summary>
     /// 前提条件判断器
     /// </summary>
-    Dictionary<string, Func<TriggerArea, bool>> prerequsiteJudges = new Dictionary<string, Func<TriggerArea, bool>>
+    Dictionary<string, Func<TriggerArea, Vector2Int, bool>> prerequsiteJudges = new Dictionary<string, Func<TriggerArea, Vector2Int, bool>>
     {
         {
             "collision",
-            (area) =>
+            (area, cord) =>
             {
-                return area.position == player.logicPos;
+                return area.position == cord;
             }
         }
     };
 
-    private void TriggerAreaHandler(TriggerArea area)
+    private void TriggerAreaHandler(TriggerArea area, Vector2Int cord)
     {
         string prerequsite = area.settings.ContainsKey("prerequsite") ? area.settings["prerequsite"] : "collision";
-        if (prerequsiteJudges[prerequsite](area))
+        if (prerequsiteJudges[prerequsite](area, cord))
         {
+            //PlayerStop();
             TriggerByArea(area);
         }
     }
@@ -1094,11 +1084,15 @@ public class GameManager : BaseManager
     private UnityAction OnTriggerAreaDone(TriggerArea area)
     {
         UnityAction action = new UnityAction(()=> { });
+        //foreach (var kvp in area.settings)
+        //{
+        //    print($"{kvp.Key}, {kvp.Value}");
+        //}
         if (area.settings.ContainsKey("dieafterdone"))
         {
             action += () =>
             {
-                mapmngr.RemoveTriggerArea(area);
+                mapmngr.KillTriggerArea(area);
             };
         }
         return action;
@@ -1109,10 +1103,9 @@ public class GameManager : BaseManager
     /// </summary>
     private void TriggerByArea(TriggerArea area)
     {
-
         var settings = area.settings;
         HandleTrigger(settings);
-        AddEvent(() => { OnTriggerAreaDone(area); CurrentEventDone(); });
+        AddEvent(() => { OnTriggerAreaDone(area)(); CurrentEventDone(); PlayerResume(); });
     }
 
     #endregion
@@ -1125,9 +1118,10 @@ public class GameManager : BaseManager
     /// <returns></returns>
     public List<(string, Action)> GetFlyList()
     {
-        var list = new HashSet<(string, Action)>();
+        var list = new List<(string, Action)>();
         foreach (string str in mapmngr.mapnameList)
         {
+
             Tilemap tilemap = mapmngr.tilemapCache[str];
             Vector2Int targetPos = tilemap.lastPos;
             var mapName = str;
@@ -1199,7 +1193,7 @@ public class GameManager : BaseManager
         mapmngr.Save2Archive(archive);
         archive.curPos = player.logicPos;
         archive.altarCount = altarCount;
-        (archive.globalValues, archive.globalKeys) = Util.CreateKeysAndValues(globalDict);
+        (archive.globalValues, archive.globalKeys) = Util.CreateKeysAndValuesList(globalDict);
         player.SaveArchive(archive);
         return archive;
     }
@@ -1274,7 +1268,7 @@ public class GameManager : BaseManager
         mapmngr.LoadArchive(archive);
         uimngr.RefreshUI();
         altarCount = archive.altarCount;
-        globalDict = Util.CreateDictionary(archive.globalKeys, archive.globalValues);
+        globalDict = Util.CreateDictionaryViaLists(archive.globalKeys, archive.globalValues);
         playerBuff.Clear();
         StartCoroutine(PlayerTransPortCoroutine(archive.curPos));
     }
@@ -1333,7 +1327,10 @@ public class GameManager : BaseManager
     {
         if (UIManager.instance.currentWindow == "GameWindow" && moveable)
             CheckInput();
-        HandleEvent();
+        if (eventQueue.Count > 0)
+        {
+            HandleEvent();
+        }
     }
 
     

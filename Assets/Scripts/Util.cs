@@ -95,9 +95,9 @@ public class Util : MonoBehaviour
     /// 只是MapManager.instance.RemoveEntity的快捷方式
     /// </summary>
     /// <param name="e"></param>
-    public static void RemoveEntity(Entity e)
+    public static void KillEntity(Entity e)
     {
-        MapManager.instance.RemoveEntity(e);
+        MapManager.instance.KillEntity(e);
     }
 
     /// <summary>
@@ -112,7 +112,7 @@ public class Util : MonoBehaviour
         action?.Invoke();
     }
 
-    public static Dictionary<string, string> CreateDictionary(List<string> keys, List<string> values)
+    public static Dictionary<string, string> CreateDictionaryViaLists(List<string> keys, List<string> values)
     {
         var dict = new Dictionary<string, string>();
         Debug.Assert(keys.Count == values.Count);
@@ -123,7 +123,7 @@ public class Util : MonoBehaviour
         return dict;
     }
 
-    public static (List<string>, List<string>) CreateKeysAndValues(Dictionary<string, string> dict)
+    public static (List<string>, List<string>) CreateKeysAndValuesList(Dictionary<string, string> dict)
     {
         List<string> keys = new List<string>();
         List<string> values = new List<string>();
