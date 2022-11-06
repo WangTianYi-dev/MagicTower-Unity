@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8bdd158328b759348b42229db62d9fe8, type: 3}
+  m_Sprite: {fileID: -749051594, guid: e01fe8dd7d72eeb468db31ebb2364fe8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,6 +100,6 @@ MonoBehaviour:
   nameInGame: "\u684C\u5B508"
   passable: 0
   effectBeforeCollision: {fileID: 0}
-  effectAfterMoveTo: {fileID: 0}
+  effectAfterKilled: {fileID: 0}
   requirement: 
   blockedMessage: 

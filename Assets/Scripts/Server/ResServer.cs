@@ -54,7 +54,7 @@ public class ResServer : MonoBehaviour
         {
             if (prefab.GetComponent<Entity>() != null)
             {
-                entityNameDict.Add(prefab.GetComponent<Entity>().nameInGame, prefab.name);
+                entityNameDict.Add(prefab.GetComponent<Entity>().nameInGame, prefab.name.ToLower());
             }
         }
     }

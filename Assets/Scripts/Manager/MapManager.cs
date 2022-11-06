@@ -182,6 +182,8 @@ public class MapManager : BaseManager
         UnitLayer.instance.Refresh(tilemap);
     }
 
+
+
     #region 实体（entity）处理
     /// <summary>
     /// 将e从当前的tilemap中移除并摧毁其gameobject
@@ -194,10 +196,10 @@ public class MapManager : BaseManager
         {
             if (curTilemap.setting[e.logicPos].ContainsKey("onkilled"))
             {
-                string instruct = curTilemap.setting[e.logicPos]["onkilled"];
+                string onKilled = curTilemap.setting[e.logicPos]["onkilled"];
                 GameManager.instance.AddEvent(() =>
                     {
-                        ScriptManager.instance.DoString(instruct);
+                        ScriptManager.instance.DoString(onKilled);
                         GameManager.instance.CurrentEventDone();
                     }
                     );
@@ -206,12 +208,14 @@ public class MapManager : BaseManager
         }
         if (unitEntityDict.ContainsKey(e.logicPos) && unitEntityDict[e.logicPos] == e)
         {
+            unitEntityDict[e.logicPos].AfterKilled();
             unitEntityDict.Remove(e.logicPos);
             curTilemap.unit[e.logicPos.x, e.logicPos.y] = "";
             Destroy(e.gameObject);
         }
         else if (groundEntityDict.ContainsKey(e.logicPos) && groundEntityDict[e.logicPos] == e)
         {
+            groundEntityDict[e.logicPos].AfterKilled();
             groundEntityDict.Remove(e.logicPos);
             curTilemap.ground[e.logicPos.x, e.logicPos.y] = "";
             Destroy(e.gameObject);
@@ -263,23 +267,27 @@ public class MapManager : BaseManager
         print($"ReplaceGroundEntity name {name} at {pos}");
         if (groundEntityDict.ContainsKey(pos))
         {
-            KillEntity(unitEntityDict[pos]);
+            GameObject go = groundEntityDict[pos].gameObject;
+            groundEntityDict.Remove(pos);
+            curTilemap.ground[pos.x, pos.y] = "";
+            Destroy(go);
         }
         curTilemap.ground[pos.x, pos.y] = name.ToLower();
         return groundLayer.AddEntity(name, pos);
     }
 
     /// <summary>
-    /// 替换Ground层特定位置上的实体
+    /// 替换Ground层特定位置上的实体（调用OnKilled）
     /// </summary>
     /// <param name="pos">位置</param>
     /// <param name="name">替换者的名字</param>
-    public GameObject ReplaceGroundEntity(Vector2Int pos, GameObject go)
+    public GameObject KillGroundEntity(Vector2Int pos, GameObject go)
     {
         if (groundEntityDict.ContainsKey(pos))
         {
             KillEntity(groundEntityDict[pos]);
         }
+        string name = ResServer.instance.GetEntityName(go.GetComponent<Entity>());
         curTilemap.ground[pos.x, pos.y] = name.ToLower();
         return groundLayer.AddEntity(name, pos);
     }
@@ -292,11 +300,15 @@ public class MapManager : BaseManager
     public GameObject ReplaceUnitEntity(Vector2Int pos, string name)
     {
         print($"ReplaceUnitEntity name {name} at {pos}");
+        curTilemap.setting.Remove(pos);
         if (unitEntityDict.ContainsKey(pos))
         {
-            KillEntity(unitEntityDict[pos]);
+            GameObject go = unitEntityDict[pos].gameObject;
+            unitEntityDict.Remove(pos);
+            curTilemap.unit[pos.x, pos.y] = "";
+            Destroy(go);
         }
-        curTilemap.unit[pos.x, pos.y] = name.ToLower();
+        curTilemap.ground[pos.x, pos.y] = name.ToLower();
         return unitLayer.AddEntity(name, pos);
     }
 

@@ -5,6 +5,7 @@
  */
 
 using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
@@ -77,6 +78,7 @@ public class Equipment : Entity
             }
         },
         {
+            // 铁盾
             "ironshield",
             new List<Buff> {
                 new Buff(
@@ -93,6 +95,7 @@ public class Equipment : Entity
             }
         },
         {
+            // 智慧权杖
             "intellion",
             new List<Buff> {
                 new Buff(
@@ -118,6 +121,26 @@ public class Equipment : Entity
                     )
                 ),
             }
+        },
+        {
+            // 刺剑
+            "rapier",
+            new List<Buff> {
+                new Buff(
+                    AdditionType.Sustain,
+                    LaunchTime.BeforeBattle,
+                    null,
+                    new BinaryAddition(
+                        (ref Property self, ref Property enemy) =>
+                        {
+                            if (self.ATK > enemy.DEF)
+                            {
+                                enemy.HP = Math.Max(enemy.HP - (self.ATK - enemy.DEF), 1);
+                            }
+                        }
+                        )
+                    )
+            }
         }
     };
 
@@ -135,6 +158,11 @@ public class Equipment : Entity
         {
             "ironshield",
             "【普通】+10% 防御\n比铁剑贵重，其实战场上并不常用，因为它又贵又重"
+        },
+        {
+            "rapier",
+            "【史诗】战斗前进行一次额外攻击\n在芝诺还不叫芝诺的时候，这把刺剑伴随他走过十年的佣兵生涯，" +
+            "握住它似乎可以听到冤魂凄厉的叫声，现在它被赠予勇士，作为二人友谊的见证"
         }
     };
 }

@@ -25,7 +25,7 @@ public abstract class Figure : Entity
 
     [HideInInspector]
     /// <summary>
-    /// 经过加成后的属性，显示在面板上，也用于伤害计算
+    /// 经过加成后的属性，显示在面板上，不用于伤害计算
     /// </summary>
     public Property externalProperty;
 

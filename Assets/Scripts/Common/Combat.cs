@@ -43,11 +43,28 @@ public static class CombatCalc
         }
     }
 
-    public static Int64 CalcDamage(Figure ATKer, Figure DEFer)
+    /// <summary>
+    /// 图鉴中使用的伤害值（即不算BeforeBattle Buff的伤害）
+    /// </summary>
+    /// <param name="ATKer"></param>
+    /// <param name="DEFer"></param>
+    /// <returns></returns>
+    public static long CalcLiteralDamage(Figure ATKer, Figure DEFer)
     {
         Property ATKerProperty = ATKer.externalProperty, DEFerProperty = DEFer.externalProperty;
         Debug.Log($"Player prop: {ATKerProperty}");
         return BaseDamage(ATKerProperty, DEFerProperty);
+    }
+
+    /// <summary>
+    /// 计算伤害
+    /// </summary>
+    /// <param name="p1">攻击者属性</param>
+    /// <param name="p2">防御者属性</param>
+    /// <returns></returns>
+    public static long CalcDamage(Property p1, Property p2)
+    {
+        return BaseDamage(p1, p2);
     }
 
     public static CombatInfo GetCombatInfo(Figure ATKer, Figure DEFer)

@@ -39,16 +39,14 @@ public class Enemy : Figure
     /// </summary>
     public void RefreshDamege()
     {
-        damage = CombatCalc.CalcDamage(Player.instance, this);
-        
+        damage = CombatCalc.CalcLiteralDamage(Player.instance, this);
+
     }
-
-
 
     public override void BeforeCollision()
     {
         base.BeforeCollision();
-        RefreshDamege();
+        //RefreshDamege();
         print($"{nameInGame}dam: {damage}");
         if (0 <= damage && damage < Player.instance.externalProperty.HP)
         {

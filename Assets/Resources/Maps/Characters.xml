@@ -31,6 +31,9 @@
  <tile id="1093" class="Princess">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster36-02_4_1.png"/>
  </tile>
+ <tile id="854">
+  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-04_4_1.png"/>
+ </tile>
  <tile id="455">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Actor01-Braver02_1_1.png"/>
  </tile>
@@ -1212,9 +1215,6 @@
  </tile>
  <tile id="853">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-04_3_1.png"/>
- </tile>
- <tile id="854">
-  <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-04_4_1.png"/>
  </tile>
  <tile id="855">
   <image width="32" height="32" source="../../魔塔吧素材库/Battlers/Monster14-05_1_1.png"/>

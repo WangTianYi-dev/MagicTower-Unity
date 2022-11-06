@@ -3,7 +3,7 @@
  <tileset firstgid="1" source="BaseAsset.xml"/>
  <tileset firstgid="171" source="Icons.xml"/>
  <tileset firstgid="714" source="Characters.xml"/>
- <tileset firstgid="1897" source="Ground.xml"/>
+ <tileset firstgid="1897" source="magictower.xml"/>
  <layer id="1" name="Ground" width="11" height="11">
   <data encoding="csv">
 169,169,169,169,169,169,169,169,169,169,169,
@@ -45,6 +45,9 @@
   </object>
  </objectgroup>
  <objectgroup id="4" name="Setting">
+  <properties>
+   <property name="onEnter" value=""/>
+  </properties>
   <object id="8" name="stair" class="stair" x="338.5" y="14">
    <properties>
     <property name="target" value="[第3层,10,9]"/>

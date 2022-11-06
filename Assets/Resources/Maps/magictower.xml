@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tileset version="1.9" tiledversion="1.9.1" name="magictower" tilewidth="32" tileheight="32" tilecount="304" columns="8">
+ <image source="../../Sprites/Tower/magictower.png" width="256" height="1216"/>
+ <tile id="136" class="Table1"/>
+ <tile id="137" class="Table2"/>
+ <tile id="138" class="Table3"/>
+ <tile id="144" class="Table4"/>
+ <tile id="145" class="Table5"/>
+ <tile id="146" class="Table6"/>
+ <tile id="152" class="Table7"/>
+ <tile id="153" class="Table8"/>
+ <tile id="154" class="Table9"/>
+</tileset>

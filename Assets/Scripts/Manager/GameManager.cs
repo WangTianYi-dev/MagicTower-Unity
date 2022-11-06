@@ -153,7 +153,7 @@ public class GameManager : BaseManager
         {
             if (unitEntity is Enemy)
             {
-                BuffBeforeBattle(unitEntity as Enemy);
+                BeforeBattle(unitEntity as Enemy);
             }
             unitEntity.BeforeCollision();
         }
@@ -241,7 +241,6 @@ public class GameManager : BaseManager
             }
             else
             {
-
                 GroundLayer.instance.RenderLine(rt);
                 rt.RemoveFirst(); // 这一步是为了消除动画bug
             }
@@ -310,19 +309,25 @@ public class GameManager : BaseManager
     #region 战斗管理
 
     /// <summary>
-    /// 战斗之前勇者上buff
+    /// 属性缓存
+    /// </summary>
+    Property self, enemy;
+
+    /// <summary>
+    /// 战斗前处理
     /// </summary>
     /// <param name="e"></param>
-    public void BuffBeforeBattle(Enemy e)
+    public void BeforeBattle(Enemy e)
     {
-        Property p = player.property, ep = e.property;
+        self = player.externalProperty;
+        enemy = e.externalProperty;
         
         var unaryBuffs = from buff in playerBuff
                          where buff.unaryAddition != null && buff.launchTime == Buff.LaunchTime.BeforeBattle
                          select buff;
         foreach (var ub in unaryBuffs)
         {
-            ub.unaryAddition(ref p);
+            ub.unaryAddition(ref self);
         }
 
         var binaryBuffs = from buff in playerBuff
@@ -330,10 +335,10 @@ public class GameManager : BaseManager
                     select buff;
         foreach (var bb in binaryBuffs)
         {
-            bb.binaryAddition(ref p, ref ep);
+            bb.binaryAddition(ref self, ref enemy);
         }
-        RefreshPlayerExternalProperty();
-        e.externalProperty = ep;
+        e.damage = CombatCalc.CalcDamage(self, enemy);
+        //print($"{e.nameInGame} damage: {e.damage}");
     }
 
     /// <summary>
@@ -960,7 +965,7 @@ public class GameManager : BaseManager
     {
         if (Skill.SkillBuffDict.ContainsKey(name) && Skill.prerequsiteDict.ContainsKey(name))
         {
-            if (Skill.prerequsiteDict[name]() == false)
+            if (player.curSkill == name || Skill.prerequsiteDict[name]() == false)
             {
                 uimngr.PopMessage("技能使用失败");
                 return;

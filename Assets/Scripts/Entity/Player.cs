@@ -250,6 +250,8 @@ public class Player : Figure
             this.equipments.Add(s);
         }
         this.equipmentsWeared.Clear();
+        this.curSkill = "";
+        
     }
 
 

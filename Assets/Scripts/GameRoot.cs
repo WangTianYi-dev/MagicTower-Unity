@@ -54,26 +54,26 @@ public class GameRoot : MonoBehaviour
         if (testProperty.HP != 0)
         {
             GameManager.player.property = testProperty;
-        }
-        if (testEquips != null)
-        {
-            foreach (var e in testEquips)
+            if (testEquips != null)
             {
-                Player.instance.equipments.Add(e);
+                foreach (var e in testEquips)
+                {
+                    Player.instance.equipments.Add(e);
+                }
             }
-        }
-        if (testItems != null)
-        {
-            foreach (var e in testItems)
+            if (testItems != null)
             {
-                Player.instance.GetItem(e);
+                foreach (var e in testItems)
+                {
+                    Player.instance.GetItem(e);
+                }
             }
-        }
-        if (testSkills != null)
-        {
-            foreach (var e in testSkills)
+            if (testSkills != null)
             {
-                Player.instance.skills.Add(e);
+                foreach (var e in testSkills)
+                {
+                    Player.instance.skills.Add(e);
+                }
             }
         }
     }

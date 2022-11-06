@@ -82,7 +82,7 @@ public class Item : Entity
 				}
 				if (mapmngr.groundEntityDict[facingPos].nameInGame == "墙")
 				{
-					mapmngr.ReplaceGroundEntity(facingPos, mapmngr.groundEntityDict[player.logicPos].gameObject);
+					mapmngr.KillGroundEntity(facingPos, mapmngr.groundEntityDict[player.logicPos].gameObject);
 					return true;
 				}
 				else
