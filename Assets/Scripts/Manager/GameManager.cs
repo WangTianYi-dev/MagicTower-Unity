@@ -162,15 +162,14 @@ public class GameManager : BaseManager
     public void AfterMove(Vector2Int cord)
     {
         if (groundEntity != null) groundEntity.AfterMoveTo();
+        if (unitEntity is Enemy)
+        {
+            AfterBattle(unitEntity as Enemy);
+            RefreshPlayerExternalProperty();
+        }
         if (unitEntity != null)
         {
             unitEntity.AfterMoveTo();
-        }
-        if (unitEntity is Enemy)
-        {
-            BuffAfterBattle(unitEntity as Enemy);
-            Util.KillEntity(unitEntity);
-            RefreshPlayerExternalProperty();
         }
         PeekTriggerAreas(cord);
     }
@@ -283,7 +282,7 @@ public class GameManager : BaseManager
     /// <summary>
     /// 恢复移动
     /// </summary>
-    private void PlayerResume()
+    public void PlayerResume()
     {
         moveable = true;
     }
@@ -345,7 +344,7 @@ public class GameManager : BaseManager
     /// 战斗之后勇者上/卸buff
     /// </summary>
     /// <param name="e"></param>
-    public void BuffAfterBattle(Enemy e)
+    public void AfterBattle(Enemy e)
     {
         print($"unbuff after {e.nameInGame}");
         // 与战前不同，直接改变player.property

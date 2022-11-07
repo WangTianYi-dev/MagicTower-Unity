@@ -6956,7 +6956,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ver beta 0.001, Presented by DeamonHook
+  m_Text: ver 0.01 beta, DeamonHook presents
 --- !u!222 &939239956
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9638,10 +9638,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81e448ace146e024b8c2b47794c6ad0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originMap: "\u7B2C1\u5C42"
+  originMap: "\u7B2C4\u5C42"
   playerPos: {x: 5, y: 0}
   testProperty:
-    HP: 0
+    HP: 1000
     ATK: 1000
     DEF: 1000
     Coin: 0

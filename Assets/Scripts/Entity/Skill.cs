@@ -25,9 +25,9 @@ public class Skill : Entity
         this.passable = true;
     }
 
-    public override void AfterKilled()
+    public override void OnKilled()
     {
-        base.AfterKilled();
+        base.OnKilled();
         Player.instance.skills.Add(internalName);
         UIManager.instance.PopMessage(messageAfterCollect);
         GameManager.instance.RemoveEntity(this);
@@ -36,7 +36,7 @@ public class Skill : Entity
     public override void AfterMoveTo()
     {
         base.AfterMoveTo();
-        AfterKilled();
+        KillSelf();
     }
 
     // 介绍信息，key为小写

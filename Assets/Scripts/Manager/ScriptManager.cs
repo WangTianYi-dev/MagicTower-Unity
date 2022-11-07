@@ -10,6 +10,7 @@ using System.Reflection;
 using UnityEngine;
 using XLua;
 using System;
+using DG.Tweening;
 
 [LuaCallCSharp]
 public static class ScriptInterface
@@ -25,6 +26,13 @@ public static class ScriptInterface
         GameManager.instance.globalDict[name] = value;
     }
 
+    public static string GetGlobal(string name)
+    {
+        if (!GameManager.instance.globalDict.ContainsKey(name))
+            return null;
+        return GameManager.instance.globalDict[name];
+    }
+
     public static bool VerifyGlobal(string name, string value)
     {
         var dict = GameManager.instance.globalDict;
@@ -37,13 +45,23 @@ public static class ScriptInterface
 
     public static GameObject CreateUnitEntity(string name, int x, int y)
     {
+        return ReplaceUnitEntity(name, x, y);
+    }
+
+    public static GameObject CreateGroundEntity(string name, int x, int y)
+    {
+        return ReplaceGroundEntity(name, x, y);
+    }
+
+    public static GameObject ReplaceUnitEntity(string name, int x, int y)
+    {
         Debug.Log($"Creating {name}");
         name = name.ToLower();
         Vector2Int pos = new Vector2Int(x, y);
         return MapManager.instance.ReplaceUnitEntity(pos, name);
     }
 
-    public static GameObject CreateGroundEntity(string name, int x, int y)
+    public static GameObject ReplaceGroundEntity(string name, int x, int y)
     {
         name = name.ToLower();
         Vector2Int pos = new Vector2Int(x, y);
@@ -91,13 +109,91 @@ public static class ScriptInterface
         return MapManager.instance.curTilemap.ground[x, y];
     }
 
-    public static void PlayerSuspend(float time)
+    public static void PlayerSuspend()
     {
         GameManager.instance.PlayerStop();
-        GameManager.instance.PlayerSuspend(time);
+        GameManager.instance.PlayerSuspend();
     }
 
+    public static void PlayerResume()
+    {
+        GameManager.instance.PlayerResume();
+    }
 
+    public static void AddContinuousEvent(LuaFunction func, float time)
+    {
+        GameManager.instance.AddEvent(
+            () =>
+            {
+                func.Call();
+                GameManager.instance.StartCoroutine(
+                    Util.InvokeAfterSeconds(time, () => { GameManager.instance.CurrentEventDone(); })
+                );
+            }
+            );
+    }
+
+    public static void AddEvent(LuaFunction func)
+    {
+        GameManager.instance.AddEvent(
+            () =>
+            {
+                func.Call();
+                GameManager.instance.CurrentEventDone();
+            }
+            );
+    }
+
+    public static void AddDialogEvent(string dialog)
+    {
+        GameManager.instance.AddEvent(
+            () =>
+            {
+                List<string> ls = Parser.LoadDialog(dialog);
+                GameManager.instance.ShowDialog(ls);
+            }
+            );
+    }
+
+    public static void Tween(string type, LuaTable param, int x, int y)
+    {
+        Entity e = null;
+        MapManager.instance.unitEntityDict.TryGetValue(new Vector2Int(x, y), out e);
+        if (e == null)
+        {
+            Debug.LogError($"Tween: Can not find unit entity at {x}, {y}");
+            return;
+        }
+        type = type.ToLower();
+        GameObject go = e.gameObject;
+        switch (type)
+        {
+            case "color":
+                byte r = 255, g = 255, b = 255, a = 255;
+                if (param.ContainsKey("r"))
+                {
+                    r = param.Get<byte>("r");
+                }
+                if (param.ContainsKey("g"))
+                {
+                    g = param.Get<byte>("g");
+                }
+                if (param.ContainsKey("b"))
+                {
+                    b = param.Get<byte>("b");
+                }
+                if (param.ContainsKey("a"))
+                {
+                    a = param.Get<byte>("a");
+                }
+                Color c = new Color32(r, g, b, a);
+
+                break;
+            default:
+                Debug.LogError($"Tween: Unsupported type: {type}");
+                break;
+        }
+    }
 }
 
 public class ScriptManager : MonoBehaviour
@@ -111,6 +207,7 @@ public class ScriptManager : MonoBehaviour
     {
         get
         {
+
             return GameManager.instance.globalDict;
         }
     }
@@ -138,7 +235,8 @@ public class ScriptManager : MonoBehaviour
 
     public void DoString(string str)
     {
-        GameManager.instance.AddEvent(() => {
+        GameManager.instance.AddEvent(() =>
+        {
             LuaTable env = luaEnv.NewTable();
             // 为每个脚本设置一个独立的环境，可一定程度上防止脚本间全局变量、函数冲突
             LuaTable meta = luaEnv.NewTable();

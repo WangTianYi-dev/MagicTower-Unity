@@ -42,15 +42,14 @@ public class Block : Entity
         UIManager.instance.PopMessage(blockedMessage);
     }
 
-    public override void AfterKilled()
+    public override void OnKilled()
     {
-        base.AfterKilled();
-        Util.KillEntity(this);
+        base.OnKilled();
     }
 
     public override void AfterMoveTo()
     {
         base.AfterMoveTo();
-        AfterKilled();
+        KillSelf();
     }
 }

@@ -37,9 +37,9 @@ public class Item : Entity
 			introText = ItemIntro[internalName.ToLower()];
 	}
 
-	public override void AfterKilled()
+	public override void OnKilled()
 	{
-		base.AfterKilled();
+		base.OnKilled();
         GameManager.instance.GetItem(internalName);
         UIManager.instance.PopMessage(messageAfterCollect);
         GameManager.instance.RemoveEntity(this);
@@ -48,7 +48,7 @@ public class Item : Entity
 	public override void AfterMoveTo()
 	{
 		base.AfterMoveTo();
-		AfterKilled();
+		KillSelf();
 	}
 
 	// key为小写

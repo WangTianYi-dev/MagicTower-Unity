@@ -5,7 +5,9 @@
  <tileset firstgid="1354" source="Icons.xml"/>
  <objectgroup id="4" name="Setting">
   <properties>
-   <property name="onEnter">if VerifyGlobal(&quot;4fjack&quot;, &quot;true&quot;) and not VerifyGlobal(&quot;5fjack&quot;, &quot;true&quot;) then
+   <property name="onEnter">Log(&quot;OnEnter&quot;)
+Log(GetGlobal(&quot;4fjack&quot;))
+if VerifyGlobal(&quot;4fjack&quot;, &quot;true&quot;) and not VerifyGlobal(&quot;5fjack&quot;, &quot;true&quot;) then
     Log(&quot;Create Jack&quot;)
     SetGlobal(&quot;5fjack&quot;, &quot;true&quot;)
     local jackx, jacky = 0, 2
@@ -52,7 +54,7 @@ end</property>
  <layer id="2" name="Unit" width="11" height="11">
   <data encoding="csv">
 143,135,0,1893,0,0,0,1893,0,135,143,
-0,0,0,1893,0,1546,0,1893,0,0,0,
+0,0,0,1893,0,0,0,1893,0,0,0,
 0,135,0,145,0,59,0,145,0,135,0,
 0,0,0,144,0,0,0,144,0,0,0,
 0,134,0,144,0,0,0,144,0,134,0,

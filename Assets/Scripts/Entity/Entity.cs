@@ -67,7 +67,7 @@ public abstract class Entity : MonoBehaviour
     {
     }
 
-    public virtual void AfterKilled()
+    public virtual void OnKilled()
     {
         if (effectAfterKilled != null)
         {
@@ -80,7 +80,7 @@ public abstract class Entity : MonoBehaviour
     /// </summary>
     public virtual void AfterBlocked() { }
 
-    public void DestroySelf()
+    public void KillSelf()
     {
         MapManager.instance.KillEntity(this);
     }
@@ -90,7 +90,7 @@ public abstract class Entity : MonoBehaviour
         return nameInGame == another.nameInGame;
     }
 
-    public void KillSelf()
+    public void RemoveSelf()
     {
         GameManager.instance.RemoveEntity(this);
     }

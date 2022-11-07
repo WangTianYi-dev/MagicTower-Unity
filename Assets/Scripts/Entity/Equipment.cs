@@ -42,9 +42,9 @@ public class Equipment : Entity
 		this.passable = true;
 	}
 
-    public override void AfterKilled()
+    public override void OnKilled()
     {
-        base.AfterKilled();
+        base.OnKilled();
         Player.instance.equipments.Add(internalName);
         UIManager.instance.PopMessage(messageAfterCollect);
         GameManager.instance.RemoveEntity(this);
@@ -53,7 +53,7 @@ public class Equipment : Entity
     public override void AfterMoveTo()
 	{
 		base.AfterMoveTo();
-        AfterKilled();
+        KillSelf();
 	}
 
     
@@ -161,7 +161,7 @@ public class Equipment : Entity
         },
         {
             "rapier",
-            "【史诗】战斗前进行一次额外攻击\n在芝诺还不叫芝诺的时候，这把刺剑伴随他走过十年的佣兵生涯，" +
+            "【史诗】战斗前进行一次额外攻击\n在芝诺还不是魔法警卫的时候，这把刺剑伴随他走过十年的佣兵生涯，" +
             "握住它似乎可以听到冤魂凄厉的叫声，现在它被赠予勇士，作为二人友谊的见证"
         }
     };

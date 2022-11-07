@@ -56,9 +56,9 @@ public class Enemy : Figure
         { passable = false; }
     }
 
-    public override void AfterKilled()
+    public override void OnKilled()
     {
-        base.AfterKilled();
+        base.OnKilled();
         // 这里直接减内部属性的生命值
         print("enemy attack");
         var dam = damage;
@@ -68,6 +68,10 @@ public class Enemy : Figure
         UIManager.instance.FloatMessage((-dam).ToString(), this.logicPos);
     }
 
+    public override void AfterMoveTo()
+    {
+        base.AfterMoveTo();
+    }
 
     public override void AfterBlocked()
     {

@@ -46,6 +46,6 @@ public abstract class Figure : Entity
     public override void AfterMoveTo()
     {
         base.AfterMoveTo();
-        AfterKilled();
+        KillSelf();
     }
 }

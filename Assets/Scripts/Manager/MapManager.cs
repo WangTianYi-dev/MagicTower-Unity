@@ -144,7 +144,7 @@ public class MapManager : BaseManager
 
     public void ChangeMap(string name)
     {
-        //print($"changeMap: {name}");
+        print($"changeMap: {name}");
         if (curTilemap != null)
         {
             curTilemap.lastPos = Player.instance.logicPos;
@@ -192,30 +192,30 @@ public class MapManager : BaseManager
     public void KillEntity(Entity e)
     {
         if (e == null) return;
-        if (curTilemap.setting.ContainsKey(e.logicPos))
-        {
-            if (curTilemap.setting[e.logicPos].ContainsKey("onkilled"))
-            {
-                string onKilled = curTilemap.setting[e.logicPos]["onkilled"];
-                GameManager.instance.AddEvent(() =>
-                    {
-                        ScriptManager.instance.DoString(onKilled);
-                        GameManager.instance.CurrentEventDone();
-                    }
-                    );
-            }
-            curTilemap.setting.Remove(e.logicPos);
-        }
         if (unitEntityDict.ContainsKey(e.logicPos) && unitEntityDict[e.logicPos] == e)
         {
-            unitEntityDict[e.logicPos].AfterKilled();
+            if (curTilemap.setting.ContainsKey(e.logicPos))
+            {
+                if (curTilemap.setting[e.logicPos].ContainsKey("onkilled"))
+                {
+                    string onKilled = curTilemap.setting[e.logicPos]["onkilled"];
+                    GameManager.instance.AddEvent(() =>
+                        {
+                            ScriptManager.instance.DoString(onKilled);
+                            GameManager.instance.CurrentEventDone();
+                        }
+                        );
+                }
+                curTilemap.setting.Remove(e.logicPos);
+            }
+            unitEntityDict[e.logicPos].OnKilled();
             unitEntityDict.Remove(e.logicPos);
             curTilemap.unit[e.logicPos.x, e.logicPos.y] = "";
             Destroy(e.gameObject);
         }
         else if (groundEntityDict.ContainsKey(e.logicPos) && groundEntityDict[e.logicPos] == e)
         {
-            groundEntityDict[e.logicPos].AfterKilled();
+            groundEntityDict[e.logicPos].OnKilled();
             groundEntityDict.Remove(e.logicPos);
             curTilemap.ground[e.logicPos.x, e.logicPos.y] = "";
             Destroy(e.gameObject);
@@ -258,7 +258,7 @@ public class MapManager : BaseManager
     }
 
     /// <summary>
-    /// 替换ground层特定位置上的实体
+    /// 替换ground层特定位置上的实体（不调用OnKilled）
     /// </summary>
     /// <param name="pos">位置</param>
     /// <param name="name">替换者的内部名字</param>
@@ -293,7 +293,7 @@ public class MapManager : BaseManager
     }
 
     /// <summary>
-    /// 替换Unit层特定位置上的实体
+    /// 替换Unit层特定位置上的实体（不调用OnKilled）
     /// </summary>
     /// <param name="pos">位置</param>
     /// <param name="name">替换者的内部名字</param>
@@ -308,7 +308,7 @@ public class MapManager : BaseManager
             curTilemap.unit[pos.x, pos.y] = "";
             Destroy(go);
         }
-        curTilemap.ground[pos.x, pos.y] = name.ToLower();
+        curTilemap.unit[pos.x, pos.y] = name.ToLower();
         return unitLayer.AddEntity(name, pos);
     }
 
